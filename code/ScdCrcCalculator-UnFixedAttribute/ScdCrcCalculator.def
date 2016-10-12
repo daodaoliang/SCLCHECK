@@ -1,0 +1,7 @@
+EXPORTS
+
+CalcCrc
+
+CalcCrcFreeMemory
+
+CalcCrcByRundll32W

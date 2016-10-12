@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{388ba320-8f41-4c96-9920-ff3165a24af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\rapidxml">
+      <UniqueIdentifier>{f9993667-fba4-4949-bc75-279908a14530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\libxl">
+      <UniqueIdentifier>{5d5d0229-cfc3-4e22-8a69-52eaf95896a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Xml2Xsl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\charconv.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\getopt.c">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ScdCheckCommon\charconv.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\getopt.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\rapidxml-1.13\rapidxml.hpp">
+      <Filter>Common\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\rapidxml-1.13\rapidxml_iterators.hpp">
+      <Filter>Common\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\rapidxml-1.13\rapidxml_print.hpp">
+      <Filter>Common\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\rapidxml-1.13\rapidxml_utils.hpp">
+      <Filter>Common\rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\ISheetT.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\libxl.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\setup.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\enum.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\IBookT.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\IFontT.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\libxl\IFormatT.h">
+      <Filter>Common\libxl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

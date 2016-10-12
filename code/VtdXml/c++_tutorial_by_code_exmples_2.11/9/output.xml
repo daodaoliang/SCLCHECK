@@ -1,0 +1,5 @@
+<a>
+	<root xmlns:bad='something'> <ns:good xmlns:ns='' attr= 'val^'></ns:good> <text> val_ </text></root><b> text</b><root xmlns:bad='something'> <ns:good xmlns:ns='' attr= 'val^'></ns:good> <text> val_ </text></root>
+	<c> text</c>
+	<d> text</d>
+</a>

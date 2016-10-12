@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{42d84d50-3ccd-49a9-a29a-155c78e03a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Impl">
+      <UniqueIdentifier>{6e81f0f0-8b34-4b46-a006-69a6278ebcf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Impl">
+      <UniqueIdentifier>{1bf1158f-a38a-4dc9-b833-d3c1778140d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ScdCrcCalculator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\charconv.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ScdCrcCalculatorImpl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Impl\CRC.cpp">
+      <Filter>源文件\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Impl\Markup.cpp">
+      <Filter>源文件\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="Impl\SCDCRC.cpp">
+      <Filter>源文件\Impl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ScdCrcCalculator.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ScdCrcCalculator.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScdCrcCalculator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\charconv.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ScdCrcCalculatorImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Impl\CRC.h">
+      <Filter>头文件\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Impl\Markup.h">
+      <Filter>头文件\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Impl\SCDCRC.h">
+      <Filter>头文件\Impl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

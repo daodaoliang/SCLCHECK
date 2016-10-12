@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- flag为登记标志（E为错误，W为警告，R为提示）isCheck=true为是否检测标记 -->
+<SCLConfig>
+	<CheckClass key="1" desc="语法格式校验">
+		<CheckItem key="CE18E6" name="XmlCheck" desc="XML格式规范" flag="E" isCheck="true" standard="GDW1396"/>
+		<!--CheckItem key="DB5780" name="SchemaCheck" desc="Schema校验" flag="E" isCheck="false" standard="GDW1396"/-->
+	</CheckClass>
+	<CheckClass key="2" desc="数据集成员有效性检查">
+		<CheckItem key="A63491" name="FcdaValidCheck" desc="数据集配置的FCDA非空的属性值是否指向模型中已存在的数据对象和数据属性" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="3" desc="模型实例与模板一致性校验">
+		<CheckItem key="71A77B" name="LDescBlankCheck" desc="LD和LN实例的“desc”属性值是否非空" flag="E" isCheck="false" standard="GDW1396"/>
+		<CheckItem key="D25578" name="DoiDescBlankCheck" desc="实例化DOI元素的“desc”属性值与“dU” 属性值是否非空且两者一致；" flag="W" isCheck="false" standard="GDW1396"/>
+		<CheckItem key="C2AFAE" name="DataTempRedunCheck" desc="存在未被引用的LNodeType、DOType、DAType" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="8FE372" name="DaTempValidCheck" desc="实例化配置DOI/SDI/DAI的对象索引是否与数据类型模板定义的数据对象结构一致" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="4" desc="通信参数属性正确性检查">
+		<CheckItem key="5E2045" name="ConnectedAPValidCheck" desc="Communication下ConnectedAP的iedName、apName以及GSE\SMV的cbName、ldInst的属性值是否在IED中存在相应信息" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="83395E" name="SmvAppidValidCheck" desc="Communication下SMV的APPID的值是否为4位16进制值，是否在4000～7FFF取值范围内且不可为0" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="7884C7" name="GseAppidValidCheck" desc="Communication下GSE的APPID的值是否为4位16进制值，是否在0000到3FFF取值范围内" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="EA5BBA" name="VlanValidCheck" desc="Communication下SMV和GSE的VLAN-ID是否为3位16进制值，VLAN-Priority是否在0~7内" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="58E4DA" name="GseMacValidCheck" desc="GSE中MAC地址在01-0C-CD-01-00-00~01-0C-CD-01-FF-FF范围内" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="EA80EF" name="SmvMacValidCheck" desc="SMV中MAC地址在01-0C-CD-04-00-00~01-0C-CD-04-FF-FF范围内" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="7053C8" name="IpValidCheck" desc="IP地址、子网掩码的每一位在0~255范围内" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="D66C1B" name="SVControlBlockInfoCheck" desc="SV控制块关联属性smvID、APPID、MAC地址、VLAN-ID存在缺失项" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="AE901A" name="GSEControlBlockInfoCheck" desc="GSE控制块关联属性GOID（appID）、APPID、MAC地址、VLAN-ID、优先级、MaxTime、MinTime存在缺失项" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="82EDB9" name="CommunicationValidCheck" desc="SCD文件中存在订阅关系的虚端子，对应发送控制块的通信参数配置是否存在；" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="3D2A1B" name="CommunicationRedunCheck" desc="GOOSE、SV未被订阅，且通信参数未配置" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="5" desc="参数属性唯一性检查">
+		<CheckItem key="8E9CE7" name="MacAddrUniqueCheck" desc="SCD文件中Communication下MAC-Address的值是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="E51D6C" name="AppidUniqueCheck" desc="Communication下SMV和GSE中的APPID是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="13FDFB" name="IpUniqueCheck" desc="SCD文件中IED的IP地址是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="2E8E7B" name="ControlIdUniqueCheck" desc="SCD文件中GSEControl的appID的值、SampledValueControl的smvID的值是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="F6163B" name="IntAddrUniqueCheck" desc="GOOSE 和SV配置的ExtRef内部intAddr的值在IED范围内是否唯一；" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="C426C5" name="CommunicationGSEorSVUniqueCheck" desc="Communication中SV或GOOSE通信配置是否唯一" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="6" desc="虚端子连线配置检查">
+		<CheckItem key="39B6E1" name="InputsValidCheck" desc="SCD文件中虚端子连线的对象索引是否有效；" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="795860" name="InputsDtDODAValidCheck" desc="SCD文件中虚端子连线的对象数据类型收发双方是否为DO/DA或DA/DO；" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="7652D1" name="InputsDtCDCValidCheck" desc="SCD文件中虚端子连线的对象数据类型收发双方CDC是否一致；" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="F68BD2" name="InputsDtbTypeValidCheck" desc="SCD文件中虚端子连线的对象数据类型收发双方bType是否一致；" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="7" desc="工程配置规范化检查">
+		<!--CheckItem key="D400F3" name="SubFormatCheck" desc="Communication下SubNetwork的子网命名是否符合规范中的命名要求；" flag="W" isCheck="false" standard="GDW1396"/-->
+		<CheckItem key="DECEFE" name="CrcBlankCheck" desc="SCD文件中是否存在IED过程层虚端子CRC32校验码和全站过程层虚端子CRC32校验码" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="DF89PO" name="CrcBlankValidCheck" desc="SCD文件中存在IED过程层虚端子CRC32校验码和全站过程层虚端子CRC32校验码是否正确" flag="R" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="C7C755" name="ControlBlockLdCheck" desc="控制块关联数据集是否在同一LD中找到" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="8" desc="工程应用校验">
+		<CheckItem key="06857F" name="BayValid1Check" desc="保护、测控、合并单元、智能终端间隔连接错误" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="EB1230" name="BayValid2Check" desc="母差内支路合并单元与智能终端不一致错误" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="5A551E" name="InputsDescValid1Check" desc="如有区分，跳闸信号用于启动失灵，启动失灵信号用于跳闸" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="189315" name="InputsDescValid2Check" desc="采样相位连接错误，跳闸启动失灵相位连接错误" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="E58327" name="InputsStadValidCheck" desc="各“六统一”保护该连接的信号没有连接或连接不正确" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="9" desc="SSD完整性检测">
+		<CheckItem key="970E2B" name="SSDSubstationCheck" desc="SubStation元素是否符合规范" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》">
+			<SubCheckItem key="A7407A" name="SSDSubstationCheck_Attr_R" desc="SubStation的name属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.1"/>
+            <SubCheckItem key="0F5B02" name="SSDSubstationCheck_Attr_O" desc="SubStation的desc及扩展dType、areaname、areadesc属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.1"/>
+			<SubCheckItem key="6361FA" name="SSDSubstationCheck_Child" desc="SubStation是否含有VoltageLevel子元素" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.1"/>
+		</CheckItem>
+		<CheckItem key="8F38E4" name="SSDVoltageLevelCheck" desc="VoltageLevel元素是否符合规范" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.2">
+			<SubCheckItem key="FA197C" name="SSDVoltageLevelCheck_Attr_R" desc="VoltageLevel的name属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.2"/>
+            <SubCheckItem key="04D972" name="SSDVoltageLevelCheck_Attr_O" desc="VoltageLevel的desc属性是否存在" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.2"/>
+			<SubCheckItem key="898C81" name="SSDVoltageLevelCheck_Child_R" desc="VoltageLevel是否包含Bay子元素" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.2"/>
+            <SubCheckItem key="FCCBBE" name="SSDVoltageLevelCheck_Child_O" desc="VoltageLevel是否包含Voltage子元素" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.2"/>
+			<SubCheckItem key="207ADF" name="SSDVoltageLevelCheck_Voltage_Attr" desc="Voltage的multiplier、unit属性是否存在”" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.2"/>
+		</CheckItem>
+		<CheckItem key="5EEDF0" name="SSDBayCheck" desc="Bay元素是否符合规范" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3">
+			<SubCheckItem key="EE049E" name="SSDBayCheck_Attr_R" desc="Bay元素name属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3"/>
+            <SubCheckItem key="B4B2D3" name="SSDBayCheck_Attr_O" desc="Bay元素desc及dType属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3"/>
+			<SubCheckItem key="8834DD" name="SSDBayCheck_Child" desc="一次设备Bay元素含有子元素PowerTransformer或ConductingEquipment，ConnectivityNode， LNode；" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3"/>
+		</CheckItem>
+		<CheckItem key="D07CE2" name="SSDPowerTransformerCheck" desc="变压器元素PowerTransformer是否符合规范" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4">
+			<SubCheckItem key="193D6E" name="SSDPowerTransformerCheck_Attr_R" desc="PowerTransformer的name、type属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+            <SubCheckItem key="0DB141" name="SSDPowerTransformerCheck_Attr_O" desc="PowerTransformer的desc、virtual属性是否存在" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+			<SubCheckItem key="03E869" name="SSDPowerTransformerCheck_Child_R" desc="PowerTransformer元素应含有子元素TransformerWinding" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+            <SubCheckItem key="308772" name="SSDPowerTransformerCheck_Child_O" desc="PowerTransformer元素应含有子元素LNode" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+			<SubCheckItem key="9B1D5D" name="SSDPowerTransformerCheck_TFWinding_Attr_R" desc="TransformerWinding的name、type属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+            <SubCheckItem key="99D42A" name="SSDPowerTransformerCheck_TFWinding_Attr_O" desc="TransformerWinding的desc、virtual属性是否存在" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+		</CheckItem>
+		<CheckItem key="F5EBE0" name="SSDConductingEquipmentCheck" desc="导电设备ConductingEquipment命名是否符合标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.5">
+			<SubCheckItem key="34D122" name="SSDConductingEquipmentCheck_Attr_R" desc="ConductingEquipment的name、type属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.5"/>
+            <SubCheckItem key="1FB03A" name="SSDConductingEquipmentCheck_Attr_O" desc="ConductingEquipment的desc、virtual属性是否存在" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.5"/>
+		</CheckItem>
+		<!--CheckItem key="A7D962" name="SSDCommonEquipmentCheck" desc="SubEquipment元素是否符合国网标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》">
+			<SubCheckItem key="D55244" name="SSDCommonEquipmentCheck_Attr" desc="Equipment应该含有name、desc、virtual、type属性" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3"/>
+		</CheckItem-->
+		<CheckItem key="7BDF46" name="SSDConnectivityNodeCheck" desc="ConnectivityNode是否符合国网标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.6">
+			<SubCheckItem key="AC4363" name="SSDConnectivityNodeCheck_Attr_R" desc="ConnectivityNode的name、pathName属性是否存在" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.6"/>
+            <SubCheckItem key="93D278" name="SSDConnectivityNodeCheck_Attr_O" desc="ConnectivityNode的desc属性是否存在" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.6"/>
+		</CheckItem>
+		<CheckItem key="50B26C" name="SSDTerminalCheck" desc="设备端点Terminal对象是否符合标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4">
+			<SubCheckItem key="5F5FC8" name="SSDTerminalCheck_Attr_R" desc="Terminal的name、connectivityNode、substationName、voltageLevelName、 bayName和cNodeName属性是否存" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+            <SubCheckItem key="0C41E2" name="SSDTerminalCheck_Attr_O" desc="Terminal的desc属性是否存" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.4"/>
+		</CheckItem>
+		<CheckItem key="FBA7BB" name="SSDLNodeCheck" desc="LNode元素是否符合国网标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3">
+			<SubCheckItem key="F59B13" name="SSDLNodeCheck_Attr_R" desc="LNode元素应含有lnInst，lnClass，iedName，ldInst属性" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3"/>
+            <SubCheckItem key="9CCF48" name="SSDLNodeCheck_Attr_O" desc="LNode元素应含有prefix、lnType属性" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》附录E.3"/>
+		</CheckItem>
+	</CheckClass>
+	<CheckClass key="10" desc="Header和Communication元素完整性检测">
+		<CheckItem key="81DA52" name="SCDHeaderCheck" desc="Header元素是否符合规范" flag="W" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="C74C3E" name="SCDHeaderCheck_Attr_R" desc="Header元素是否包括id属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="FD49A2" name="SCDHeaderCheck_Attr_O" desc="Header元素是否包括version、revision、toolID、nameStructure 4个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="C616E6" name="SCDHeaderCheck_Child" desc="Header元素是否至少包括History子元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="95449A" name="SCDHeaderCheck_History_Child" desc="History元素是否含有子元素Hitem" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="6A1008" name="SCDHeaderCheck_Hitem_Attr_R" desc="“Hitem”是否包括 “version”、“revision”、“when” 3个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="B9FCE5" name="SCDHeaderCheck_Hitem_Attr_O" desc="“Hitem”是否包括 “who”、“what”及“why”3个属性" flag="W" isCheck="false" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="5A05FF" name="SCDCommunicationCheck" desc="Communication元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="5D9158" name="SCDCommunicationCheck_Attr_O" desc="Communication元素是否含有desc 属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="50C553" name="SCDCommunicationCheck_Child" desc="Communication元素是否含有一个必选的子元素SubNetwork子网" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="EFA2C2" name="SCDSubNetWorkCheck" desc="SubnetWork元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="647BBC" name="SCDSubNetWorkCheck_Attr_R" desc="SubNetwork元素是否含有name 等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="6F8076" name="SCDSubNetWorkCheck_Attr_O" desc="SubNetwork元素是否含有 desc和type 等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="501AB4" name="SCDSubNetWorkCheck_Child" desc="SubNetwork元素含有子元素 BitRate比特率、ConnectedAP连接访问点。其中ConnectedAP为必选" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="A1F1F4" name="SCDSubNetWorkCheck_BitRate_Attr_R" desc="BitRate元素含有unit 等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="0F4B6A" name="SCDSubNetWorkCheck_BitRate_Attr_O" desc="BitRate元素含有multiplier 等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="72417E" name="SCDConnectedAPCheck" desc="ConnectedAP元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="7AFB7C" name="SCDConnectedAPCheck_Attr_R" desc="ConnectedAP元素含有iedName 和apName等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="0F5E5D" name="SCDConnectedAPCheck_Attr_O" desc="ConnectedAP元素含有desc等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="25B22A" name="SCDIPAddressCheck" desc="IP所在Address元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="E41AD9" name="SCDIPAddressCheck_Child" desc="Address元素是否含有一个必选参数P" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="1B1CE9" name="SCDIPAddressCheck_P_Attr" desc="P_type包括IP, IP_SUBNET" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="2391A5" name="SCDGSECheck" desc="GSE元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="FC15B2" name="SCDGSECheck_Attr_R" desc="GSE元素含有 ldInst及cbName等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="379CC7" name="SCDGSECheck_Attr_O" desc="GSE元素含有desc等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="F6DB34" name="SCDGSECheck_Address_Child" desc="Address元素应含有一个必选参数P" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="150324" name="SCDGSECheck_P_Attr" desc="P_type应含有MAC_Address, APPID, VLAN_PRIORITY和VLAN_ID等4种类型" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="8D3AD5" name="SCDGSECheck_MinTime_Attr" desc="MinTime元素含有unit和multiplier等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="B4213E" name="SCDGSECheck_MaxTime_Attr" desc="MaxTime元素含有unit和multiplier等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="D0620B" name="SCDSMVCheck" desc="SMV元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="CFF699" name="SCDSMVCheck_Attr_R" desc="SMV元素含有ldInst及cbName等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="AA5BA9" name="SCDSMVCheck_Attr_O" desc="SMV元素含有desc等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="F0E988" name="SCDSMVCheck_Address_Child" desc="Address元素应含有一个必选参数P" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="87C111" name="SCDSMVCheck_P_Attr" desc="P_type应含有MAC_Address, APPID, VLAN_PRIORITY和VLAN_ID等4种类型" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="0775FF" name="SCDPhysConnCheck" desc="PhysConn元素检测" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="69C068" name="SCDPhysConnCheck_Attr" desc="PhysConn元素含有type属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="FA5820" name="SCDPhysConnCheck_Child" desc="PhysConn元素含有一个必选参数P" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="9C656D" name="SCDPhysConnCheck_P_Attr" desc="P_type应含有Type和Plug 等2种类型" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+	</CheckClass>
+	<CheckClass key="11" desc="IED完整性检测">
+		<CheckItem key="69FBFF" name="SCDIEDCheck" desc="IED元素是否符合规范" flag="W" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="C23F4A" name="SCDIEDCheck_Attr_R" desc="IED元素含有name等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="4203F9" name="SCDIEDCheck_Attr_O" desc="IED元素含有desc, type, manufacturer 和configVersion等4个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="7A2805" name="SCDIEDCheck_Child" desc="IED元素含有2个子元素Services、AccessPoint。其中AccessPoint元素为必选" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="30D5AC" name="SCDIEDServicesCheck" desc="Services元素是否符合规范" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="5A6317" name="SCDIEDServicesCheck_Child_O" desc="Services元素应含有SettingGroups, ConfDataSet, DynDataSet,ConfReportControl,ConfLogControl,ReportSettings, LogSettings, GSESettings,SMVSettings, GOOSE, GSSE, 及ConfLNs等12个子元素。" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="0CE376" name="SCDIEDServicesCheck_SettingGroups_Child_O" desc="SettingGroups元素含有SGEdit和ConfSG等2个子元素" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="3C69E9" name="SCDIEDServicesCheck_ConfDataSet_Attr_R" desc="ConfDataSet元素含有max等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="5402F3" name="SCDIEDServicesCheck_ConfDataSet_Attr_O" desc="ConfDataSet元素含有maxAttributes和modify等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="782D13" name="SCDIEDServicesCheck_DynDataSet_Attr_R" desc="DynDataSet元素含有max等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="47E658" name="SCDIEDServicesCheck_DynDataSet_Attr_O" desc="DynDataSet元素含有maxAttributes等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="046451" name="SCDIEDServicesCheck_ConfReportControl_Attr" desc="ConfReportControl元素含有max属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="262A9E" name="SCDIEDServicesCheck_ConfLogControl_Attr" desc="ConfLogControl元素含有max属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="7A7AED" name="SCDIEDServicesCheck_ReportSettings_Attr_O" desc="ReportSettings元素含有cbName, datSet, rptID, optFields, bufTime, trgOps和intgPd等7个属性。" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="2CA21A" name="SCDIEDServicesCheck_LogSettings_Attr_O" desc="LogSettings元素含有cbName, datSet, logEna, trgOps和intgPd等5个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="A06360" name="SCDIEDServicesCheck_GSESettings_Attr_O" desc="GSESettings元素含有cbName, datSet, appID和dataLabel等4个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="E40EB0" name="SCDIEDServicesCheck_SMVSettings_Attr_O" desc="SMVSettings元素含有cbName, datSet, svID, optFields和 smpRate等5个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="EF7B8E" name="SCDIEDServicesCheck_GOOSE_Attr" desc="GOOSE元素含有max属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="799F5E" name="SCDIEDServicesCheck_GSSE_Attr" desc="GSSE元素含有max属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="737B04" name="SCDIEDServicesCheck_ConfLNs_Attr_O" desc="ConfLNs元素含有fixPrefix和fixLnInst属性" flag="E" isCheck="false" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="509878" name="SCDIEDAccessPointCheck" desc="AccessPoint元素是否符合规范" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="779080" name="SCDIEDAccessPointCheck_Attr_R" desc="AccessPoint元素含有name等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="A46C44" name="SCDIEDAccessPointCheck_Attr_O" desc="AccessPoint元素含有desc, router和clock等3个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="0C378E" name="SCDIEDAccessPointCheck_Child" desc="AccessPoint元素含有Server子元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="0F01C4" name="SCDIEDAccessPointCheck_Server_Attr_O" desc="Server元素含有timeout和desc等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="26047A" name="SCDIEDAccessPointCheck_Server_Child" desc="Server元素含有子元素Authentication认证元素、LDevice逻辑设备元素、Association关联元素。其中Authentication、LDevice为必须元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="11E7BC" name="SCDIEDAccessPointCheck_Association_Attr_R" desc="Association元素含有kind,  iedName, ldInst, lnClass, 及lnInst等5个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="A595A8" name="SCDIEDAccessPointCheck_Association_Attr_O" desc="Association元素含有associationID,  prefix等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="DAB314" name="SCDIEDAccessPointCheck_Authentication_Attr_O" desc="Authentication元素含有none, password, weak, strong 和 certificate等5个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="98448C" name="SCDIEDAccessPointCheck_LDevice_Attr_R" desc="LDevice元素含有inst等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="49A13D" name="SCDIEDAccessPointCheck_LDevice_Attr_O" desc="LDevice元素含有desc等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="46B945" name="SCDIEDAccessPointCheck_LDevice_Child" desc="LDevice元素含有子元素LN0零逻辑节点实例元素、LN其他逻辑节点实例元素、AccessControl访问控制实例元素。LN0为必选元素" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="40F963" name="SCDIEDLNCheck" desc="LN元素是否符合规范" flag="E" isCheck="true" standard="GDW1396">
+			<SubCheckItem key="1ADF25" name="SCDIEDLNCheck_LN0_Attr_R" desc="LN0元素含有lnClass, lnType, inst等3个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="FF5BCC" name="SCDIEDLNCheck_LN0_Attr_O" desc="LN0元素含有desc等1个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="19D0F9" name="SCDIEDLNCheck_LN0_Child_O" desc="LN0元素含有子元素DataSet数据集实例元素、ReportControl报告控制实例元素、LogControl日志控制实例元素、DOI数据对象实例元素、Inputs信息输入实例元素、GSEControlGSE控制实例元素、SampledValueControl采样值控制实例元素、SettingControl定值控制实例元素、SCLControlSCL控制元素、Log日志元素" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="745B41" name="SCDIEDLNCheck_DataSet_Attr_R" desc="DataSet元素含有name等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="B8166C" name="SCDIEDLNCheck_DataSet_Attr_O" desc="DataSet元素含有desc等1个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="6C7C25" name="SCDIEDLNCheck_FCDA_Attr_R" desc="FCDA元素含有fc等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="43020A" name="SCDIEDLNCheck_FCDA_Attr_O" desc="FCDA元素含有IdInst, prefix, lnClass, lnInst, doName, daName等6个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="6EA4C7" name="SCDIEDLNCheck_ReportControl_Attr_R" desc="ReportControl元素含有name, confRev等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="F59359" name="SCDIEDLNCheck_ReportControl_Attr_O" desc="ReportControl元素含有desc, datSet, intgPd, rptID, buffered及bufTime等6个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="693734" name="SCDIEDLNCheck_ReportControl_Child" desc="ReportControl元素含有子元素：TrgOps触发选项元素、OptFields选项元素、RptEnabled报告使能元素。其中OptFields元素为必选" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="F1E4EC" name="SCDIEDLNCheck_TrgOps_Attr_O" desc="TrgOps元素含有dchg, qchg, dupd及period等4个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="43532D" name="SCDIEDLNCheck_OptFields_Attr_O" desc="OptFields元素含有seqNum, timeStamp, dataSet, reasonCode, dataRef, bufOvfl, entryID, configRef及segmentation等9个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="B07D9D" name="SCDIEDLNCheck_RptEnabled_Attr_O" desc="RptEnabled元素含有desc及max等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="4F2F92" name="SCDIEDLNCheck_RptEnabled_Child_O" desc="RptEnabled元素含有子元素：ClientLN报告控制块客户端元素" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="BA5673" name="SCDIEDLNCheck_ClientLN_Attr_R" desc="ClientLN元素含有iedName, ldInst, lnClass及lnInst等4个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="777067" name="SCDIEDLNCheck_ClientLN_Attr_O" desc="ClientLN元素含有prefix等1个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="294558" name="SCDIEDLNCheck_LogControl_Attr_R" desc="LogControl元素含有name, logName等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="D256A7" name="SCDIEDLNCheck_LogControl_Attr_O" desc="LogControl元素含有desc, datSet, intgPd, logEna及reasonCode等5个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="1138E4" name="SCDIEDLNCheck_LogControl_Child" desc="LogControl元素含有子元素：TrgOps触发选项元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="35874C" name="SCDIEDLNCheck_Inputs_Attr_O" desc="Inputs元素含有desc属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="74FBCF" name="SCDIEDLNCheck_Inputs_Child" desc="Inputs元素含有子元素ExRef外部信息元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="535ABA" name="SCDIEDLNCheck_ExtRef_Attr_O" desc="ExtRef元素含有iedName, ldInst, prefix, lnClass, lnInst, doName, daName及intAddr等8个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="93C5D9" name="SCDIEDLNCheck_GSEControl_Attr_R" desc="GSEControl元素含有name, appID等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="DE5AA5" name="SCDIEDLNCheck_GSEControl_Attr_O" desc="GSEControl元素含有desc, datSet, confRev, type等4个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="7227F6" name="SCDIEDLNCheck_SampledValueControl_Attr_R" desc="SampledValueControl元素含有name, smvID, smpRate及nofASDU等4个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="F611E8" name="SCDIEDLNCheck_SampledValueControl_Attr_O" desc="SampledValueControl元素含有desc, datSet, confRev,  multicast等4个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="F2E51A" name="SCDIEDLNCheck_SampledValueControl_Child" desc="SampledValueControl元素含有子元素SmvOpts采样值选项元素。此元素为必选" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="A8E954" name="SCDIEDLNCheck_SmvOpts_Attr_O" desc="SmvOpts元素含有refreshTime, sampleSynchronized, sampleRate, security及dataRef等5个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="D4A2C1" name="SCDIEDLNCheck_SettingControl_Attr_R" desc="SettingControl元素含有numOfSGs等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="3D51FB" name="SCDIEDLNCheck_SettingControl_Attr_O" desc="SettingControl元素含有desc及actSG等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="4E99CF" name="SCDIEDLNCheck_SCLControl_Attr_O" desc="SCLControl元素含有desc属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="2B5C2A" name="SCDIEDLNCheck_LN_Attr_R" desc="LN元素含有lnClass, lnType, inst等3个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="055200" name="SCDIEDLNCheck_LN_Attr_O" desc="LN元素含有desc及prefix等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="818209" name="SCDIEDLNCheck_DOI_Attr_R" desc="DOI元素含name等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="A7E16E" name="SCDIEDLNCheck_DOI_Attr_O" desc="DOI元素含有desc, ix及accessControl等3个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="D09681" name="SCDIEDLNCheck_DOI_Child_O" desc="DOI元素含有子元素：DAI数据属性实例元素、SDI子数据实例元素。均是必选元素" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="9902F7" name="SCDIEDLNCheck_DAI_Attr_R" desc="DAI元素含有name等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="84A714" name="SCDIEDLNCheck_DAI_Attr_O" desc="DAI元素含有desc, sAddr, valKind及ix等4个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="81BF85" name="SCDIEDLNCheck_DAI_Child_O" desc="DAI元素含有子元素：Val数据值元素" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="4F1040" name="SCDIEDLNCheck_Val_Attr_O" desc="Val元素含有sGroup属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="CCA58A" name="SCDIEDLNCheck_SDI_Attr_R" desc="SDI元素含有name等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="CF028C" name="SCDIEDLNCheck_SDI_Attr_O" desc="SDI元素含有desc, ix等2个属性" flag="W" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="74B3E0" name="SCDIEDLNCheck_SDI_Child_O" desc="SDI元素含有子元素DAI数据属性实例元素、SDI子数据实例元素。均是必选元素" flag="W" isCheck="false" standard="GDW1396"/>
+		</CheckItem>
+	</CheckClass>
+	<CheckClass key="12" desc="DataTypeTemplate完整性检测">
+		<CheckItem key="386A45" name="SCDLNodeTypeCheck" desc="LNodeType完整性检测" flag="W" isCheck="true" standard="智能变电站SCD审查技术规范">
+			<SubCheckItem key="8B68E5" name="SCDLNodeTypeCheck_Attr_R" desc="LNodeType元素含有id,lnClass等2个属性" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="30C31F" name="SCDLNodeTypeCheck_Attr_O" desc="LNodeType元素含有 desc, iedType2个属性" flag="R" isCheck="false" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="012670" name="SCDLNodeTypeCheck_Child" desc="LNodeType元素含有子元素DO数据对象元素" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="3EB31D" name="SCDLNodeTypeCheck_DO_Attr_O" desc="DO元素含有accessControl及transient等2个属性" flag="R" isCheck="false" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="3EB31D" name="SCDLNodeTypeCheck_DO_Attr_R" desc="DO元素含有name, type等2个属性" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范"/>
+		</CheckItem>
+		<CheckItem key="296AE3" name="SCDDOTypeCheck" desc="DOType完整性检测" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范">
+			<SubCheckItem key="952615" name="SCDDOTypeCheck_Attr_R" desc="DOType元素含有id,cdc等2个属性" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="AEDB6C" name="SCDDOTypeCheck_Attr_O" desc="DOType元素含有iedType等1个属性" flag="E" isCheck="false" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="CDE595" name="SCDDOTypeCheck_Child_O" desc="DOType元素含有子元素：SDO子数据对象元素、DA数据属性元素。均为必选元素" flag="W" isCheck="false" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="A4513B" name="SCDDOTypeCheck_SDO_Attr_R" desc="SDO元素含有name、type等2个属性" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="BC988A" name="SCDDOTypeCheck_SDO_Attr_O" desc="SDO元素含有desc等1个属性" flag="E" isCheck="false" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="9C703C" name="SCDDOTypeCheck_DA_Attr_R" desc="DA元素含有name, fc, bType 3个属性" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范"/>
+			<SubCheckItem key="A9CFB6" name="SCDDOTypeCheck_DA_Attr_O" desc="DA元素含有type 1个属性" flag="E" isCheck="false" standard="智能变电站SCD审查技术规范"/>
+		</CheckItem>
+		<CheckItem key="71D964" name="SCDDATypeCheck" desc="DAType完整性检测" flag="W" isCheck="true" standard="智能变电站SCD审查技术规范">
+			<SubCheckItem key="D6EF99" name="SCDDATypeCheck_Attr_R" desc="DAType元素含有id等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="9C2DDF" name="SCDDATypeCheck_Attr_O" desc="DAType元素含有iedType及desc等2个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="FF283F" name="SCDDATypeCheck_Child" desc="DAType元素含有必选子元素：BDA基础数据属性元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="70B817" name="SCDDATypeCheck_BDA_Attr_R" desc="BDA元素含有name,bType等2个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="D9E33D" name="SCDDATypeCheck_BDA_Attr_O" desc="BDA元素含有type等1个属性" flag="E" isCheck="false" standard="GDW1396"/>
+		</CheckItem>
+		<CheckItem key="4BA204" name="SCDEnumTypeCheck" desc="EnumType完整性检测" flag="E" isCheck="true" standard="智能变电站SCD审查技术规范">
+			<SubCheckItem key="E7511E" name="SCDEnumTypeCheck_Attr_R" desc="EnumType元素含有id等1个属性" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="0B41EC" name="SCDEnumTypeCheck_Attr_O" desc="EnumType元素含有desc等1个属性" flag="E" isCheck="false" standard="GDW1396"/>
+			<SubCheckItem key="C46B9F" name="SCDEnumTypeCheck_Child" desc="EnumType元素含有必选子元素：EnumVal枚举值元素" flag="E" isCheck="true" standard="GDW1396"/>
+			<SubCheckItem key="69B909" name="SCDEnumTypeCheck_EnumVal_Attr" desc="EnumVal元素含有ord属性" flag="E" isCheck="true" standard="GDW1396"/>
+		</CheckItem>
+	</CheckClass>
+	<CheckClass key="13" desc="SSD规范性检测">
+		<CheckItem key="E0B8B6" name="SSDSubstationCheck_Unique" desc="SubStation是否唯一" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.2.a）"/>
+		<CheckItem key="FAD0DE" name="SSDSubstationCheck_Normative" desc="SubStation属性dType是否符合调度规范" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.2"/>
+		<CheckItem key="894442" name="SSDSubstationCheck_Other" desc="SubStation是否含有其他元素（LNode等）" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.2"/>
+		<CheckItem key="B179A8" name="SSDVoltageLevelCheck_Unique" desc="VoltageLevel是否唯一" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.3.b)"/>
+		<CheckItem key="E81083" name="SSDVoltageLevelCheck_UnNULL" desc="VoltageLevel值与Voltage是否一致" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.3.d)"/>
+		<CheckItem key="221E7A" name="SSDVoltageLevelCheck_Normative" desc="VoltageLevel的name、desc属性是否符合额定电压标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.3.b）"/>
+		<CheckItem key="6AD663" name="SSDVoltageLevelCheck_Other" desc="VoltageLevel是否含有其他元素（LNode等）" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.3.b）"/>
+		<CheckItem key="353D3C" name="SSDVoltageLevelCheck_Sort" desc="电压等级是否按照从高到低的顺序进行排序" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.3.a）"/>
+		<CheckItem key="A4401A" name="SSDBayCheck_AttrNormative" desc="一次设备间隔Bay元素的name、desc命名是否符合规范；" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.4.3.a)"/>
+		<CheckItem key="3C04EC" name="SSDBayCheck_dTypeNormative" desc="一次设备间隔Bay元素的扩展属性dType是否符合规范" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.4.3.b)"/>
+		<CheckItem key="0A9655" name="SSDPowerTransformerCheck_Unique" desc="PowerTransformer是否唯一" flag="E" isCheck="true" standard="一般要求"/>
+		<CheckItem key="F49CBC" name="SSDPowerTransformerCheck_AttrNormative" desc="变压器设备name属性是否符合国网标准" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.5.1.a）"/>
+		<CheckItem key="6AD8BF" name="SSDPowerTransformerCheck_WindingNormative" desc="PowerTransformer是否存在至少两个变压器绕组子元素" flag="W" isCheck="true" standard="《智能变电站SSD建模技术规范》6.5.1"/>
+		<CheckItem key="07E93F" name="SSDConductingEquipmentCheck_Unique" desc="ConductingEquipment在同一间隔内是否唯一" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.5.2.a）"/>
+		<CheckItem key="088D84" name="SSDConductingEquipmentCheck_IFLEquipment" desc="引出线IFL类设备对象name是否符合标准；" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.5.7.b）"/>
+		<CheckItem key="88181E" name="SSDTerminalCheck_NameNormative" desc="Terminal对象name属性是否按照Tn进行命名" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.5.6"/>
+		<CheckItem key="A27269" name="SSDTerminalCheck_Unique" desc="Terminal命名装置内是否唯一" flag="E" isCheck="true" standard="一般要求"/>
+		<CheckItem key="7BCC9B" name="SSDTerminalCheck_Valid" desc="Terminal的SubstationName、VoltageLevelName、bayName、cNodeName、connectivityNode索引是否有效" flag="E" isCheck="true" standard="一般要求"/>
+		<CheckItem key="BBEAF8" name="SSDConnectivityNodeCheck_PathUnique" desc="ConnectivityNode的pathName是否全站唯一" flag="E" isCheck="true" standard="《智能变电站SCD审查技术规范》7.2.3"/>
+		<CheckItem key="A897DD" name="SSDConnectivityNodeCheck_UnUsed" desc="ConnectivityNode未与Terminal关联" flag="E" isCheck="true" standard="《智能变电站SCD审查技术规范》7.2.3"/>
+		<CheckItem key="6D6D0B" name="SSDConnectivityNodeCheck_NameNormative" desc="ConnectivityNode的name属性是否按照Cn进行命名" flag="E" isCheck="true" standard="《智能变电站SSD建模技术规范》6.5.5.a)"/>
+	</CheckClass>
+	<CheckClass key="14" desc="其他">
+		<CheckItem key="5E04BF" name="GeneralCheck" desc="其他问题检查" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="36FEF6" name="SignalValidSet" desc="查找输入信号对应LN时，是否在AP下查找" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+</SCLConfig>

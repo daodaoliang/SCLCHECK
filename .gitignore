@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+# git ignore
+.svn/
+
 # Folder config file
 Desktop.ini
 

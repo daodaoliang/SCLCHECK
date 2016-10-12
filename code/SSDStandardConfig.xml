@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SSD>
+	<SubstationType>
+		<Type name="变电站"/>
+		<Type name="开关站"/>
+		<Type name="火电厂"/>
+		<Type name="水电厂"/>
+		<Type name="抽蓄电厂"/>
+		<Type name="风电厂"/>
+		<Type name="核电厂"/>
+		<Type name="燃气电厂"/>
+		<Type name="光伏电厂"/>
+		<Type name="生物质能电厂"/>
+		<Type name="虚拟站"/>
+		<Type name="T接站"/>
+	</SubstationType>
+	<BayType>
+		<Type name="二分之三接线"/>
+		<Type name="三分之四接线"/>
+		<Type name="双母接线"/>
+		<Type name="双母带旁路接线"/>
+		<Type name="双母分段接线"/>
+		<Type name="单母接线"/>
+		<Type name="单母分段接线"/>
+		<Type name="单母分段带旁路接线"/>
+		<Type name="三角型接线"/>
+		<Type name="四角形接线"/>
+	</BayType>
+	<EquipmentType>
+		<Type name="CBR" desc="断路器"/>
+		<Type name="DIS" desc="隔离开关/接地刀闸"/>
+		<Type name="VTR" desc="电压互感器"/>
+		<Type name="CTR" desc="电流互感器"/>
+		<Type name="PTW" desc="变压器绕组"/>		
+		<Type name="PTR" desc="变压器"/>
+		<Type name="LTC" desc="有载分接开关"/>
+		<Type name="GEN" desc="发电机"/>
+		<Type name="CAP" desc="电容器组"/>
+		<Type name="REA" desc="电抗器"/>		
+		<Type name="CON" desc="换流器"/>
+		<Type name="MOT" desc="电动机"/>
+		<Type name="EFN" desc="接地故障补偿器/消弧线圈"/>
+		<Type name="BAT" desc="电池"/>
+		<Type name="CAB" desc="电力电缆"/>		
+		<Type name="LIN" desc="电力架空线或线路分段"/>
+		<!--Type name="EALIN" desc="电力架空线或线路分段"/-->
+		<Type name="SAR" desc="避雷器"/>
+		<Type name="IFL" desc="馈入线路"/>
+		<Type name="EBUS" desc="母线"/>
+		<Type name="EGD" desc="接地点"/>
+	</EquipmentType>
+	<VoltageLevelType>
+		<Type name="10kV"/>
+		<Type name="35kV"/>
+		<Type name="66kV"/>
+		<Type name="110kV"/>
+		<Type name="220kV"/>
+		<Type name="330kV"/>
+		<Type name="500kV"/>
+		<Type name="750kV"/>
+		<Type name="1000kV"/>
+	</VoltageLevelType>
+</SSD>

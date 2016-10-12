@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://nari-relays.com">
+	<DataTypeTemplates>
+		<DOType id="CN_SPS" cdc="SPS">
+			<DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST" ext:eOption="M" />
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA bType="Timestamp" fc="ST"/>
+			<DA name="t" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="BOOLEAN" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_SPS_EX" cdc="SPS">
+			<DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="BOOLEAN" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_INS" cdc="INS">
+			<DA name="stVal" bType="INT32" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="INT32" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_INS_EX" cdc="INS">
+			<DA name="stVal" bType="INT32" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="INT32" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_INS_Beh" cdc="INS">
+			<DA name="stVal" bType="Enum" type="Beh" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+		</DOType>
+		<DOType id="CN_INS_Health" cdc="INS">
+			<DA name="stVal" bType="Enum" type="Health" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+		</DOType>
+		<DOType id="CN_INS_ARST" cdc="INS">
+			<DA name="stVal" bType="Enum" type="AutoRecSt" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Enum" type="AutoRecSt" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_INS_CBOpCap" cdc="INS">
+			<DA name="stVal" bType="Enum" type="CBOpCap" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Enum" type="CBOpCap" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_INS_SwTyp" cdc="INS">
+			<DA name="stVal" bType="Enum" type="SwTyp" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Enum" type="SwTyp" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_INS_SwOpCap" cdc="INS">
+			<DA name="stVal" bType="Enum" type="SwOpCap" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Enum" type="SwOpCap" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_INS_FltLoop" cdc="INS">
+			<DA name="stVal" bType="Enum" type="FltLoop" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Enum" type="FltLoop" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ACT" cdc="ACT">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ACT_EX" cdc="ACT">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ACT_3P" cdc="ACT">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="phsA" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="phsB" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="phsC" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="neut" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ACT_3P_EX" cdc="ACT">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="phsA" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="phsB" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="phsC" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="neut" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ACD" cdc="ACD">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirGeneral" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ACD_EX" cdc="ACD">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirGeneral" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ACD_3P" cdc="ACD">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirGeneral" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="phsA" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirPhsA" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="phsB" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirPhsB" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="phsC" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirPhsC" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="neut" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirNeut" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ACD_3P_EX" cdc="ACD">
+			<DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirGeneral" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="phsA" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirPhsA" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="phsB" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirPhsB" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="phsC" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirPhsC" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="neut" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="dirNeut" bType="Enum" type="dir" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_MV" cdc="MV">
+			<DA name="mag" bType="Struct" type="CN_AnalogueValue" dchg="true" fc="MX"/>
+			<DA name="q" bType="Quality" qchg="true" fc="MX"/>
+			<DA name="t" bType="Timestamp" fc="MX"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subMag" bType="Struct" type="CN_AnalogueValue" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="db" bType="INT32U" fc="CF"/>
+			<DA name="zeroDb" bType="INT32U" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="rangeC" bType="Struct" type="CN_RangeConfig" fc="CF"/>
+			<DA name="smpRate" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_MV_EX" cdc="MV">
+			<DA name="mag" bType="Struct" type="CN_AnalogueValue" dchg="true" fc="MX"/>
+			<DA name="q" bType="Quality" qchg="true" fc="MX"/>
+			<DA name="t" bType="Timestamp" fc="MX"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subMag" bType="Struct" type="CN_AnalogueValue" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="db" bType="INT32U" fc="CF"/>
+			<DA name="zeroDb" bType="INT32U" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="rangeC" bType="Struct" type="CN_RangeConfig" fc="CF"/>
+			<DA name="smpRate" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_CMV" cdc="CMV">
+			<DA name="cVal" bType="Struct" type="CN_Vector" dchg="true" fc="MX"/>
+			<DA name="q" bType="Quality" qchg="true" fc="MX"/>
+			<DA name="t" bType="Timestamp" fc="MX"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subCVal" bType="Struct" type="CN_Vector" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="db" bType="INT32U" fc="CF"/>
+			<DA name="zeroDb" bType="INT32U" fc="CF"/>
+			<DA name="rangeC" bType="Struct" type="CN_RangeConfig" fc="CF"/>
+			<DA name="magSVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="angSVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="angRef" bType="Enum" type="angidCMV" fc="CF"/>
+			<DA name="smpRate" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_CMV_EX" cdc="CMV">
+			<DA name="cVal" bType="Struct" type="CN_Vector" dchg="true" fc="MX"/>
+			<DA name="q" bType="Quality" qchg="true" fc="MX"/>
+			<DA name="t" bType="Timestamp" fc="MX"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subCVal" bType="Struct" type="CN_Vector" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="db" bType="INT32U" fc="CF"/>
+			<DA name="zeroDb" bType="INT32U" fc="CF"/>
+			<DA name="rangeC" bType="Struct" type="CN_RangeConfig" fc="CF"/>
+			<DA name="magSVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="angSVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="angRef" bType="Enum" type="angidCMV" fc="CF"/>
+			<DA name="smpRate" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_WYE" cdc="WYE">
+			<SDO name="phsA" type="CN_CMV"/>
+			<SDO name="phsB" type="CN_CMV"/>
+			<SDO name="phsC" type="CN_CMV"/>
+			<DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_WYE_EX" cdc="WYE">
+			<SDO name="phsA" type="CN_CMV"/>
+			<SDO name="phsB" type="CN_CMV"/>
+			<SDO name="phsC" type="CN_CMV"/>
+			<DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_WYE_ALL" cdc="WYE">
+			<SDO name="phsA" type="CN_CMV"/>
+			<SDO name="phsB" type="CN_CMV"/>
+			<SDO name="phsC" type="CN_CMV"/>
+			<SDO name="neut" type="CN_CMV"/>
+			<SDO name="net" type="CN_CMV"/>
+			<SDO name="res" type="CN_CMV"/>
+			<DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_WYE_ALL_EX" cdc="WYE">
+			<SDO name="phsA" type="CN_CMV"/>
+			<SDO name="phsB" type="CN_CMV"/>
+			<SDO name="phsC" type="CN_CMV"/>
+			<SDO name="neut" type="CN_CMV"/>
+			<SDO name="net" type="CN_CMV"/>
+			<SDO name="res" type="CN_CMV"/>
+			<DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_DEL" cdc="DEL">
+			<SDO name="phsAB" type="CN_CMV"/>
+			<SDO name="phsBC" type="CN_CMV"/>
+			<SDO name="phsCA" type="CN_CMV"/>
+			<DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_DEL_EX" cdc="DEL">
+			<SDO name="phsAB" type="CN_CMV"/>
+			<SDO name="phsBC" type="CN_CMV"/>
+			<SDO name="phsCA" type="CN_CMV"/>
+			<DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_SPC" cdc="SPC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_SDPC" fc="CO"/>
+			<DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="BOOLEAN" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_SPC_EX" cdc="SPC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_SDPC" fc="CO"/>
+			<DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="BOOLEAN" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_SPC_DC" cdc="SPC">
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="BOOLEAN" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_DPC" cdc="DPC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_SDPC" fc="CO"/>
+			<DA name="stVal" bType="Dbpos" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Dbpos" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_DPC_EX" cdc="DPC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_SDPC" fc="CO"/>
+			<DA name="stVal" bType="Dbpos" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Dbpos" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_INC" cdc="INC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_INC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_INC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_INC" fc="CO"/>
+			<DA name="stVal" bType="INT32" type="" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="INT32" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="minVal" bType="INT32" fc="CF"/>
+			<DA name="maxVal" bType="INT32" fc="CF"/>
+			<DA name="stepSize" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_INC_EX" cdc="INC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_INC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_INC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_INC" fc="CO"/>
+			<DA name="stVal" bType="INT32" type="" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="INT32" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="minVal" bType="INT32" fc="CF"/>
+			<DA name="maxVal" bType="INT32" fc="CF"/>
+			<DA name="stepSize" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_INC_Mod" cdc="INC">
+			<DA name="stVal" bType="Enum" type="Mod" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF">
+				<Val>0</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_BSC" cdc="BSC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_BSC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_BSC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_BSC" fc="CO"/>
+			<DA name="valWTr" bType="Struct" type="CN_ValWithTrans" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Struct" type="CN_ValWithTrans" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="persistent" bType="BOOLEAN" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="minVal" bType="INT8" fc="CF"/>
+			<DA name="maxVal" bType="INT8" fc="CF"/>
+			<DA name="stepSize" bType="INT8U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_BSC_EX" cdc="BSC">
+			<DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_BSC" fc="CO"/>
+			<DA name="Oper" bType="Struct" type="CN_SBOw_Oper_BSC" fc="CO"/>
+			<DA name="Cancel" bType="Struct" type="CN_Cancel_BSC" fc="CO"/>
+			<DA name="valWTr" bType="Struct" type="CN_ValWithTrans" dchg="true" fc="ST"/>
+			<DA name="q" bType="Quality" qchg="true" fc="ST"/>
+			<DA name="t" bType="Timestamp" fc="ST"/>
+			<DA name="subEna" bType="BOOLEAN" fc="SV"/>
+			<DA name="subVal" bType="Struct" type="CN_ValWithTrans" fc="SV"/>
+			<DA name="subQ" bType="Quality" fc="SV"/>
+			<DA name="subID" bType="VisString64" fc="SV"/>
+			<DA name="persistent" bType="BOOLEAN" fc="CF"/>
+			<DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+			<DA name="sboTimeout" bType="INT32U" fc="CF"/>
+			<DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+			<DA name="minVal" bType="INT8" fc="CF"/>
+			<DA name="maxVal" bType="INT8" fc="CF"/>
+			<DA name="stepSize" bType="INT8U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_SPG_SG" cdc="SPG">
+			<DA name="setVal" bType="BOOLEAN" fc="SG"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_SPG_SG_EX" cdc="SPG">
+			<DA name="setVal" bType="BOOLEAN" fc="SG"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_SPG_SP" cdc="SPG">
+			<DA name="setVal" bType="BOOLEAN" fc="SP"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_SPG_SP_EX" cdc="SPG">
+			<DA name="setVal" bType="BOOLEAN" fc="SP"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ING_SG" cdc="ING">
+			<DA name="setVal" bType="INT32" fc="SG"/>
+			<DA name="minVal" bType="INT32" fc="CF"/>
+			<DA name="maxVal" bType="INT32" fc="CF"/>
+			<DA name="stepSize" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ING_SG_EX" cdc="ING">
+			<DA name="setVal" bType="INT32" fc="SG"/>
+			<DA name="minVal" bType="INT32" fc="CF"/>
+			<DA name="maxVal" bType="INT32" fc="CF"/>
+			<DA name="stepSize" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ING_SP" cdc="ING">
+			<DA name="setVal" bType="INT32" fc="SP"/>
+			<DA name="minVal" bType="INT32" fc="CF"/>
+			<DA name="maxVal" bType="INT32" fc="CF"/>
+			<DA name="stepSize" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ING_SP_EX" cdc="ING">
+			<DA name="setVal" bType="INT32" fc="SP"/>
+			<DA name="minVal" bType="INT32" fc="CF"/>
+			<DA name="maxVal" bType="INT32" fc="CF"/>
+			<DA name="stepSize" bType="INT32U" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ASG_SG" cdc="ASG">
+			<DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SG"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ASG_SG_EX" cdc="ASG">
+			<DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SG"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_ASG_SP" cdc="ASG">
+			<DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SP"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_ASG_SP_EX" cdc="ASG">
+			<DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SP"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_STG_SG_EX" cdc="STG">
+			<DA name="setVal" bType="Unicode255" fc="SG"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="cdcNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+			<DA name="cdcName" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_STG_SP_EX" cdc="STG">
+			<DA name="setVal" bType="Unicode255" fc="SP"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="cdcNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+			<DA name="cdcName" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_DPL" cdc="DPL">
+			<DA name="vendor" bType="VisString255" fc="DC"/>
+			<DA name="hwRev" bType="VisString255" fc="DC"/>
+			<DA name="swRev" bType="VisString255" fc="DC"/>
+			<DA name="serNum" bType="VisString255" fc="DC"/>
+			<DA name="model" bType="VisString255" fc="DC"/>
+			<DA name="location" bType="VisString255" fc="DC"/>
+			<DA name="mRID" bType="VisString255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_LPL_LN0" cdc="LPL">
+			<DA name="vendor" bType="VisString255" fc="DC"/>
+			<DA name="swRev" bType="VisString255" fc="DC"/>
+			<DA name="d" bType="VisString255" fc="DC"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="configRev" bType="VisString255" fc="DC"/>
+			<DA name="ldNs" bType="VisString255" fc="EX">
+				<Val>IEC 61850-7-4:2003</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_LPL" cdc="LPL">
+			<DA name="vendor" bType="VisString255" fc="DC"/>
+			<DA name="swRev" bType="VisString255" fc="DC"/>
+			<DA name="d" bType="VisString255" fc="DC"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_LPL_EX" cdc="LPL">
+			<DA name="vendor" bType="VisString255" fc="DC"/>
+			<DA name="swRev" bType="VisString255" fc="DC"/>
+			<DA name="d" bType="VisString255" fc="DC"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="lnNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+		<DOType id="CN_SAV" cdc="SAV">
+			<DA name="instMag" bType="Struct" type="CN_AnalogueValue_I" fc="MX"/>
+			<DA name="q" bType="Quality" qchg="true" fc="MX"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="min" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+			<DA name="max" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+		</DOType>
+		<DOType id="CN_SAV_EX" cdc="SAV">
+			<DA name="instMag" bType="Struct" type="CN_AnalogueValue_I" fc="MX"/>
+			<DA name="q" bType="Quality" qchg="true" fc="MX"/>
+			<DA name="t" bType="Timestamp" fc="MX"/>
+			<DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+			<DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+			<DA name="min" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+			<DA name="max" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+			<DA name="dU" bType="Unicode255" fc="DC"/>
+			<DA name="dataNs" bType="VisString255" fc="EX">
+				<Val>SGCC MODEL: 2012</Val>
+			</DA>
+		</DOType>
+	</DataTypeTemplates>
+</SCL>

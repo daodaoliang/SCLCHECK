@@ -1,0 +1,76 @@
+#include "_InitAllCheckItems.h"
+#include "ConfReportCheck.h"
+#include "LnValidCheck.h"
+#include "EnumtypeCheck.h"
+#include "RedDatypeCheck.h"
+#include "CdcCheck.h"
+#include "MLntypeCheck.h"
+#include "DoiValidCheck.h"
+#include "RedLntypeCheck.h"
+#include "DotypeCheck.h"
+#include "GsSmvCheck.h"
+#include "RedInputsCheck.h"
+#include "REnumtypeCheck.h"
+#include "FcdaLdValidCheck.h"
+#include "LntypeCheck.h"
+#include "GeneralWarnCheck.h"
+#include "LdDescCheck.h"
+#include "LdValidCheck.h"
+#include "DataSetCheck.h"
+#include "ReportCtrlCheck.h"
+#include "ServerCheck.h"
+#include "RedDotypeCheck.h"
+#include "ConfDataSetCheck.h"
+#include "ConfLogCheck.h"
+#include "ConfFcdaCheck.h"
+#include "MDatypeCheck.h"
+#include "GeneralErrorCheck.h"
+#include "MDotypeCheck.h"
+#include "IedCheck.h"
+#include "XmlCheck.h"
+#include "SchemaCheck.h"
+#include "DatypeCheck.h"
+#include "LDdoiCheck.h"
+#include "FcdaValidCheck.h"
+#include "DataSetTypeValidCheck.h"
+#include "PhsyconCheck.h"
+
+bool InitAllCheckItems()
+{
+    return true &&
+        CConfReportCheck::InitializeInstance() &&
+        CLnValidCheck::InitializeInstance() &&
+        CEnumtypeCheck::InitializeInstance() &&
+        CRedDatypeCheck::InitializeInstance() &&
+        CCdcCheck::InitializeInstance() &&
+        CMLntypeCheck::InitializeInstance() &&
+        CDoiValidCheck::InitializeInstance() &&
+        CRedLntypeCheck::InitializeInstance() &&
+        CDotypeCheck::InitializeInstance() &&
+        CGsSmvCheck::InitializeInstance() &&
+        CRedInputsCheck::InitializeInstance() &&
+        CREnumtypeCheck::InitializeInstance() &&
+        CFcdaLdValidCheck::InitializeInstance() &&
+        CLntypeCheck::InitializeInstance() &&
+        CGeneralWarnCheck::InitializeInstance() &&
+        CLdDescCheck::InitializeInstance() &&
+        CLdValidCheck::InitializeInstance() &&
+        CDataSetCheck::InitializeInstance() &&
+        CReportCtrlCheck::InitializeInstance() &&
+        CServerCheck::InitializeInstance() &&
+        CRedDotypeCheck::InitializeInstance() &&
+        CConfDataSetCheck::InitializeInstance() &&
+        CConfLogCheck::InitializeInstance() &&
+        CConfFcdaCheck::InitializeInstance() &&
+        CMDatypeCheck::InitializeInstance() &&
+        CGeneralErrorCheck::InitializeInstance() &&
+        CMDotypeCheck::InitializeInstance() &&
+        CIedCheck::InitializeInstance() &&
+        CXmlCheck::InitializeInstance() &&
+        CSchemaCheck::InitializeInstance() &&
+        CDatypeCheck::InitializeInstance() &&
+        CLDdoiCheck::InitializeInstance() &&
+        CFcdaValidCheck::InitializeInstance() &&
+        CDataSetTypeValidCheck::InitializeInstance() &&
+        CPhsyconCheck::InitializeInstance();
+}

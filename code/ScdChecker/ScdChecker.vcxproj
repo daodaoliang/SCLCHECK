@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{13BF151B-C636-4BBD-9552-A7679C4B43B8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ScdChecker</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DLL;BOOST_DYN_LINK;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DLL;BOOST_DYN_LINK;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;4334;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_DLL;BOOST_DYN_LINK;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_DLL;BOOST_DYN_LINK;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;4334;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ScdCheckCommon\charconv.cpp" />
+    <ClCompile Include="..\ScdCheckCommon\Common.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\VtdTools.cpp" />
+    <ClCompile Include="..\VtdXml\arrayList.cpp" />
+    <ClCompile Include="..\VtdXml\autoPilot.cpp" />
+    <ClCompile Include="..\VtdXml\binaryExpr.cpp" />
+    <ClCompile Include="..\VtdXml\bookMark.cpp" />
+    <ClCompile Include="..\VtdXml\cachedExpr.cpp" />
+    <ClCompile Include="..\VtdXml\contextBuffer.cpp" />
+    <ClCompile Include="..\VtdXml\decoder.cpp" />
+    <ClCompile Include="..\VtdXml\elementFragmentNs.cpp" />
+    <ClCompile Include="..\VtdXml\fastIntBuffer.cpp" />
+    <ClCompile Include="..\VtdXml\fastLongBuffer.cpp" />
+    <ClCompile Include="..\VtdXml\filterExpr.cpp" />
+    <ClCompile Include="..\VtdXml\funcExpr.cpp" />
+    <ClCompile Include="..\VtdXml\indexHandler.cpp" />
+    <ClCompile Include="..\VtdXml\intHash.cpp" />
+    <ClCompile Include="..\VtdXml\lex.yy.cc" />
+    <ClCompile Include="..\VtdXml\literalExpr.cpp" />
+    <ClCompile Include="..\VtdXml\locationPathExpr.cpp" />
+    <ClCompile Include="..\VtdXml\nodeRecorder.cpp" />
+    <ClCompile Include="..\VtdXml\numberExpr.cpp" />
+    <ClCompile Include="..\VtdXml\pathExpr.cpp" />
+    <ClCompile Include="..\VtdXml\textIter.cpp" />
+    <ClCompile Include="..\VtdXml\transcoder.cpp" />
+    <ClCompile Include="..\VtdXml\unaryExpr.cpp" />
+    <ClCompile Include="..\VtdXml\unionExpr.cpp" />
+    <ClCompile Include="..\VtdXml\variableExpr.cpp" />
+    <ClCompile Include="..\VtdXml\vtdGen.cpp" />
+    <ClCompile Include="..\VtdXml\vtdNav.cpp" />
+    <ClCompile Include="..\VtdXml\vtdNav_L5.cpp" />
+    <ClCompile Include="..\VtdXml\XMLChar.cpp" />
+    <ClCompile Include="..\VtdXml\XMLModifier.cpp" />
+    <ClCompile Include="..\VtdXml\xpathParser.tab.cc" />
+    <ClCompile Include="..\VtdXml\xpath_driver.cc" />
+    <ClCompile Include="CacheMgr.cpp" />
+    <ClCompile Include="CheckItem.cpp" />
+    <ClCompile Include="CheckItems\AppidUniqueCheck.cpp" />
+    <ClCompile Include="CheckItems\BayValid1Check.cpp" />
+    <ClCompile Include="CheckItems\BayValid2Check.cpp" />
+    <ClCompile Include="CheckItems\CommunicationGSEorSVUniqueCheck.cpp" />
+    <ClCompile Include="CheckItems\CommunicationRedunCheck.cpp" />
+    <ClCompile Include="CheckItems\CommunicationValidCheck.cpp" />
+    <ClCompile Include="CheckItems\ConnectedAPValidCheck.cpp" />
+    <ClCompile Include="CheckItems\ControlBlockLdCheck.cpp" />
+    <ClCompile Include="CheckItems\ControlIdUniqueCheck.cpp" />
+    <ClCompile Include="CheckItems\CrcBlankCheck.cpp" />
+    <ClCompile Include="CheckItems\CrcBlankValidCheck.cpp" />
+    <ClCompile Include="CheckItems\DataTempRedunCheck.cpp" />
+    <ClCompile Include="CheckItems\DaTempValidCheck.cpp" />
+    <ClCompile Include="CheckItems\DoiDescBlankCheck.cpp" />
+    <ClCompile Include="CheckItems\FcdaValidCheck.cpp" />
+    <ClCompile Include="CheckItems\GeneralCheck.cpp" />
+    <ClCompile Include="CheckItems\GseAppidValidCheck.cpp" />
+    <ClCompile Include="CheckItems\GSEControlBlockInfoCheck.cpp" />
+    <ClCompile Include="CheckItems\GseMacValidCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsDescValid1Check.cpp" />
+    <ClCompile Include="CheckItems\InputsDescValid2Check.cpp" />
+    <ClCompile Include="CheckItems\InputsDtbTypeValidCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsDtCDCValidCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsDtDODAValidCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsDtValidCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsFormatCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsStadValidCheck.cpp" />
+    <ClCompile Include="CheckItems\InputsValidCheck.cpp" />
+    <ClCompile Include="CheckItems\IntAddrUniqueCheck.cpp" />
+    <ClCompile Include="CheckItems\IpUniqueCheck.cpp" />
+    <ClCompile Include="CheckItems\IpValidCheck.cpp" />
+    <ClCompile Include="CheckItems\LDescBlankCheck.cpp" />
+    <ClCompile Include="CheckItems\MacAddrUniqueCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDCommunicationCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDConnectedAPCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDDATypeCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDDOTypeCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDEnumTypeCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDGSECheck.cpp" />
+    <ClCompile Include="CheckItems\SCDHeaderCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDIEDAccessPointCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDIEDCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDIEDLNCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDIEDServicesCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDIPAddressCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDLNodeTypeCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDPhysConnCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDSMVCheck.cpp" />
+    <ClCompile Include="CheckItems\SCDSubNetWorkCheck.cpp" />
+    <ClCompile Include="CheckItems\SchemaCheck.cpp" />
+    <ClCompile Include="CheckItems\SmvAppidValidCheck.cpp" />
+    <ClCompile Include="CheckItems\SmvMacValidCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDBayCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDBayCheck_AttrNormative.cpp" />
+    <ClCompile Include="CheckItems\SSDBayCheck_dTypeNormative.cpp" />
+    <ClCompile Include="CheckItems\SSDBayCheck_LineBay.cpp" />
+    <ClCompile Include="CheckItems\SSDCommonEquipmentCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck_IFLEquipment.cpp" />
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck_Normative.cpp" />
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck_Unique.cpp" />
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck_NameNormative.cpp" />
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck_PathUnique.cpp" />
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck_UnUsed.cpp" />
+    <ClCompile Include="CheckItems\SSDLNodeCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDLNodeCheck_BeUsed.cpp" />
+    <ClCompile Include="CheckItems\SSDLNodeCheck_InBay.cpp" />
+    <ClCompile Include="CheckItems\SSDLNodeCheck_Unique.cpp" />
+    <ClCompile Include="CheckItems\SSDLNodeCheck_Valid.cpp" />
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_AttrNormative.cpp" />
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_Connection.cpp" />
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_Unique.cpp" />
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_WindingNormative.cpp" />
+    <ClCompile Include="CheckItems\SSDSubstationCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDSubstationCheck_Normative.cpp" />
+    <ClCompile Include="CheckItems\SSDSubstationCheck_Other.cpp" />
+    <ClCompile Include="CheckItems\SSDSubstationCheck_Unique.cpp" />
+    <ClCompile Include="CheckItems\SSDTerminalCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDTerminalCheck_CNodeConnection.cpp" />
+    <ClCompile Include="CheckItems\SSDTerminalCheck_NameNormative.cpp" />
+    <ClCompile Include="CheckItems\SSDTerminalCheck_Unique.cpp" />
+    <ClCompile Include="CheckItems\SSDTerminalCheck_Valid.cpp" />
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck.cpp" />
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Normative.cpp" />
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Other.cpp" />
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Sort.cpp" />
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Unique.cpp" />
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_UnNULL.cpp" />
+    <ClCompile Include="CheckItems\SubFormatCheck.cpp" />
+    <ClCompile Include="CheckItems\SVControlBlockInfoCheck.cpp" />
+    <ClCompile Include="CheckItems\VlanValidCheck.cpp" />
+    <ClCompile Include="CheckItems\XmlCheck.cpp" />
+    <ClCompile Include="CheckItems\_InitAllCheckItems.cpp" />
+    <ClCompile Include="CheckItems\_PreCheck.cpp" />
+    <ClCompile Include="ConfigMgr.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OutputMgr.cpp" />
+    <ClCompile Include="ScdChecker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ScdCheckCommon\charconv.h" />
+    <ClInclude Include="..\ScdCheckCommon\Common.h" />
+    <ClInclude Include="..\ScdCheckCommon\deelx.h" />
+    <ClInclude Include="..\ScdCheckCommon\OperHandler.h" />
+    <ClInclude Include="..\ScdCheckCommon\VtdTools.h" />
+    <ClInclude Include="..\VtdXml\arrayList.h" />
+    <ClInclude Include="..\VtdXml\autoPilot.h" />
+    <ClInclude Include="..\VtdXml\binaryExpr.h" />
+    <ClInclude Include="..\VtdXml\bookMark.h" />
+    <ClInclude Include="..\VtdXml\cachedExpr.h" />
+    <ClInclude Include="..\VtdXml\contextBuffer.h" />
+    <ClInclude Include="..\VtdXml\customTypes.h" />
+    <ClInclude Include="..\VtdXml\decoder.h" />
+    <ClInclude Include="..\VtdXml\elementFragmentNs.h" />
+    <ClInclude Include="..\VtdXml\everything.h" />
+    <ClInclude Include="..\VtdXml\expr.h" />
+    <ClInclude Include="..\VtdXml\fastIntBuffer.h" />
+    <ClInclude Include="..\VtdXml\fastLongBuffer.h" />
+    <ClInclude Include="..\VtdXml\filterExpr.h" />
+    <ClInclude Include="..\VtdXml\FlexLexer.h" />
+    <ClInclude Include="..\VtdXml\funcExpr.h" />
+    <ClInclude Include="..\VtdXml\indexHandler.h" />
+    <ClInclude Include="..\VtdXml\intHash.h" />
+    <ClInclude Include="..\VtdXml\literalExpr.h" />
+    <ClInclude Include="..\VtdXml\locationPathExpr.h" />
+    <ClInclude Include="..\VtdXml\nodeRecorder.h" />
+    <ClInclude Include="..\VtdXml\numberExpr.h" />
+    <ClInclude Include="..\VtdXml\pathExpr.h" />
+    <ClInclude Include="..\VtdXml\test.h" />
+    <ClInclude Include="..\VtdXml\textIter.h" />
+    <ClInclude Include="..\VtdXml\transcoder.h" />
+    <ClInclude Include="..\VtdXml\unaryExpr.h" />
+    <ClInclude Include="..\VtdXml\unionExpr.h" />
+    <ClInclude Include="..\VtdXml\UTF8Char.h" />
+    <ClInclude Include="..\VtdXml\variableExpr.h" />
+    <ClInclude Include="..\VtdXml\vtdException.h" />
+    <ClInclude Include="..\VtdXml\vtdGen.h" />
+    <ClInclude Include="..\VtdXml\vtdNav.h" />
+    <ClInclude Include="..\VtdXml\vtdNav_L5.h" />
+    <ClInclude Include="..\VtdXml\XMLChar.h" />
+    <ClInclude Include="..\VtdXml\XMLModifier.h" />
+    <ClInclude Include="..\VtdXml\xpath_driver.h" />
+    <ClInclude Include="CacheMgr.h" />
+    <ClInclude Include="CheckItem.h" />
+    <ClInclude Include="CheckItems\AppidUniqueCheck.h" />
+    <ClInclude Include="CheckItems\BayValid1Check.h" />
+    <ClInclude Include="CheckItems\BayValid2Check.h" />
+    <ClInclude Include="CheckItems\CommunicationGSEorSVUniqueCheck.h" />
+    <ClInclude Include="CheckItems\CommunicationRedunCheck.h" />
+    <ClInclude Include="CheckItems\CommunicationValidCheck.h" />
+    <ClInclude Include="CheckItems\ConnectedAPValidCheck.h" />
+    <ClInclude Include="CheckItems\ControlBlockLdCheck.h" />
+    <ClInclude Include="CheckItems\ControlIdUniqueCheck.h" />
+    <ClInclude Include="CheckItems\CrcBlankCheck.h" />
+    <ClInclude Include="CheckItems\CrcBlankValidCheck.h" />
+    <ClInclude Include="CheckItems\DataTempRedunCheck.h" />
+    <ClInclude Include="CheckItems\DaTempValidCheck.h" />
+    <ClInclude Include="CheckItems\DoiDescBlankCheck.h" />
+    <ClInclude Include="CheckItems\FcdaValidCheck.h" />
+    <ClInclude Include="CheckItems\GeneralCheck.h" />
+    <ClInclude Include="CheckItems\GseAppidValidCheck.h" />
+    <ClInclude Include="CheckItems\GSEControlBlockInfoCheck.h" />
+    <ClInclude Include="CheckItems\GseMacValidCheck.h" />
+    <ClInclude Include="CheckItems\InputsDescValid1Check.h" />
+    <ClInclude Include="CheckItems\InputsDescValid2Check.h" />
+    <ClInclude Include="CheckItems\InputsDtbTypeValidCheck.h" />
+    <ClInclude Include="CheckItems\InputsDtCDCValidCheck.h" />
+    <ClInclude Include="CheckItems\InputsDtDODAValidCheck.h" />
+    <ClInclude Include="CheckItems\InputsDtValidCheck.h" />
+    <ClInclude Include="CheckItems\InputsFormatCheck.h" />
+    <ClInclude Include="CheckItems\InputsStadValidCheck.h" />
+    <ClInclude Include="CheckItems\InputsValidCheck.h" />
+    <ClInclude Include="CheckItems\IntAddrUniqueCheck.h" />
+    <ClInclude Include="CheckItems\IpUniqueCheck.h" />
+    <ClInclude Include="CheckItems\IpValidCheck.h" />
+    <ClInclude Include="CheckItems\LDescBlankCheck.h" />
+    <ClInclude Include="CheckItems\MacAddrUniqueCheck.h" />
+    <ClInclude Include="CheckItems\SCDCommunicationCheck.h" />
+    <ClInclude Include="CheckItems\SCDConnectedAPCheck.h" />
+    <ClInclude Include="CheckItems\SCDDATypeCheck.h" />
+    <ClInclude Include="CheckItems\SCDDOTypeCheck.h" />
+    <ClInclude Include="CheckItems\SCDEnumTypeCheck.h" />
+    <ClInclude Include="CheckItems\SCDGSECheck.h" />
+    <ClInclude Include="CheckItems\SCDHeaderCheck.h" />
+    <ClInclude Include="CheckItems\SCDIEDAccessPointCheck.h" />
+    <ClInclude Include="CheckItems\SCDIEDCheck.h" />
+    <ClInclude Include="CheckItems\SCDIEDLNCheck.h" />
+    <ClInclude Include="CheckItems\SCDIEDServicesCheck.h" />
+    <ClInclude Include="CheckItems\SCDIPAddressCheck.h" />
+    <ClInclude Include="CheckItems\SCDLNodeTypeCheck.h" />
+    <ClInclude Include="CheckItems\SCDPhysConnCheck.h" />
+    <ClInclude Include="CheckItems\SCDSMVCheck.h" />
+    <ClInclude Include="CheckItems\SCDSubNetWorkCheck.h" />
+    <ClInclude Include="CheckItems\SchemaCheck.h" />
+    <ClInclude Include="CheckItems\SmvAppidValidCheck.h" />
+    <ClInclude Include="CheckItems\SmvMacValidCheck.h" />
+    <ClInclude Include="CheckItems\SSDBayCheck.h" />
+    <ClInclude Include="CheckItems\SSDBayCheck_AttrNormative.h" />
+    <ClInclude Include="CheckItems\SSDBayCheck_dTypeNormative.h" />
+    <ClInclude Include="CheckItems\SSDBayCheck_LineBay.h" />
+    <ClInclude Include="CheckItems\SSDCommonEquipmentCheck.h" />
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck.h" />
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck_IFLEquipment.h" />
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck_Normative.h" />
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck_Unique.h" />
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck.h" />
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck_NameNormative.h" />
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck_PathUnique.h" />
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck_UnUsed.h" />
+    <ClInclude Include="CheckItems\SSDLNodeCheck.h" />
+    <ClInclude Include="CheckItems\SSDLNodeCheck_BeUsed.h" />
+    <ClInclude Include="CheckItems\SSDLNodeCheck_InBay.h" />
+    <ClInclude Include="CheckItems\SSDLNodeCheck_Unique.h" />
+    <ClInclude Include="CheckItems\SSDLNodeCheck_Valid.h" />
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck.h" />
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_AttrNormative.h" />
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_Connection.h" />
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_Unique.h" />
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_WindingNormative.h" />
+    <ClInclude Include="CheckItems\SSDSubstationCheck.h" />
+    <ClInclude Include="CheckItems\SSDSubstationCheck_Normative.h" />
+    <ClInclude Include="CheckItems\SSDSubstationCheck_Other.h" />
+    <ClInclude Include="CheckItems\SSDSubstationCheck_Unique.h" />
+    <ClInclude Include="CheckItems\SSDTerminalCheck.h" />
+    <ClInclude Include="CheckItems\SSDTerminalCheck_CNodeConnection.h" />
+    <ClInclude Include="CheckItems\SSDTerminalCheck_NameNormative.h" />
+    <ClInclude Include="CheckItems\SSDTerminalCheck_Unique.h" />
+    <ClInclude Include="CheckItems\SSDTerminalCheck_Valid.h" />
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck.h" />
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Normative.h" />
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Other.h" />
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Sort.h" />
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Unique.h" />
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_UnNULL.h" />
+    <ClInclude Include="CheckItems\SubFormatCheck.h" />
+    <ClInclude Include="CheckItems\SVControlBlockInfoCheck.h" />
+    <ClInclude Include="CheckItems\VlanValidCheck.h" />
+    <ClInclude Include="CheckItems\XmlCheck.h" />
+    <ClInclude Include="CheckItems\_InitAllCheckItems.h" />
+    <ClInclude Include="CheckItems\_PreCheck.h" />
+    <ClInclude Include="ConfigMgr.h" />
+    <ClInclude Include="OutputMgr.h" />
+    <ClInclude Include="ScdChecker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\VtdXml\location.hh" />
+    <None Include="..\VtdXml\position.hh" />
+    <None Include="..\VtdXml\stack.hh" />
+    <None Include="..\VtdXml\xpathParser.tab.hh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

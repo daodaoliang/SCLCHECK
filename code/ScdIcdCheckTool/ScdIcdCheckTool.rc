@@ -1,0 +1,386 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ScdIcdCheckTool.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "SCLHeat Plugin for QClientGUI"
+            VALUE "CompanyName", "SCLHeat Corporation LTD"
+            VALUE "FileDescription", "SCLHeat"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "SCLHeat.exe"
+            VALUE "LegalCopyright", "Copyright 11259500@qq.com 2010-2012"
+            VALUE "OriginalFilename", "SCLHeat.exe"
+            VALUE "ProductName", "SCLHeat"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_ANALYZE DIALOGEX 0, 0, 253, 36
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+EXSTYLE WS_EX_TRANSPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "静态",IDC_STATIC_NEWBUSY,0,17,253,11
+END
+
+IDD_DLG_CRC DIALOGEX 0, 0, 391, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "校验码"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "基本信息",IDC_STATIC_BASICINFO,3,7,382,63
+    PUSHBUTTON      "选择文件",IDC_BUTTON_SELECT,246,75,83,19
+    LTEXT           "",IDC_STATIC_FILENAME,4,19,159,8
+    LTEXT           "",IDC_STATIC_FILEPATH,208,19,46,8
+    LTEXT           "",IDC_STATIC_DATE,4,35,159,8
+    LTEXT           "",IDC_STATIC_TIME,208,35,153,8
+    LTEXT           "",IDC_STATIC_SCDCRC,4,52,46,8
+    LTEXT           "",IDC_STATIC_CRCCOUNT,208,51,153,8
+    EDITTEXT        IDC_EDIT,52,51,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,252,16,114,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG_ATTRIBUTE DIALOGEX 0, 0, 317, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "详细信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "校验类型:",IDC_STATIC,10,11,39,8
+    LTEXT           "位  置:",IDC_STATIC,10,29,30,8
+    LTEXT           "校验项目:",IDC_STATIC,10,47,39,8
+    LTEXT           "原文内容:",IDC_STATIC,10,65,39,8
+    LTEXT           "检测结果:",IDC_STATIC,10,108,39,8
+    LTEXT           "参考规范:",IDC_STATIC,10,153,39,8
+    EDITTEXT        IDC_EDIT_MSG,63,9,126,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_POSITION,63,27,126,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_CLASS,63,45,239,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_DESC,63,106,239,37,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_REFERENCE,63,151,239,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_XML,62,63,239,37,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_DIALOG_SCD_OR_ICD DIALOGEX 0, 0, 663, 323
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SCD检测"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FILE,51,13,175,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "浏览...",IDC_BUTTON_BROWSER,229,12,50,14
+    PUSHBUTTON      "浏览...",IDC_BUTTON_BROWSER_CFG,533,12,50,14
+    PUSHBUTTON      "配置...",IDC_BUTTON_CONFIG,592,12,50,14
+    PUSHBUTTON      "检测",IDC_BUTTON_CHECK,5,36,50,14
+    PUSHBUTTON      "导出Excel",IDC_BUTTON_EXPORT_EXCEL,65,36,50,14
+    COMBOBOX        IDC_COMBO_MSG,387,38,94,85,CBS_DROPDOWNLIST | CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CHECKITEM,498,38,94,84,CBS_DROPDOWNLIST | CBS_OWNERDRAWVARIABLE | CBS_SORT | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "滚屏显示",IDC_CHECK_SHOWLAST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,609,39,47,10
+    GROUPBOX        "",IDC_STATIC,3,67,113,22
+    LTEXT           "配置项文件:",IDC_STATIC,301,15,50,8
+    GROUPBOX        "",IDC_STATIC,5,1,654,30,BS_FLAT
+    LTEXT           "检测文件:",IDC_STATIC,11,15,37,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,0,57,663,250
+    LTEXT           "",IDC_STATIC_SUMMER,494,313,160,8
+    CONTROL         "",IDC_PROGRESS_EXPORT_EXCEL,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,120,38,151,11
+    PUSHBUTTON      "取  消",IDC_BUTTON_CANCEL_EXCEL,279,36,50,14,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_CFG_FILE,352,12,174,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_CONFIG_LIST DIALOGEX 0, 0, 529, 259
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "检测项配置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "全部启用",IDC_BUTTON_ENABLE_ALL,12,1,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "全部禁用",IDC_BUTTON_DISENABLE_ALL,80,1,50,14,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "另存为",IDC_BUTTON_SAVEAS,410,240,50,14
+    PUSHBUTTON      "取消",IDC_BUTTON_CANCEL,469,240,50,14
+    DEFPUSHBUTTON   "保存",IDC_BUTTON_SAVE,355,240,50,14
+    PUSHBUTTON      "删除方案",IDC_BUTTON_DEL,297,240,50,14
+END
+
+IDD_DIALOG_ICD_INPUT DIALOGEX 0, 0, 174, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ICD型号"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,28,66,50,14
+    LTEXT           "保护类型:",IDC_STATIC,8,16,42,8
+    COMBOBOX        IDC_COMBO_ICD_TYPE,65,14,92,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "电压等级(kV):",IDC_STATIC,8,37,52,8
+    COMBOBOX        IDC_COMBO_ICD_VOLTAGE,65,35,92,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "取消",2,90,66,50,14
+END
+
+IDD_DIALOG_SAVEAS_CONFIG DIALOGEX 0, 0, 213, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "方案另存为"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_SAVEAS_NAME,82,24,119,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDOK,94,62,50,14
+    PUSHBUTTON      "取消",IDCANCEL,156,62,50,14
+    LTEXT           "请输入方案名称：",IDC_STATIC,11,26,66,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SSDT.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDR_ICON_UCENTER        PNG                     "res\\Image\\scd校验.png"
+IDR_ICON_BAOHU          PNG                     "res\\Image\\scd差异化.png"
+IDR_ICON_DESKTOP        PNG                     "res\\Image\\icd校验.png"
+IDR_ICON_SCAN           PNG                     "res\\Image\\CRC校验码.png"
+IDR_BACK_DESKTOP        PNG                     "res\\Image\\ICDCheck.jpg"
+IDR_BACK_SCAN           PNG                     "res\\Image\\CRC.jpg"
+IDR_BACK_UCENTER        PNG                     "res\\Image\\SCDCheck.jpg"
+IDR_BACK_BAOHU          PNG                     "res\\Image\\SCDCmp.jpg"
+IDR_BTN_CLOSE           PNG                     "res\\Image\\sys_dlg_close.png"
+IDR_BTN_MINIMIZE        PNG                     "res\\Image\\sys_dlg_min.png"
+IDR_BTN_GREEN           PNG                     "res\\Image\\btn_green.png"
+IDR_BACK_FREE           PNG                     "res\\Image\\bg_02.png"
+IDR_ARROW               PNG                     "res\\Image\\bg_briangle.png"
+IDR_FRAME               PNG                     "res\\Image\\bg_light-level_02.png"
+IDR_HOVER               PNG                     "res\\Image\\btn_bg.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DLG_ANALYZE, DIALOG
+    BEGIN
+    END
+
+    IDD_DLG_CRC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 384
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_DIALOG_ATTRIBUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_DIALOG_SCD_OR_ICD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 656
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 316
+    END
+
+    IDD_DIALOG_CONFIG_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 522
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_DIALOG_ICD_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DIALOG_SAVEAS_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_ICD_INPUT DLGINIT
+BEGIN
+    IDC_COMBO_ICD_TYPE, 0x403, 9, 0
+0xdfcf, 0xb7c2, 0xa3b1, 0xa4bb, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 17, 0
+0xddd7, 0xaac1, 0xe0be, 0xebc0, 0xbdb7, 0xf2cf, 0xa3b1, 0xa4bb, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 11, 0
+0xcfb6, 0xb7c2, 0xf7c6, 0xa3b1, 0xa4bb, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 11, 0
+0xe4b1, 0xb9d1, 0xf7c6, 0xa3b1, 0xa4bb, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 9, 0
+0xb8c4, 0xdfcf, 0xa3b1, 0xa4bb, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 11, 0
+0xe7b5, 0xb9bf, 0xf7c6, 0xa3b1, 0xa4bb, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 9, 0
+0xe2b2, 0xd8bf, 0xb0d7, 0xc3d6, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 9, 0
+0xc7d6, 0xdcc4, 0xd5d6, 0xcbb6, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 9, 0
+0xcfba, 0xa2b2, 0xa5b5, 0xaad4, "\000" 
+    IDC_COMBO_ICD_TYPE, 0x403, 7, 0
+0xbcc2, 0xa8b2, 0xf7c6, "\000" 
+    IDC_COMBO_ICD_VOLTAGE, 0x403, 4, 0
+0x3232, 0x0030, 
+    IDC_COMBO_ICD_VOLTAGE, 0x403, 4, 0
+0x3035, 0x0030, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FOLDER              BITMAP                  "res\\folders.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TOOL
+//
+
+IDR_ICDCRCCALCTOOL      TOOL                    "res\\IcdCrcCalcTool.exe"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 SCLHeat(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ScdIcdCheckTool.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

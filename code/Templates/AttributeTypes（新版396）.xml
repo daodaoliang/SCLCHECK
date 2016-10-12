@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://ase-systems.com">
+	<DataTypeTemplates>
+		<DAType id="CN_AnalogueValue">
+			<BDA ext:eOption="M " name="f" bType="FLOAT32"/>
+		</DAType>
+		<DAType id="CN_AnalogueValue_I">
+			<BDA ext:eOption="M " name="i" bType="INT32"/>
+		</DAType>
+		<DAType id="CN_RangeConfig">
+			<BDA ext:eOption="M " name="hhLim" bType="Struct" type="CN_AnalogueValue"/>
+			<BDA ext:eOption="M " name="hLim" bType="Struct" type="CN_AnalogueValue"/>
+			<BDA ext:eOption="M " name="lLim" bType="Struct" type="CN_AnalogueValue"/>
+			<BDA ext:eOption="M " name="llLim" bType="Struct" type="CN_AnalogueValue"/>
+			<BDA ext:eOption="M " name="min" bType="Struct" type="CN_AnalogueValue"/>
+			<BDA ext:eOption="M " name="max" bType="Struct" type="CN_AnalogueValue"/>
+		</DAType>
+		<DAType id="CN_Vector">
+			<BDA ext:eOption="M " name="mag" bType="Struct" type="CN_AnalogueValue"/>
+			<BDA ext:eOption="M " name="ang" bType="Struct" type="CN_AnalogueValue"/>
+		</DAType>
+		<DAType id="CN_SBOw_Oper_SDPC">
+			<BDA ext:eOption="M " name="ctlVal" bType="BOOLEAN"/>
+			<BDA ext:eOption="M " name="origin" bType="Struct" type="CN_Originator"/>
+			<BDA ext:eOption="M " name="ctlNum" bType="INT8U"/>
+			<BDA ext:eOption="M " name="T" bType="Timestamp"/>
+			<BDA ext:eOption="M " name="Test" bType="BOOLEAN"/>
+			<BDA ext:eOption="M " name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="CN_Cancel_SDPC">
+			<BDA ext:eOption="M " name="ctlVal" bType="BOOLEAN"/>
+			<BDA ext:eOption="M " name="origin" bType="Struct" type="CN_Originator"/>
+			<BDA ext:eOption="M " name="ctlNum" bType="INT8U"/>
+			<BDA ext:eOption="M " name="T" bType="Timestamp"/>
+			<BDA ext:eOption="M " name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="CN_SBOw_Oper_INC">
+			<BDA ext:eOption="M " name="ctlVal" bType="INT32"/>
+			<BDA ext:eOption="M " name="origin" bType="Struct" type="CN_Originator"/>
+			<BDA ext:eOption="M " name="ctlNum" bType="INT8U"/>
+			<BDA ext:eOption="M " name="T" bType="Timestamp"/>
+			<BDA ext:eOption="M " name="Test" bType="BOOLEAN"/>
+			<BDA ext:eOption="M " name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="CN_Cancel_INC">
+			<BDA ext:eOption="M " name="ctlVal" bType="INT32"/>
+			<BDA ext:eOption="M " name="origin" bType="Struct" type="CN_Originator"/>
+			<BDA ext:eOption="M " name="ctlNum" bType="INT8U"/>
+			<BDA ext:eOption="M " name="T" bType="Timestamp"/>
+			<BDA ext:eOption="M " name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="CN_SBOw_Oper_BSC">
+			<BDA ext:eOption="M " name="ctlVal" bType="Tcmd"/>
+			<BDA ext:eOption="M " name="origin" bType="Struct" type="CN_Originator"/>
+			<BDA ext:eOption="M " name="ctlNum" bType="INT8U"/>
+			<BDA ext:eOption="M " name="T" bType="Timestamp"/>
+			<BDA ext:eOption="M " name="Test" bType="BOOLEAN"/>
+			<BDA ext:eOption="M " name="Check" bType="Check"/>
+		</DAType>
+		<DAType id="CN_Cancel_BSC">
+			<BDA ext:eOption="M " name="ctlVal" bType="Tcmd"/>
+			<BDA ext:eOption="M " name="origin" bType="Struct" type="CN_Originator"/>
+			<BDA ext:eOption="M " name="ctlNum" bType="INT8U"/>
+			<BDA ext:eOption="M " name="T" bType="Timestamp"/>
+			<BDA ext:eOption="M " name="Test" bType="BOOLEAN"/>
+		</DAType>
+		<DAType id="CN_Originator">
+			<BDA ext:eOption="M " name="orCat" bType="Enum" type="orCategory"/>
+			<BDA ext:eOption="M " name="orIdent" bType="Octet64"/>
+		</DAType>
+		<DAType id="CN_ValWithTrans">
+			<BDA ext:eOption="M " name="posVal" bType="INT8"/>
+		</DAType>
+		<DAType id="CN_ScaledValueConfig">
+			<BDA ext:eOption="M " name="scaleFactor" bType="FLOAT32"/>
+			<BDA ext:eOption="M " name="offset" bType="FLOAT32"/>
+		</DAType>
+		<DAType id="CN_PulseConfig">
+			<BDA ext:eOption="M " name="cmdQual" bType="Enum" type="PulseConfigCmdQual"/>
+			<BDA ext:eOption="M " name="onDur" bType="INT32U"/>
+			<BDA ext:eOption="M " name="offDur" bType="INT32U"/>
+			<BDA ext:eOption="M " name="numPls" bType="INT32U"/>
+		</DAType>
+		<DAType id="CN_units">
+			<BDA bType="Enum" ext:eOption="M " name="SIUnit" type="SIUnit"/>
+			<BDA bType="Enum" ext:eOption="M " name="multiplier" type="multiplier"/>
+		</DAType>
+	</DataTypeTemplates>
+</SCL>

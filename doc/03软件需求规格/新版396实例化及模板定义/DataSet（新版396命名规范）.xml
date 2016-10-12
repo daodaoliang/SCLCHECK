@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://ase-systems.com">
+	<DataSet desc="遥测" name="dsAin"/>
+	<DataSet desc="遥信" name="dsDin"/>
+	<DataSet desc="故障信号" name="dsAlarm"/>
+	<DataSet desc="告警信号" name="dsWarning"/>
+	<DataSet desc="通信工况" name="dsCommState"/>
+	<DataSet desc="装置参数" name="dsParameter"/>
+	<DataSet desc="联锁状态" name="dsInterLock"/>
+	<DataSet desc="GOOSE输出信号" name="dsGOOSE"/>
+	<DataSet desc="保护事件" name="dsTripInfo"/>
+	<DataSet desc="保护遥信" name="dsRelayDin"/>
+	<DataSet desc="保护压板" name="dsRelayEna"/>
+	<DataSet desc="保护录波" name="dsRelayRec"/>
+	<DataSet desc="保护遥测" name="dsRelayAin"/>
+	<DataSet desc="保护定值" name="dsSetting"/>
+	<DataSet desc="采样输出值" name="dsSV"/>
+	<DataSet desc="日志记录" name="dsLog"/>
+</SCL>

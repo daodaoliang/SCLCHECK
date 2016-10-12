@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 (mgl) 使用XMLSpy vroof编辑的 (http://www.altova.com) by -->
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL">
+	<DataTypeTemplates>
+		<LNodeType id="LLN0" lnClass="LLN0">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Local operation for complete logical device " name="Loc" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="LED reset" name="LEDRs" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Function 1 enabled" name="FuncEna1" type="SPC " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Function 2 enabled " name="FuncEna2" type="SPC " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Current Breaker Flaut" name="CBFlt" type="SPC " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable modify setting remotely" name="RemSetEna" type="SPS" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable modify setting group remotely " name="RemGrpEna" type="SPS" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable control GOOSE out strap remotely " name="RemGoEna" type="SPS " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Self Reset Current Breaker Flaut " name="SelfRstFlt" type="SPS" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="DPFC start value " name="DPFCStr" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Residual current start value " name="ROCStr" type="ASG " transient="true" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PSCH" lnClass="PSCH">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="C" desc="Op strap" name="OpStrp" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Teleprotection signal transmitted " name="ProTx" type="SPS " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Teleprotection signal received" name="ProRx" type="SPS " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Carrier Send " name="Str" type="ACD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Channel Type" name="Type" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Local channel ID" name="LocChnID" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Remote channel ID" name="RemChnID" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel check time" name="ChkTmh" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Permissive scheme type" name="PermSchTyp" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Unblock Enable" name="UnBlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Mode of Weak End" name="WeakEnd" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Internal Clock Mode" name="IntClkMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Auto check Mode" name="AutChk" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Speed，0：64K，1：2M" name="ChnSpd" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Remote Trip Blocked by Local Startup" name="StrEnaRT" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Remote Trip Function Enable" name="RemTrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PTRC" lnClass="PTRC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Trip strap" name="TrStrp" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start breaker failure strap" name="StrBFStrp" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block recloser starp" name="BlkRecStrp" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="C" desc="Trip" name="Tr" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="C" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start breaker failure" name="StrBF" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block reclosing" name="BlkRecST" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Three Pole Trip Mode" name="TPTrMod" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Zone 2 fault blocking recloser" name="Z2BlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="multi-phase fault blocking recloser" name="MPFltBlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Zone 3 fault blocking recloser" name="Z3BlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PPDP" lnClass="PPDP">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="I0、I2 block value" name="ABlkVal" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESN" desc="I0 block value" name="I0BlkVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESN" desc="I2 block value" name="I2BlkVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate Delay Time in Miliseconds" name="OpDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="I0、I2 block enable" name="ABlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PDIF" lnClass="PDIF">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Differential Current" name="DifAClc" type="WYE" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Restraint Mode" name="RstA" type="WYE" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Line capacitance (for load currents)" name="LinCapac" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Zero Sequence Line Capacitance" name="LinCapac0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="X value of Local Shunt Reactor" name="LocShRX" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="X value of Local Reactor of Neutral Point" name="LocNRX" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="CT Factor" name="CTFact" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="PDIF operate value" name="StrValSG" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="PDIF operate value when CT broken" name="CTBrkVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="CT broken Block PDIF Enable" name="CTBlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="X value of Local Shunt Reactor" name="RemShRX" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="X value of Local Reactor of Neutral Point" name="RemNRX" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Capacitive Current Compensate Enable" name="CCCEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Break value  PDIF Enable" name="BrkDifEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Zero sequence PDIF  blocking recloser" name="Dif0BlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="PDIF operate value" name="StrValSG" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="2nd harmonic restraint factor" name="Ha2RstFact" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Different value to warning for CT abnormal" name="CTWrnSet" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Different value to block for CT broken" name="CTBlkSet" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="2nd harmonica restraint mode" name="Ha2RstMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="CT loop broken Block PDIF Enable" name="CTBlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="PDIF inflexion value" name="InfVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PDIS" lnClass="PDIS">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Phase Start Value" name="PhStr" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Groud Start Value" name="GndStr" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Resistive Reach for Load Area" name="RisLod" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Time Delay" name="OpDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Time Delay" name="PhDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Time Delay" name="GndDlTmms" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Line Angle" name="LinAng" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Residual Compensation Factor K0" name="K0Fact" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="" name="StrVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Positive sequence line impedance" name="Z1" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Zero sequence line impedance" name="Z0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Zero sequence line angle" name="LinAng0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Residual Compensation Factor KX" name="K0FactX" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Residual Compensation Factor KR" name="K0FactR" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Speedup Enable" name="SpdupEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Resistive Reach for Load Area Enable" name="RisLodEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Positive sequence line resistance" name="StrValR" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Positive sequence line reactance" name="StrValX" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="2nd  fault blocking recloser" name="SedBlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="3rd  fault blocking recloser" name="TrdBlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Ground offset angle" name="LineAngOfsPG" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase Start Value to transformer" name="ZValToTfm" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase Start Value to bus" name="ZValToBus" type="ASG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PTOC" lnClass="PTOC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name Plate" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start Value" name="StrVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Minimum Operate Time" name="MinOpTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Directional Mode Enable" name="DirEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Direction To Bus" name="DirToBus" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Inverse zero sequence trip blocking recloser" name="OCBlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="zero sequence voltage blocking" name="VolBlk" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Speedup Enable" name="SpdupEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PVOC" lnClass="PVOC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value Vpp" name="BlkValVpp" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value V2" name="BlkValV2" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start Value" name="StrValSG" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Current Directional To Bus" name="DirToBus" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PTOV" lnClass="PTOV">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start Value" name="StrVal" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Breaker open block Remote trip" name="CBOpnBlkRT" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="One Phase Overvoltage Mode" name="OnePhOVMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PVPH" lnClass="PVPH">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Volts per hertz Start Value" name="StrVal" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="WarnDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms1" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms2" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms3" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms4" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms5" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms6" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate Delay Time" name="OpDlTmms7" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Trip enable" name="TrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RBRF" lnClass="RBRF">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="C" desc="Breaker failure trip (“external trip”)" name="OpEx" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="C " desc="Operate, retrip (“internal trip”)" name="OpIn" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Breaker failure trip Tie" name="OpTie" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Breaker Failure Time Delay for bus bar trip" name="FailTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Retrip Time Delay" name="ReTrTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase current to start RBRF" name="StrValA" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="3I0 value to start RBRF" name="StrVal3I0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="I2 value to start RBRF" name="StrValI2" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Angle setting of low power factor element" name="LoPFAng" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Retrip enable" name="ReTrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Higher Phase current to start RBRF" name="StrValAHi" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="PDP start RBRF" name="PDPStrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Low Power fact Enable trip" name="LoPFEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Higher Phase current Enable" name="HiAEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase current to start RBRF" name="StrValA" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Breaker Failure Time Delay" name="FailTmms" type="ING" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Breaker Failure Time Delay for bus bar trip" name="FailTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Breaker Failure Time Delay for bus tie trip" name="Fail1Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value of phase voltage" name="UVBlkVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value of V0" name="V0BlkVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value of V2" name="V2BlkVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase current to start RBRF" name="StrValA" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="3I0 value to start RBRF" name="StrVal3I0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="I2 value to start RBRF" name="StrValI2" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RRTC" lnClass="RRTC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Zero sequence undervoltage block value (3U0）" name="StrVal3I0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="negative sequence undervoltage block value" name="StrValI2" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="zero sequence undervoltage block value (3U0）" name="StrVal3U0" type="ASG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="negative sequence undervoltage block value" name="StrValU2" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Low current value" name="LoA" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Low active power value" name="LoW" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Angle setting of low power factor element" name="LoPFAng" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate delay time with the criterion" name="RTCDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Operate delay time without the criterion" name="RTDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start by current and voltage" name="AVStrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start by low current or active power" name="LoAWStrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start by low power factor angle" name="LoPFAngEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Remote trip without criterion" name="NoCrtrnEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Disable criterion when PT Fail" name="PTFDisCEna" type="SPG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate delay time with the criterion for double channel mode" name="RTCDChTmms" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate delay time without the criterion for double channel mode" name="RTDChTmms" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Remote trip adopt double channel mode" name="RTDChMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="without criterion for double channel mode" name="RTDChEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RPSB" lnClass="RPSB">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Block current value for PSB" name="BlkValASG" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Unblock 1st distance  for PSB" name="BlkZ1Ena" type="SPG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Unblock  2nd distance  for PSB" name="BlkZ2Ena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RREC" lnClass="RREC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="E" desc="Operate strap" name="OpStrp" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase Reclosing" name="PhRecEna" type="SPC " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase Reclosing" name="StopRecEna" type="SPC " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate （used here to provide close to XCBR）" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Auto Reclosing Status" name="AutoRecSt" type="INS" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="single pole reclose time delay in ms" name="SPRecTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="triple pole reclose time delay in ms" name="TPRecTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Reclose Angle" name="RecDifAng" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Reclose check synchronousness" name="RecChkSyn" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Reclose check dead line" name="RecChkDea" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="SP recolse check live line" name="SPRChkLiv" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Breaker open start SP recloser" name="OpnStrSPR" type="SPG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Breaker open start TP recloser" name="OpnStrTPR" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Following reclose check live line" name="ChkLivLin" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Single pole recloser mode" name="SPRecMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Triple pole recloser mode" name="TPRecMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Inhibit recloser" name="InhRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Stop recloser" name="StopRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="SCAS" lnClass="SCAS">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="E" desc="Cooler Failure Trip" name="CoolTr" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="E" desc="Cooler Failure Alarm" name="CoolAlm" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate Delay Time 1" name="OpDlTmm1" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate Delay Time 2" name="OpDlTmm2" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate Delay Time 1 Enable" name="DlTmm1Ena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate Delay Time 2 Enable" name="DlTmm2Ena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Temperature Block Enable" name="TmpBlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="TCTR" lnClass="TCTR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment health " name="EEHealth" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment name plate " name="EEName" type="DPL " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operation time " name="OpTmh" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Current (Sampled value) " name="Amp" type="SAV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated Current " name="ARtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated Frequency " name="HzRtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Secondary Rated Current" name="ARtgSnd" type="ASG " xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="TVTR" lnClass="TVTR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment health " name="EEHealth" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment name plate " name="EEName" type="DPL " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operation time " name="OpTmh" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Current (Sampled value)" name="Vol" type="SAV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="TVTR fuse failure " name="FuFail" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated Voltage " name="VRtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated frequency " name="HzRtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Secondary Rated Voltage" name="VRtgSnd" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Line PT MODE" name="LinPTMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="CILO" lnClass="CILO">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Enable Open " name="EnaOpn" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Enable Close " name="EnaCls" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable Operate" name="EnaOp" type="SPS " xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="ATCC" lnClass="ATCC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Local operation " name="Loc" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Change Tap Position (stop, higher, lower)" name="TapChg" type="BSC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Parallel/Independent operation" name="ParOp" type="DPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Tap Position stop operate" name="OpStop" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Tap Position higher operate" name="OpHi" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Tap Position lower operate" name="OpLo" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Control Voltage" name="CtlV" type="MV" transient="true" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RDRE" lnClass="RDRE">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Recorder Start" name="RcdStr" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Recorder Made" name="RcdMade" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Fault Number" name="FltNum" type="INS" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Grid Fault Number" name="GriFltNum" type="INS" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Recorder Trig" name="RcdTrg" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Memory Clear" name="MemClr" type="SPC" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RADR" lnClass="RADR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Channel Trig" name="ChTrg" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Chop" name="ChnlCo" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel High Limit" name="ChnlHi" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Low Limit" name="ChnlLo" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Current Difference" name="ChnlKd" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Frequence Rate" name="ChRate" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Frequence High Level" name="HiLevl" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Channel Frequence Low Level" name="LoLevl" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Harmonic High 3" name="HmHi3" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Harmonic High 5" name="HmHi5" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Harmonic High 7" name="HmHi7" type="ASG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RBDR" lnClass="RBDR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Channel Trig" name="ChTrg" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Max Record Time Width" name="MaxRdTimeWidth" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Part A Sample Rate" name="PartARate" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Part A Time Width" name="PartATimeWidth" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Part B Time Width" name="PartBTimeWidth" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Part C Sample Rate" name="PartCRate" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Part C Time Width" name="PartCTimeWidth" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Real Time Sample Rate" name="RealTimeRate" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Continue-Recode Plug Sample Rate" name="ContinueRate" type="ING " xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PTTR" lnClass="PTTR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Current for thermal load model " name="Amp" type="MV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Temperature for thermal load " name="Tmp" type="MV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Relation between temperature and max. temperature " name="TmpRl" type="MV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Load reserve to alarm " name="LodRsvAlm" type="MV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Load reserve to trip " name="LodRsvTr" type="MV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Ageing rate " name="AgeRat" type="MV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start " name="Str" type="ACD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Thermal Alarm " name="AlmThm" type="ACT " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Active curve characteristic " name="TmTmpSt" type="CSD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Active curve characteristic " name="TmAStSG" type="CSD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Characteristic Curve for temperature measurement " name="TmTmpCrv" type="CURVE " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Characteristic Curve for current measurement /Thermal model " name="TmACrv" type="CURVE " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Maximum allowed temperature " name="TmpMax" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start Value " name="StrVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time " name="OpDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Minimum Operate Time " name="MinOpTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Maximum Operate Time " name="MaxOpTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Reset Delay Time " name="RsDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Time constant of the thermal model " name="ConsTms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Alarm Value" name="AlmVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Block Value" name="StrBlkVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="The value above this threshold" name="ThdVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Time constant of the thermal Cool" name="CConsTms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Trip Enable" name="TrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Inhibit Start Enable" name="InhStrEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PVOC" lnClass="PVOC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start " name="Str" type="ACD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value Vpp" name="BlkValVpp" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Block value V2" name="BlkValV2" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Block value V0" name="BlkValV0" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Start Value" name="StrValSG" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Direction Block Enable" name="BlkDirEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Voltage Block Enable" name="BlkVolEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Other Side Voltage Block Enable" name="BlkOVolEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Angle Enable" name="AngEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PTUF" lnClass="PTUF">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start " name="Str" type="ACD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Blocked because of voltage " name="BlkV" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Volts per hertz Start Value" name="StrVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Voltage Block Value" name="BlkVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="df/dt Block Value" name="RteHzVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="df/dt Block Enable" name="RteHzEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PTUV" lnClass="PTUV">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start " name="Str" type="ACD " xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="O" desc="Volts per hertz Start Value" name="StrVal" type="ASG" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Current Block Value" name="BlkVal" type="ASG " xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Current Block Enable" name="BlkValEna" type="SPG" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="EO" desc="du/dt Block Value" name="RteUBlkVal" type="ASG" xmlns:ext="http://www.nari-relays.com"/>
+			<DO ext:eOption="EO" desc="du/dt Block Enable" name="RteUBlkEna" type="SPG" xmlns:ext="http://www.nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PPDP" lnClass="PPDP">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start " name="Str" type="ACD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="I0、I2 block value" name="ABlkVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="I0 block value" name="I0BlkVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="I2 block value" name="I2BlkVal" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Operate Delay Time in Miliseconds" name="OpDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="I0、I2 block enable" name="ABlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="TWJ Enable" name="TWJEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="PSDE" lnClass="PSDE">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start " name="Str" type="ACD " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate " name="Op" type="ACT " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Ground Alarm" name="GndAlm" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Ground Alarm" name="GndAlm2" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Angle between voltage (U0) and current (I0)" name="Ang" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Ground Start Value (3 U0)" name="GndStr" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Ground Operate Value (3 I0)" name="GndOp" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start Delay Time" name="StrDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operate Delay Time" name="OpDlTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Directional Mode" name="DirMod" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="V0 Block Enable" name="V0BlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RFLO" lnClass="RFLO">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Fault Impedance " name="FltZ" type="CMV " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Fault Distance in km " name="FltDiskm" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Max Fault Phase Current" name="MaxFltA" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Max Fault I0 Current" name="MaxFltI0A" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Fault Different Current" name="MaxFltDifA" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Fault Loop" name="FltLoop" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Line length in km" name="LinLenKm" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Positive-sequence line resistance" name="R1" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Positive-sequence line reactance" name="X1" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Zero -sequence line resistance" name="R0" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Zero -sequence line reactance" name="X0" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Per Kilometre line reactance" name="XPerKm" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Ratio of Positive-sequence line resistance and reactance" name="RatRX" type="ASG " xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RREC" lnClass="RREC">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="E" desc="Operate strap" name="OpStrp" type="SPC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Phase Reclosing" name="StopRecEna" type="SPC " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate （used here to provide close to XCBR）" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Auto Reclosing Status" name="AutoRecSt" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="triple pole reclose time delay in ms" name="TPRecTmms" type="ING" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Reclose Angle" name="RecDifAng" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Reclose check synchronousness" name="RecChkSyn" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Reclose check dead line" name="RecChkDea" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Following reclose check live line" name="ChkLivLin" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Triple pole recloser mode" name="TPRecMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Inhibit recloser" name="InhRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Stop recloser" name="StopRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="op trip enable recloser" name="OpTrgRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="PT Fail Block recloser" name="PTFBlkRec" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Double line live check Enable" name="DbLnLvEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Diffrent position mode" name="DifPosMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Reclose Charger Time" name="RecChaTmms" type="ING" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="1st Reclose Time" name="Rec1Tmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="2nd Reclose Time" name="Rec2Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="3rd Reclose Time" name="Rec3Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Reclose Times" name="RecNum" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="3rd Reclose Time" name="RecBlkTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Voltage Phase Type" name="Phase" type="ING " xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RSYN" lnClass="RSYN">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Calculated Difference in Voltage" name="DifVClc" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Calculated Difference in Frequency" name="DifHzClc" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Calculated Difference of Phase Angle" name="DifAngClc" type="MV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Release" name="Rel" type="SPS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Voltage Difference Indicator" name="VInd" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Angle Difference Indicator" name="AngInd" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Frequency Difference Indicator" name="HzInd" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Difference Voltage" name="DifV" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Difference Frequency" name="DifHz" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Difference Phase Angle" name="DifAng" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Live Dead Mode" name="LivDeaMod" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Dead Line Value" name="DeaLinVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Live Line Value" name="LivLinVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Dead Bus Value" name="DeaBusVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Live Bus Value" name="LivBusVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Close Pulse Time" name="PlsTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Closing time of breaker" name="BkrTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Enable" name="Enable" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Angle Offset between Ux and Ua" name="AngOfs" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="不正确Dead Line  Live Bus Enable" name="DeaLinLivB" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="不正确Dead Bus  Live Line Enable" name="DeaBusLivL" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="不正确Dead Bus  Dead Line Enable" name="DeaBusDeaL" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Check Line Dead Percent" name="ChkDeaPct" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Check Line Live Percent" name="ChkLivPct" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Synchronousness Reset time delay" name="SynRsTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="df/dt Value" name="RteHz" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="PT failure Block Check Dead Line" name="PTFBlkDea" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="PT failure Block Check Synchronousness" name="PTFBlkSyn" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="TCTR" lnClass="TCTR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment health " name="EEHealth" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment name plate " name="EEName" type="DPL " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operation time " name="OpTmh" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Current (Sampled value) " name="Amp" type="SAV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated Current " name="ARtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated Frequency" name="HzRtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Secondary Rated Current" name="ARtgSnd" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Double Phase CT mode" name="DPhMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="a combination of values from other real physical sensors " name="PhyCombVal" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="TVTR" lnClass="TVTR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment health " name="EEHealth" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment name plate " name="EEName" type="DPL " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operation time " name="OpTmh" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Current (Sampled value)" name="Vol" type="SAV" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="TVTR fuse failure " name="FuFail" type="SPS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated Voltage " name="VRtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated frequency " name="HzRtg" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Secondary Rated Voltage" name="VRtgSnd" type="ASG " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="ESG" desc="Line PT MODE" name="LinPTMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="PT Failure Check Enable" name="PTFChkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="RBZT" lnClass="RBZT">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Start" name="Str" type="ACD" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Operate" name="Op" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Alarm" name="Alm" type="ACT" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Bus link Close" name="Bus1Cls" type="ACT" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Bus link Trip" name="Bus1Trp" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 1 High Sise Close" name="Pwr1HCls" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 1 Low Sise Close" name="Pwr1LCls" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 1 High Sise Trip" name="Pwr1HTrp" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 1 Low Sise Trip" name="Pwr1LTrp" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 1 Other Trip" name="Pwr1OTrp" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 2 High Sise Close" name="Pwr2HCls" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 2 Low Sise Close" name="Pwr2LCls" type="ACT" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 2 High Sise Trip" name="Pwr2HTrp" type="ACT" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Power 2 Other Trip" name="Pwr2OTrp" type="ACT" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Start Value" name="StrVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Dead Bus Value" name="DeaBusVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Live Bus Value" name="LivBusVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Live Line Value" name="LivLinVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Dead Line Current Value" name="DeaLinAVal" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Charge Time" name="ChTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Discharge Time" name="DschTmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Trip Time" name="Trp1Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Trip Time" name="Trp2Tmms" type="ING " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Trip Time" name="Trp3Tmms" type="ING " transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Trip Time" name="Trp4Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Close Time" name="Cls1Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Close Time" name="Cls2Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line Close Time" name="Cls3Tmms" type="ING " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Manual Operation Block Enable" name="MOpBlkEna" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line 1 voltage Check Enable" name="Lin1Vena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Line 2 voltage Check Enable" name="Lin2Vena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Automatic Work mode" name="AutoMod" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Retrip Bus I" name="Bus1ReTrp" type="SPG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Retrip Bus II" name="Bus2ReTrp" type="SPG" transient="true" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Speed Automatic Ena" name="Spd1Ena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Speed Automatic Ena" name="Spd2Ena" type="SPG" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="YPTR" lnClass="YPTR">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment health " name="EEHealth" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment name plate " name="EEName" type="DPL " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operation time " name="OpTmh" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="High Rated Voltage" name="HiVRtg" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Middle Rated Voltage" name="MdVRtg" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Low Rated Voltage" name="LoVRtg" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Rated power" name="PwrRtg" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Low Vside Rated power" name="LoVPwrRtg" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="High Vside Trasformer Connection Mode" name="HiVTmode" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Middle Vside Trasformer Connection Mode" name="MdVTmode" type="ING" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Low Vside Trasformer Connection Mode" name="LoVTmode" type="ING" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+		<LNodeType id="ZMOT" lnClass="ZMOT">
+			<DO ext:eOption="M" desc="Mode" name="Mod" type="INC" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Behaviour" name="Beh" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Health" name="Health" type="INS" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="Name" name="NamPlt" type="LPL" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment health " name="EEHealth" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="External equipment name plate " name="EEName" type="DPL " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="O" desc="Operation time " name="OpTmh" type="INS " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="M" desc="De-excitation " name="DExt" type="SPC " xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Rated Current" name="ARtg" type="ASG" xmlns:ext="http://nari-relays.com"/>
+			<DO ext:eOption="EO" desc="Start Time" name="StrTmms" type="ING" xmlns:ext="http://nari-relays.com"/>
+		</LNodeType>
+	</DataTypeTemplates>
+</SCL>

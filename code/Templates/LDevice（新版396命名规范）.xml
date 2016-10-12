@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://ase-systems.com">
+	<LDevice desc="公用LD" name="LD0"/>
+	<LDevice desc="测量LD" name="MEAS"/>
+	<LDevice desc="保护LD" name="PROT"/>
+	<LDevice desc="控制LD" name="CTRL"/>
+	<LDevice desc="GOOSE过程层访问点LD" name="PIGO"/>
+	<LDevice desc="SV过程层访问点LD" name="PISV"/>
+	<LDevice desc="智能终端LD" name="RPIT"/>
+	<LDevice desc="录波LD" name="RCD"/>
+	<LDevice desc="合并单元GOOSE访问点LD" name="MUGO"/>
+	<LDevice desc="合并单元SV访问点LD" name="MUSV"/>
+	</SCL>

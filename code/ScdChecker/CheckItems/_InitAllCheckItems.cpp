@@ -1,0 +1,190 @@
+#include "_InitAllCheckItems.h"
+#include "BayValid1Check.h"
+#include "SCDPhysConnCheck.h"
+#include "SSDConductingEquipmentCheck_Unique.h"
+#include "SSDConductingEquipmentCheck_IFLEquipment.h"
+#include "SSDPowerTransformerCheck_Unique.h"
+#include "IpUniqueCheck.h"
+#include "InputsDescValid2Check.h"
+#include "SSDVoltageLevelCheck_Normative.h"
+#include "SCDGSECheck.h"
+#include "SCDIPAddressCheck.h"
+#include "SCDDOTypeCheck.h"
+#include "SSDLNodeCheck_Valid.h"
+#include "ControlIdUniqueCheck.h"
+#include "SCDIEDServicesCheck.h"
+#include "SSDVoltageLevelCheck_Sort.h"
+#include "SCDLNodeTypeCheck.h"
+#include "InputsValidCheck.h"
+#include "SSDBayCheck_LineBay.h"
+#include "SSDBayCheck_dTypeNormative.h"
+#include "CommunicationRedunCheck.h"
+#include "SCDIEDLNCheck.h"
+#include "SCDEnumTypeCheck.h"
+#include "SCDIEDAccessPointCheck.h"
+#include "SSDTerminalCheck.h"
+#include "GseMacValidCheck.h"
+#include "SCDCommunicationCheck.h"
+#include "InputsDescValid1Check.h"
+#include "GeneralCheck.h"
+#include "ConnectedAPValidCheck.h"
+#include "SSDBayCheck.h"
+#include "SCDIEDCheck.h"
+#include "SSDVoltageLevelCheck_Other.h"
+#include "SSDPowerTransformerCheck_WindingNormative.h"
+#include "SSDConnectivityNodeCheck_NameNormative.h"
+#include "IpValidCheck.h"
+#include "LDescBlankCheck.h"
+#include "SCDDATypeCheck.h"
+#include "SCDConnectedAPCheck.h"
+#include "InputsDtCDCValidCheck.h"
+#include "GseAppidValidCheck.h"
+#include "InputsDtDODAValidCheck.h"
+#include "SSDTerminalCheck_Valid.h"
+#include "SSDConnectivityNodeCheck.h"
+#include "SSDTerminalCheck_CNodeConnection.h"
+#include "SCDHeaderCheck.h"
+#include "CommunicationValidCheck.h"
+#include "SmvAppidValidCheck.h"
+#include "SSDTerminalCheck_NameNormative.h"
+#include "SSDSubstationCheck_Other.h"
+#include "SSDLNodeCheck_Unique.h"
+#include "MacAddrUniqueCheck.h"
+#include "SSDVoltageLevelCheck.h"
+#include "DaTempValidCheck.h"
+#include "SSDLNodeCheck_InBay.h"
+#include "SSDSubstationCheck.h"
+#include "SSDTerminalCheck_Unique.h"
+#include "SSDBayCheck_AttrNormative.h"
+#include "FcdaValidCheck.h"
+#include "SSDCommonEquipmentCheck.h"
+#include "SSDConnectivityNodeCheck_PathUnique.h"
+#include "SSDConnectivityNodeCheck_UnUsed.h"
+#include "GSEControlBlockInfoCheck.h"
+#include "SSDVoltageLevelCheck_Unique.h"
+#include "SSDPowerTransformerCheck_Connection.h"
+#include "DataTempRedunCheck.h"
+#include "CommunicationGSEorSVUniqueCheck.h"
+#include "ControlBlockLdCheck.h"
+#include "XmlCheck.h"
+#include "SCDSMVCheck.h"
+#include "SSDPowerTransformerCheck.h"
+#include "DoiDescBlankCheck.h"
+#include "SubFormatCheck.h"
+#include "SVControlBlockInfoCheck.h"
+#include "SSDLNodeCheck_BeUsed.h"
+#include "SSDConductingEquipmentCheck_Normative.h"
+#include "SchemaCheck.h"
+#include "CrcBlankCheck.h"
+#include "CrcBlankValidCheck.h"
+#include "SSDSubstationCheck_Unique.h"
+#include "AppidUniqueCheck.h"
+#include "InputsStadValidCheck.h"
+#include "SSDVoltageLevelCheck_UnNULL.h"
+#include "VlanValidCheck.h"
+#include "SmvMacValidCheck.h"
+#include "BayValid2Check.h"
+#include "SCDSubNetWorkCheck.h"
+#include "SSDPowerTransformerCheck_AttrNormative.h"
+#include "SSDConductingEquipmentCheck.h"
+#include "IntAddrUniqueCheck.h"
+#include "InputsDtbTypeValidCheck.h"
+#include "SSDSubstationCheck_Normative.h"
+#include "SSDLNodeCheck.h"
+
+bool InitAllCheckItems()
+{
+    return true &&
+        CBayValid1Check::InitializeInstance() &&
+        CSCDPhysConnCheck::InitializeInstance() &&
+        CSSDConductingEquipmentCheck_Unique::InitializeInstance() &&
+        CSSDConductingEquipmentCheck_IFLEquipment::InitializeInstance() &&
+        CSSDPowerTransformerCheck_Unique::InitializeInstance() &&
+        CIpUniqueCheck::InitializeInstance() &&
+        CInputsDescValid2Check::InitializeInstance() &&
+        CSSDVoltageLevelCheck_Normative::InitializeInstance() &&
+        CSCDGSECheck::InitializeInstance() &&
+        CSCDIPAddressCheck::InitializeInstance() &&
+        CSCDDOTypeCheck::InitializeInstance() &&
+        CSSDLNodeCheck_Valid::InitializeInstance() &&
+        CControlIdUniqueCheck::InitializeInstance() &&
+        CSCDIEDServicesCheck::InitializeInstance() &&
+        CSSDVoltageLevelCheck_Sort::InitializeInstance() &&
+        CSCDLNodeTypeCheck::InitializeInstance() &&
+        CInputsValidCheck::InitializeInstance() &&
+        CSSDBayCheck_LineBay::InitializeInstance() &&
+        CSSDBayCheck_dTypeNormative::InitializeInstance() &&
+        CCommunicationRedunCheck::InitializeInstance() &&
+        CSCDIEDLNCheck::InitializeInstance() &&
+        CSCDEnumTypeCheck::InitializeInstance() &&
+        CSCDIEDAccessPointCheck::InitializeInstance() &&
+        CSSDTerminalCheck::InitializeInstance() &&
+        CGseMacValidCheck::InitializeInstance() &&
+        CSCDCommunicationCheck::InitializeInstance() &&
+        CInputsDescValid1Check::InitializeInstance() &&
+        CGeneralCheck::InitializeInstance() &&
+        CConnectedAPValidCheck::InitializeInstance() &&
+        CSSDBayCheck::InitializeInstance() &&
+        CSCDIEDCheck::InitializeInstance() &&
+        CSSDVoltageLevelCheck_Other::InitializeInstance() &&
+        CSSDPowerTransformerCheck_WindingNormative::InitializeInstance() &&
+        CSSDConnectivityNodeCheck_NameNormative::InitializeInstance() &&
+        CIpValidCheck::InitializeInstance() &&
+        CLDescBlankCheck::InitializeInstance() &&
+        CSCDDATypeCheck::InitializeInstance() &&
+        CSCDConnectedAPCheck::InitializeInstance() &&
+        CInputsDtCDCValidCheck::InitializeInstance() &&
+        CGseAppidValidCheck::InitializeInstance() &&
+        CInputsDtDODAValidCheck::InitializeInstance() &&
+        CSSDTerminalCheck_Valid::InitializeInstance() &&
+        CSSDConnectivityNodeCheck::InitializeInstance() &&
+        CSSDTerminalCheck_CNodeConnection::InitializeInstance() &&
+        CSCDHeaderCheck::InitializeInstance() &&
+        CCommunicationValidCheck::InitializeInstance() &&
+        CSmvAppidValidCheck::InitializeInstance() &&
+        CSSDTerminalCheck_NameNormative::InitializeInstance() &&
+        CSSDSubstationCheck_Other::InitializeInstance() &&
+        CSSDLNodeCheck_Unique::InitializeInstance() &&
+        CMacAddrUniqueCheck::InitializeInstance() &&
+        CSSDVoltageLevelCheck::InitializeInstance() &&
+        CDaTempValidCheck::InitializeInstance() &&
+        CSSDLNodeCheck_InBay::InitializeInstance() &&
+        CSSDSubstationCheck::InitializeInstance() &&
+        CSSDTerminalCheck_Unique::InitializeInstance() &&
+        CSSDBayCheck_AttrNormative::InitializeInstance() &&
+        CFcdaValidCheck::InitializeInstance() &&
+        CSSDCommonEquipmentCheck::InitializeInstance() &&
+        CSSDConnectivityNodeCheck_PathUnique::InitializeInstance() &&
+		CSSDConnectivityNodeCheck_UnUsed::InitializeInstance() &&
+        CGSEControlBlockInfoCheck::InitializeInstance() &&
+        CSSDVoltageLevelCheck_Unique::InitializeInstance() &&
+        CSSDPowerTransformerCheck_Connection::InitializeInstance() &&
+        CDataTempRedunCheck::InitializeInstance() &&
+        CCommunicationGSEorSVUniqueCheck::InitializeInstance() &&
+        CControlBlockLdCheck::InitializeInstance() &&
+        CXmlCheck::InitializeInstance() &&
+        CSCDSMVCheck::InitializeInstance() &&
+        CSSDPowerTransformerCheck::InitializeInstance() &&
+        CDoiDescBlankCheck::InitializeInstance() &&
+        CSubFormatCheck::InitializeInstance() &&
+        CSVControlBlockInfoCheck::InitializeInstance() &&
+        CSSDLNodeCheck_BeUsed::InitializeInstance() &&
+        CSSDConductingEquipmentCheck_Normative::InitializeInstance() &&
+        CSchemaCheck::InitializeInstance() &&
+        CCrcBlankCheck::InitializeInstance() &&
+        CCrcBlankValidCheck::InitializeInstance() &&
+        CSSDSubstationCheck_Unique::InitializeInstance() &&
+        CAppidUniqueCheck::InitializeInstance() &&
+        CInputsStadValidCheck::InitializeInstance() &&
+        CSSDVoltageLevelCheck_UnNULL::InitializeInstance() &&
+        CVlanValidCheck::InitializeInstance() &&
+        CSmvMacValidCheck::InitializeInstance() &&
+        CBayValid2Check::InitializeInstance() &&
+        CSCDSubNetWorkCheck::InitializeInstance() &&
+        CSSDPowerTransformerCheck_AttrNormative::InitializeInstance() &&
+        CSSDConductingEquipmentCheck::InitializeInstance() &&
+        CIntAddrUniqueCheck::InitializeInstance() &&
+        CInputsDtbTypeValidCheck::InitializeInstance() &&
+        CSSDSubstationCheck_Normative::InitializeInstance() &&
+        CSSDLNodeCheck::InitializeInstance();
+}

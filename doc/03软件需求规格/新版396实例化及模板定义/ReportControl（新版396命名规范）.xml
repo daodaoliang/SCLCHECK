@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://ase-systems.com">
+	<ReportControl desc="遥测" name="urcbAin"/>
+	<ReportControl desc="遥信" name="brcbDin"/>
+	<ReportControl desc="故障信号" name="brcbAlarm"/>
+	<ReportControl desc="告警信号" name="brcbWarning"/>
+	<ReportControl desc="通信工况" name="brcbCommState"/>
+	<ReportControl desc="联锁" name="brcbInterLock"/>
+	<ReportControl desc="保护事件" name="brcbTripInfo"/>
+	<ReportControl desc="保护压板" name="brcbRelayEna"/>
+	<ReportControl desc="保护录波" name="brcbRelayRec"/>
+	<ReportControl desc="保护遥测" name="urcbRelayAin"/>
+	<ReportControl desc="保护遥信" name="brcbRelayDin"/>
+</SCL>

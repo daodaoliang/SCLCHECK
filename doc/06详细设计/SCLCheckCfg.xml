@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- flag为登记标志（E为错误，W为警告，R为提示）isCheck=true为是否检测标记 -->
+<SCLConfig>
+	<CheckClass key="1" desc="语法格式校验">
+		<CheckItem key="CE18E6" name="XmlCheck" desc="XML格式规范" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="DB5780" name="SchemaCheck" desc="Schema校验" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="2" desc="数据集成员有效性检查">
+		<CheckItem key="A63491" name="FcdaValidCheck" desc="数据集配置的FCDA非空的属性值是否指向模型中已存在的数据对象和数据属性" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="3" desc="模型实例与模板一致性校验">
+		<CheckItem key="71A77B" name="LDescBlankCheck" desc="LD和LN实例的“desc”属性值是否非空" flag="E" isCheck="false" standard="GDW1396"/>
+		<CheckItem key="D25578" name="DoiDescBlankCheck" desc="实例化DOI元素的“desc”属性值与“dU” 属性值是否非空且两者一致；" flag="W" isCheck="false" standard="GDW1396"/>
+		<CheckItem key="C2AFAE" name="DataTempRedunCheck" desc="存在未被引用的LNodeType、DOType、DAType" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="8FE372" name="DaTempValidCheck" desc="实例化配置DOI/SDI/DAI的对象索引是否与数据类型模板定义的数据对象结构一致" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="4" desc="通信参数属性正确性检查">
+		<CheckItem key="5E2045" name="ConnectedAPValidCheck" desc="Communication下ConnectedAP的iedName、apName以及GSE\SMV的cbName、ldInst的属性值是否在IED中存在相应信息" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="83395E" name="SmvAppidValidCheck" desc="Communication下SMV的APPID的值是否为4位16进制值，是否在4000～7FFF取值范围内且不可为0" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="7884C7" name="GseAppidValidCheck" desc="Communication下GSE的APPID的值是否为4位16进制值，是否在0000到3FFF取值范围内" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="EA5BBA" name="VlanValidCheck" desc="Communication下SMV和GSE的VLAN-ID是否为3位16进制值，VLAN-Priority是否在0~7内" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="58E4DA" name="GseMacValidCheck" desc="GSE中MAC地址在01-0C-CD-01-00-00~01-0C-CD-01-FF-FF范围内" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="EA80EF" name="SmvMacValidCheck" desc="SMV中MAC地址在01-0C-CD-04-00-00~01-0C-CD-04-FF-FF范围内" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="7053C8" name="IpValidCheck" desc="IP地址、子网掩码的每一位在0~255范围内" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="D66C1B" name="SVControlBlockInfoCheck" desc="SV控制块关联属性smvID、APPID、MAC地址、VLAN-ID存在缺失项" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="AE901A" name="GSEControlBlockInfoCheck" desc="GSE控制块关联属性GOID（appID）、APPID、MAC地址、VLAN-ID、优先级、MaxTime、MinTime存在缺失项" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="82EDB9" name="CommunicationValidCheck" desc="SCD文件中存在订阅关系的虚端子，对应发送控制块的通信参数配置是否存在；" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="3D2A1B" name="CommunicationRedunCheck" desc="GOOSE、SV未被订阅，且通信参数未配置" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="5" desc="参数属性唯一性检查">
+		<CheckItem key="8E9CE7" name="MacAddrUniqueCheck" desc="SCD文件中Communication下MAC-Address的值是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="E51D6C" name="AppidUniqueCheck" desc="Communication下SMV和GSE中的APPID是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="13FDFB" name="IpUniqueCheck" desc="SCD文件中IED的IP地址是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="2E8E7B" name="ControlIdUniqueCheck" desc="SCD文件中GSEControl的appID的值、SampledValueControl的smvID的值是否全局唯一" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="F6163B" name="IntAddrUniqueCheck" desc="GOOSE 和SV配置的ExtRef内部intAddr的值在IED范围内是否唯一；" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="C426C5" name="CommunicationGSEorSVUniqueCheck" desc="Communication中SV或GOOSE通信配置是否唯一" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="6" desc="虚端子连线配置检查">
+		<CheckItem key="39B6E1" name="InputsValidCheck" desc="SCD文件中虚端子连线的对象索引是否有效；" flag="E" isCheck="true" standard="GDW1396"/>
+		<!--InputsDtValidCheck 包含DO-DA检查-->
+		<CheckItem key="795860" name="InputsDtDODAValidCheck" desc="SCD文件中虚端子连线的对象数据类型收发双方是否为DO/DA或DA/DO；" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="7652D1" name="InputsDtCDCValidCheck" desc="SCD文件中虚端子连线的对象数据类型收发双方CDC是否一致；" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="F68BD2" name="InputsDtbTypeValidCheck" desc="SCD文件中虚端子连线的对象数据类型收发双方bType是否一致；" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="7" desc="工程配置规范化检查">
+		<CheckItem key="D400F3" name="SubFormatCheck" desc="Communication下SubNetwork的子网命名是否符合规范中的命名要求；" flag="W" isCheck="false" standard="GDW1396"/>
+		<CheckItem key="DECEFE" name="CrcBlankCheck" desc="SCD文件中是否存在IED过程层虚端子CRC32校验码和全站过程层虚端子CRC32校验码" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="DF89PO" name="CrcBlankValidCheck" desc="SCD文件中存在IED过程层虚端子CRC32校验码和全站过程层虚端子CRC32校验码是否正确" flag="R" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="C7C755" name="ControlBlockLdCheck" desc="控制块关联数据集是否在同一LD中找到" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="8" desc="工程应用校验">
+		<CheckItem key="06857F" name="BayValid1Check" desc="保护、测控、合并单元、智能终端间隔连接错误" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="EB1230" name="BayValid2Check" desc="母差内支路合并单元与智能终端不一致错误" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="5A551E" name="InputsDescValid1Check" desc="如有区分，跳闸信号用于启动失灵，启动失灵信号用于跳闸" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="189315" name="InputsDescValid2Check" desc="采样相位连接错误，跳闸启动失灵相位连接错误" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="E58327" name="InputsStadValidCheck" desc="各“六统一”保护该连接的信号没有连接或连接不正确" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="9" desc="其他">
+		<CheckItem key="5E04BF" name="GeneralCheck" desc="其他问题检查" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="36FEF6" name="SignalValidSet" desc="查找输入信号对应LN时，是否在AP下查找" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+</SCLConfig>

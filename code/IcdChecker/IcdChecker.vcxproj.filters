@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{839e5a0a-ae20-4910-b6f8-7c7a8d8ec465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VtdXml">
+      <UniqueIdentifier>{6783f9b9-5a82-4993-8154-e227b5f7ba96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CheckItems">
+      <UniqueIdentifier>{7e665cb3-32b5-4f71-a970-9816c06e8b43}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IcdChecker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ScdChecker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\charconv.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\VtdTools.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\arrayList.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\autoPilot.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\binaryExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\bookMark.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\cachedExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\contextBuffer.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\decoder.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\elementFragmentNs.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\fastIntBuffer.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\fastLongBuffer.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\filterExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\funcExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\indexHandler.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\intHash.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\lex.yy.cc">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\literalExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\locationPathExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\nodeRecorder.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\numberExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\pathExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\textIter.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\transcoder.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\unaryExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\unionExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\variableExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\vtdGen.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\vtdNav.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\vtdNav_L5.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\XMLChar.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\XMLModifier.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\xpathParser.tab.cc">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\xpath_driver.cc">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\RedDatypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\RedDotypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\RedInputsCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\RedLntypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\REnumtypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ReportCtrlCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SchemaCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ServerCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\XmlCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\_InitAllCheckItems.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\CdcCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ConfDataSetCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ConfFcdaCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ConfLogCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ConfReportCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DataSetCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DataSetTypeValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DatypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DoiValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DotypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\EnumtypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\FcdaLdValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\FcdaValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GeneralErrorCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GeneralWarnCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GsSmvCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\IedCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\LdDescCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\LDdoiCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\LdValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\LntypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\LnValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\MDatypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\MDotypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\MLntypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\PhsyconCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\Markup.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CacheMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ScdChecker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\charconv.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\OperHandler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\VtdTools.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\arrayList.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\autoPilot.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\binaryExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\bookMark.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\cachedExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\contextBuffer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\customTypes.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\decoder.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\elementFragmentNs.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\everything.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\expr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\fastIntBuffer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\fastLongBuffer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\filterExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\FlexLexer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\funcExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\indexHandler.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\intHash.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\literalExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\locationPathExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\nodeRecorder.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\numberExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\pathExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\test.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\textIter.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\transcoder.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\unaryExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\unionExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\UTF8Char.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\variableExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdException.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdGen.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdNav.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdNav_L5.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\XMLChar.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\XMLModifier.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\xpath_driver.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\RedDatypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\RedDotypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\RedInputsCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\RedLntypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\REnumtypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ReportCtrlCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SchemaCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ServerCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\XmlCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\CdcCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ConfDataSetCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ConfFcdaCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ConfLogCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ConfReportCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DataSetCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DataSetTypeValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DatypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DoiValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DotypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\EnumtypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\FcdaLdValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\FcdaValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GeneralErrorCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GeneralWarnCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GsSmvCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\IedCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\LdDescCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\LDdoiCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\LdValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\LntypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\LnValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\MDatypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\MDotypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\MLntypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\PhsyconCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\Markup.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\VtdXml\location.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="..\VtdXml\position.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="..\VtdXml\stack.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="..\VtdXml\xpathParser.tab.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="CheckItems\ICDCheckCfg.xml">
+      <Filter>CheckItems</Filter>
+    </None>
+  </ItemGroup>
+</Project>

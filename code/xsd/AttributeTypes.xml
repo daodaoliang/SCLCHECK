@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://ase-systems.com">
+  <DataTypeTemplates>
+    <DAType id="AnalogueValue">
+      <BDA ext:eOption="GC_1 " name="i" bType="INT32" />
+      <BDA ext:eOption="GC_1 " name="f" bType="FLOAT32" />
+    </DAType>
+    <DAType id="ScaledValueConfig">
+      <BDA ext:eOption="M " name="scaleFactor" bType="FLOAT32" />
+      <BDA ext:eOption="M " name="offset" bType="FLOAT32" />
+    </DAType>
+    <DAType id="RangeConfig">
+      <BDA ext:eOption="M " name="hhLim" bType="Struct" type="AnalogueValue" />
+      <BDA ext:eOption="M " name="hLim" bType="Struct" type="AnalogueValue" />
+      <BDA ext:eOption="M " name="lLim" bType="Struct" type="AnalogueValue" />
+      <BDA ext:eOption="M " name="llLim" bType="Struct" type="AnalogueValue" />
+      <BDA ext:eOption="M " name="min" bType="Struct" type="AnalogueValue" />
+      <BDA ext:eOption="M " name="max" bType="Struct" type="AnalogueValue" />
+    </DAType>
+    <DAType id="ValWithTrans">
+      <BDA ext:eOption="M " name="posVal" bType="INT8" />
+      <BDA ext:eOption="O " name="transInd" bType="BOOLEAN" />
+    </DAType>
+    <DAType id="PulseConfig">
+      <BDA ext:eOption="M " name="cmdQual" bType="Enum" />
+      <BDA ext:eOption="M " name="onDur" bType="INT32U" />
+      <BDA ext:eOption="M " name="offDur" bType="INT32U" />
+      <BDA ext:eOption="M " name="numPls" bType="INT32U" />
+    </DAType>
+    <DAType id="Originator">
+      <BDA ext:eOption="M " name="orCat" bType="Enum" type="orCategory" />
+      <BDA ext:eOption="M " name="orIdent" bType="Octet64" />
+    </DAType>
+    <DAType id="Unit">
+      <BDA ext:eOption="M" name="SIUnit" bType="Enum" type="SIUnit" />
+      <BDA ext:eOption="O" name="multiplier" bType="Enum" type="multiplier" />
+    </DAType>
+    <DAType id="Vector">
+      <BDA ext:eOption="M " name="mag" bType="Struct" type="AnalogueValue" />
+      <BDA ext:eOption="O " name="ang" bType="Struct" type="AnalogueValue" />
+    </DAType>
+    <DAType id="Point">
+      <BDA ext:eOption="M " name="xVal" bType="FLOAT32" />
+      <BDA ext:eOption="M " name="yVal" bType="FLOAT32" />
+    </DAType>
+   <DAType id="SBOw">
+	  <BDA ext:eOption="M " name="ctlVal" bType="BOOLEAN" />
+	  <BDA ext:eOption="M " name="origin" bType="Struct" type="Originator" />
+	  <BDA ext:eOption="M " name="ctlNum" bType="INT8" />
+	  <BDA ext:eOption="M " name="T" bType="Timestamp" />
+	  <BDA ext:eOption="M " name="Test" bType="BOOLEAN" />
+	  <BDA ext:eOption="M " name="Check" bType="Check" />
+  </DAType>
+  <DAType id="Oper">
+	  <BDA ext:eOption="M " name="ctlVal" bType="BOOLEAN" />
+	  <BDA ext:eOption="M " name="origin" bType="Struct" type="Originator" />
+	  <BDA ext:eOption="M " name="ctlNum" bType="INT8" />
+	  <BDA ext:eOption="M " name="T" bType="Timestamp" />
+	  <BDA ext:eOption="M " name="Test" bType="BOOLEAN" />
+	  <BDA ext:eOption="M " name="Check" bType="Check" />
+   </DAType>
+   <DAType id="Cancel">
+	  <BDA ext:eOption="M " name="ctlVal" bType="BOOLEAN" />
+	  <BDA ext:eOption="M " name="origin" bType="Struct" type="Originator" />
+	  <BDA ext:eOption="M " name="ctlNum" bType="INT8" />
+	  <BDA ext:eOption="M " name="T" bType="Timestamp" />
+	  <BDA ext:eOption="M " name="Test" bType="BOOLEAN" />
+   </DAType>
+  </DataTypeTemplates>
+</SCL>

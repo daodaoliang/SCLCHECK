@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:ext="http://nari-relays.com">
+  <DataTypeTemplates>
+    <DOType id="SPS" cdc="SPS">
+      <DA ext:eOption="M " name="stVal" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="DPS" cdc="DPS">
+      <DA ext:eOption="M " name="stVal" bType="Enum" type="Dbpos" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="Enum" type="Dbpos" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="INS" cdc="INS">
+      <DA ext:eOption="M " name="stVal" bType="INT32" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="INT32" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="ACT" cdc="ACT">
+      <DA ext:eOption="M " name="general" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="O " name="phsA" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="O " name="phsB" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="O " name="phsC" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="O " name="neut" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="O " name="operTm" bType="Timestamp" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="ACD" cdc="ACD">
+      <DA ext:eOption="M " name="general" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="dirGeneral" bType="Enum" type="dir" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (1) " name="phsA" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (1) " name="dirPhsA" bType="Enum" type="dir" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (2) " name="phsB" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (2) " name="dirPhsB" bType="Enum" type="dir" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (3) " name="phsC" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (3) " name="dirPhsC" bType="Enum" type="dir" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (4) " name="neut" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (4) " name="dirNeut" bType="Enum" type="dir" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="SEC" cdc="SEC">
+      <DA ext:eOption="M " name="cnt" bType="INT32U" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="sev" bType="Enum" type="sev" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="O " name="addr" bType="Struct" type="OCTET STRING64" fc="ST" />
+      <DA ext:eOption="O " name="addInfo" bType="VisString64" fc="ST" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="BCR" cdc="BCR">
+      <DA ext:eOption="M " name="actVal" bType="INT128" dchg="true" fc="ST" />
+      <DA ext:eOption="GC_2 (1) " name="frVal" bType="INT128" dupd="true" fc="ST" />
+      <DA ext:eOption="GC_2 (1) " name="frTm" bType="Timestamp" dupd="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="M " name="pulsQty" bType="FLOAT32" fc="CF" />
+      <DA ext:eOption="GC_2 (1) " name="frEna" bType="BOOLEAN" fc="CF" />
+      <DA ext:eOption="GC_2 (1) " name="strTm" bType="Timestamp" fc="CF" />
+      <DA ext:eOption="GC_2 (1) " name="frPd" bType="INT32" fc="CF" />
+      <DA ext:eOption="GC_2 (1) " name="frRs" bType="BOOLEAN" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="MV" cdc="MV">
+      <DA ext:eOption="O " name="instMag" bType="Struct" type="AnalogueValue" fc="MX" />
+      <DA ext:eOption="M " name="mag" bType="Struct" type="AnalogueValue" dchg="true" fc="MX" />
+      <DA ext:eOption="O " name="range" bType="Enum" type="range" dchg="true" fc="MX" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subMag" bType="Struct" type="AnalogueValue" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="O " name="db" bType="INT32U" fc="CF" />
+      <DA ext:eOption="O " name="zeroDb" bType="INT32U" fc="CF" />
+      <DA ext:eOption="AC_SCAV " name="sVC" bType="Struct" type="ScaledValueConfig" fc="CF" />
+      <DA ext:eOption="GC_CON " name="rangeC" bType="Struct" type="RangeConfig" fc="CF" />
+      <DA ext:eOption="O " name="smpRate" bType="INT32U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="CMV" cdc="CMV">
+      <DA ext:eOption="O " name="instCVal" bType="Struct" type="Vector" fc="MX" />
+      <DA ext:eOption="M " name="cVal" bType="Struct" type="Vector" dchg="true" fc="MX" />
+      <DA ext:eOption="O " name="range" bType="Enum" type="range" dchg="true" fc="MX" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subCVal" bType="Struct" type="Vector" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="O " name="db" bType="INT32U" fc="CF" />
+      <DA ext:eOption="O " name="zeroDb" bType="INT32U" fc="CF" />
+      <DA ext:eOption="GC_CON " name="rangeC" bType="Struct" type="RangeConfig" fc="CF" />
+      <DA ext:eOption="AC_SCAV " name="magSVC" bType="Struct" type="ScaledValueConfig" fc="CF" />
+      <DA ext:eOption="AC_SCAV " name="angSVC" bType="Struct" type="ScaledValueConfig" fc="CF" />
+      <DA ext:eOption="O " name="angRef" bType="Enum" type="angid" fc="CF" />
+      <DA ext:eOption="O " name="smpRate" bType="INT32U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="SAV" cdc="SAV">
+      <DA ext:eOption="M " name="instMag" bType="Struct" type="AnalogueValue" fc="MX" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="O " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="AC_SCAV " name="sVC" bType="Struct" type="ScaledValueConfig" fc="CF" />
+      <DA ext:eOption="O " name="min" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="max" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="WYE" cdc="WYE">
+      <SDO ext:eOption="GC_1 " name="phsA" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="phsB" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="phsC" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="neut" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="net" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="res" type="CMV " />
+      <DA ext:eOption="O " name="angRef" bType="Enum" type="angid" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="DEL" cdc="DEL">
+      <SDO ext:eOption="GC_1 " name="phsAB" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="phsBC" type="CMV " />
+      <SDO ext:eOption="GC_1 " name="phsCA" type="CMV " />
+      <DA ext:eOption="O " name="angRef" bType="Enum" type="angid" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="SEQ" cdc="SEQ">
+      <SDO ext:eOption="M " name="c1" type="CMV " />
+      <SDO ext:eOption="M " name="c2" type="CMV " />
+      <SDO ext:eOption="M " name="c3" type="CMV " />
+      <DA ext:eOption="M " name="seqT" bType="Enum" type="seqT" fc="MX" />
+      <DA ext:eOption="O " name="phsRef" bType="Enum" type="phsid" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="HMV" cdc="HMV">
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="M " name="har" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="M " name="numHar" bType="INT16U" fc="CF" />
+      <DA ext:eOption="M " name="numCyc" bType="INT16U" fc="CF" />
+      <DA ext:eOption="M " name="evalTm" bType="INT16U" fc="CF" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="O " name="smpRate" bType="INT32U" fc="CF" />
+      <DA ext:eOption="M " name="frequency" bType="FLOAT32" fc="CF" />
+      <DA ext:eOption="O " name="hvRef" bType="Enum" type="hvid" fc="CF" />
+      <DA ext:eOption="AC_RMS_M " name="rmsCyc" bType="INT16U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="HWYE" cdc="HWYE">
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="M " name="phsAHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="phsBHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="phsCHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="neutHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="netHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="resHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="M " name="numHar" bType="INT16U" fc="CF" />
+      <DA ext:eOption="M " name="numCyc" bType="INT16U" fc="CF" />
+      <DA ext:eOption="M " name="evalTm" bType="INT16U" fc="CF" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="O " name="angRef" bType="Enum" type="angid" fc="CF" />
+      <DA ext:eOption="O " name="smpRate" bType="INT32U" fc="CF" />
+      <DA ext:eOption="M " name="frequency" bType="FLOAT32" fc="CF" />
+      <DA ext:eOption="O " name="hvRef" bType="Enum" type="hvid" fc="CF" />
+      <DA ext:eOption="AC_RMS_M " name="rmsCyc" bType="INT16U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="HDEL" cdc="HDEL">
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="M " name="phsABHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="phsBCHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="O " name="phsCAHar" bType="Struct" type="Vector" dchg="true" dupd="true" fc="MX" />
+      <DA ext:eOption="M " name="numHar" bType="INT16U" fc="CF" />
+      <DA ext:eOption="M " name="numCyc" bType="INT16U" fc="CF" />
+      <DA ext:eOption="M " name="evalTm" bType="INT16U" fc="CF" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="O " name="angRef" bType="Enum" type="angid" fc="CF" />
+      <DA ext:eOption="O " name="smpRate" bType="INT32U" fc="CF" />
+      <DA ext:eOption="M " name="frequency" bType="FLOAT32" fc="CF" />
+      <DA ext:eOption="O " name="hvRef" bType="Enum" type="hvid" fc="CF" />
+      <DA ext:eOption="AC_RMS_M " name="rmsCyc" bType="INT16U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="SPC" cdc="SPC">
+      <DA ext:eOption="AC_CO_M " name="ctlVal" bType="BOOLEAN" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="operTm" bType="Timestamp" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="ST" />
+      <DA ext:eOption="AC_ST " name="stVal" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="AC_ST " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="AC_ST " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="stSeld" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="AC_CO_O " name="pulseConfig" bType="Struct" type="PulseConfig" fc="CF" />
+      <DA ext:eOption="M " name="ctlModel" bType="Enum" type="ctlModel" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboTimeout" bType="INT32U" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboClass" bType="Enum" type="sboClass" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="DPC" cdc="DPC">
+      <DA ext:eOption="AC_CO_M " name="ctlVal" bType="BOOLEAN" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="operTm" bType="Timestamp" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="ST" />
+      <DA ext:eOption="M " name="stVal" bType="Enum" type="Dbpos" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="stSeld" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="Enum" type="Dbpos" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="AC_CO_O " name="pulseConfig" bType="Struct" type="PulseConfig" fc="CF" />
+      <DA ext:eOption="M " name="ctlModel" bType="Enum" type="ctlModel" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboTimeout" bType="INT32U" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboClass" bType="Enum" type="sboClass" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="INC" cdc="INC">
+      <DA ext:eOption="AC_CO_M " name="ctlVal" bType="INT32" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="operTm" bType="Timestamp" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="ST" />
+      <DA ext:eOption="M " name="stVal" bType="INT32" dchg="true" fc="ST" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="stSeld" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="INT32" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="M " name="ctlModel" bType="Enum" type="ctlModel" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboTimeout" bType="INT32U" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboClass" bType="Enum" type="sboClass" fc="CF" />
+      <DA ext:eOption="O " name="minVal" bType="INT32" fc="CF" />
+      <DA ext:eOption="O " name="maxVal" bType="INT32" fc="CF" />
+      <DA ext:eOption="O " name="stepSize" bType="INT32U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="BSC" cdc="BSC">
+      <DA ext:eOption="AC_CO_M " name="ctlVal" bType="Enum" type="Tcmd" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="operTm" bType="Timestamp" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="ST" />
+      <DA ext:eOption="AC_ST " name="valWTr" bType="Struct" type="ValWithTrans" dchg="true" fc="ST" />
+      <DA ext:eOption="AC_ST " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="AC_ST " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="stSeld" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="Struct" type="ValWithTrans" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="M " name="persistent" bType="BOOLEAN" fc="CF" />
+      <DA ext:eOption="M " name="ctlModel" bType="Enum" type="ctlModel" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboTimeout" bType="INT32U" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboClass" bType="Enum" type="sboClass" fc="CF" />
+      <DA ext:eOption="O " name="minVal" bType="INT8" fc="CF" />
+      <DA ext:eOption="O " name="maxVal" bType="INT8" fc="CF" />
+      <DA ext:eOption="O " name="stepSize" bType="INT8U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="ISC" cdc="ISC">
+      <DA ext:eOption="AC_CO_M " name="ctlVal" bType="INT8" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="operTm" bType="Timestamp" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="origin" bType="Struct" type="Originator" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="CO" />
+      <DA ext:eOption="AC_CO_O " name="ctlNum" bType="INT8U" fc="ST" />
+      <DA ext:eOption="AC_ST " name="valWTr" bType="Struct" type="ValWithTrans" dchg="true" fc="ST" />
+      <DA ext:eOption="AC_ST " name="q" bType="Quality" qchg="true" fc="ST" />
+      <DA ext:eOption="AC_ST " name="t" bType="Timestamp" fc="ST" />
+      <DA ext:eOption="AC_CO_O " name="stSeld" bType="BOOLEAN" dchg="true" fc="ST" />
+      <DA ext:eOption="PICS_SUBST " name="subEna" bType="BOOLEAN" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subVal" bType="Struct" type="ValWithTrans" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subQ" bType="Quality" fc="SV" />
+      <DA ext:eOption="PICS_SUBST " name="subID" bType="VisString64" fc="SV" />
+      <DA ext:eOption="M " name="ctlModel" bType="Enum" type="ctlModel" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboTimeout" bType="INT32U" fc="CF" />
+      <DA ext:eOption="AC_CO_O " name="sboClass" bType="Enum" type="sboClass" fc="CF" />
+      <DA ext:eOption="O " name="minVal" bType="INT8" fc="CF" />
+      <DA ext:eOption="O " name="maxVal" bType="INT8" fc="CF" />
+      <DA ext:eOption="O " name="stepSize" bType="INT8U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="APC" cdc="APC">
+      <DA ext:eOption="M " name="setMag" bType="Struct" type="AnalogueValue" dchg="true" fc="SP" />
+      <DA ext:eOption="M " name="setMag" bType="Struct" type="AnalogueValue" dchg="true" fc="MX" />
+      <DA ext:eOption="O " name="origin" bType="Struct" type="Originator" fc="SP" />
+      <DA ext:eOption="O " name="origin" bType="Struct" type="Originator" fc="MX" />
+      <DA ext:eOption="O " name="operTm" bType="Timestamp" fc="SP" />
+      <DA ext:eOption="M " name="q" bType="Quality" qchg="true" fc="MX" />
+      <DA ext:eOption="M " name="t" bType="Timestamp" fc="MX" />
+      <DA ext:eOption="M " name="ctlModel" bType="Enum" type="ctlModel" fc="CF" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="AC_SCAV " name="sVC" bType="Struct" type="ScaledValueConfig" fc="CF" />
+      <DA ext:eOption="O " name="minVal" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="maxVal" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="stepSize" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="SPG" cdc="SPG">
+      <DA ext:eOption="AC_NSG_M " name="setVal" bType="BOOLEAN" fc="SP" />
+      <DA ext:eOption="AC_SG_M " name="setVal" bType="BOOLEAN" fc="SG" />
+      <DA ext:eOption="AC_SG_M " name="setVal" bType="BOOLEAN" fc="SE" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="ING" cdc="ING">
+      <DA ext:eOption="AC_NSG_M " name="setVal" bType="INT32" fc="SP" />
+      <DA ext:eOption="AC_SG_M " name="setVal" bType="INT32" fc="SG" />
+      <DA ext:eOption="AC_SG_M " name="setVal" bType="INT32" fc="SE" />
+      <DA ext:eOption="O " name="minVal" bType="INT32" fc="CF" />
+      <DA ext:eOption="O " name="maxVal" bType="INT32" fc="CF" />
+      <DA ext:eOption="O " name="stepSize" bType="INT32U" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="ASG" cdc="ASG">
+      <DA ext:eOption="AC_NSG_M " name="setMag" bType="Struct" type="AnalogueValue" fc="SP" />
+      <DA ext:eOption="AC_SG_M " name="setMag" bType="Struct" type="AnalogueValue" fc="SG" />
+      <DA ext:eOption="AC_SG_M " name="setMag" bType="Struct" type="AnalogueValue" fc="SE" />
+      <DA ext:eOption="O " name="units" bType="Struct" type="Unit" fc="CF" />
+      <DA ext:eOption="AC_SCAV " name="sVC" bType="Struct" type="ScaledValueConfig" fc="CF" />
+      <DA ext:eOption="O " name="minVal" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="maxVal" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="stepSize" bType="Struct" type="AnalogueValue" fc="CF" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="CURVE" cdc="CURVE">
+      <DA ext:eOption="AC_NSG_M " name="setCharact" bType="Enum" fc="SP" />
+      <DA ext:eOption="AC_NSG_O " name="setParA" bType="FLOAT32" fc="SP" />
+      <DA ext:eOption="AC_NSG_O " name="setParB" bType="FLOAT32" fc="SP" />
+      <DA ext:eOption="AC_NSG_O " name="setParC" bType="FLOAT32" fc="SP" />
+      <DA ext:eOption="AC_NSG_O " name="setParD" bType="FLOAT32" fc="SP" />
+      <DA ext:eOption="AC_NSG_O " name="setParE" bType="FLOAT32" fc="SP" />
+      <DA ext:eOption="AC_NSG_O " name="setParF" bType="FLOAT32" fc="SP" />
+      <DA ext:eOption="AC_SG_M " name="setCharact" bType="Enum" fc="SG" />
+      <DA ext:eOption="AC_SG_M " name="setCharact" bType="Enum" fc="SE" />
+      <DA ext:eOption="AC_SG_O " name="setParA" bType="FLOAT32" fc="SG" />
+      <DA ext:eOption="AC_SG_O " name="setParA" bType="FLOAT32" fc="SE" />
+      <DA ext:eOption="AC_SG_O " name="setParB" bType="FLOAT32" fc="SG" />
+      <DA ext:eOption="AC_SG_O " name="setParB" bType="FLOAT32" fc="SE" />
+      <DA ext:eOption="AC_SG_O " name="setParC" bType="FLOAT32" fc="SG" />
+      <DA ext:eOption="AC_SG_O " name="setParC" bType="FLOAT32" fc="SE" />
+      <DA ext:eOption="AC_SG_O " name="setParD" bType="FLOAT32" fc="SG" />
+      <DA ext:eOption="AC_SG_O " name="setParD" bType="FLOAT32" fc="SE" />
+      <DA ext:eOption="AC_SG_O " name="setParE" bType="FLOAT32" fc="SG" />
+      <DA ext:eOption="AC_SG_O " name="setParE" bType="FLOAT32" fc="SE" />
+      <DA ext:eOption="AC_SG_O " name="setParF" bType="FLOAT32" fc="SG" />
+      <DA ext:eOption="AC_SG_O " name="setParF" bType="FLOAT32" fc="SE" />
+      <DA ext:eOption="O " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="DPL" cdc="DPL">
+      <DA ext:eOption="M " name="vendor" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="hwRev" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="swRev" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="serNum" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="model" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="location" bType="VisString255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="LPL" cdc="LPL">
+      <DA ext:eOption="M " name="vendor" bType="VisString255" fc="DC" />
+      <DA ext:eOption="M " name="swRev" bType="VisString255" fc="DC" />
+      <DA ext:eOption="M " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_LN0_M " name="configRev" bType="VisString255" fc="DC" />
+      <DA ext:eOption="AC_LN0_EX " name="ldNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLD_M " name="lnNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+    <DOType id="CSD" cdc="CSD">
+      <DA ext:eOption="M " name="xUnit" bType="Struct" type="Unit" fc="DC" />
+      <DA ext:eOption="M " name="xD" bType="VisString255" fc="DC" />
+      <DA ext:eOption="M " name="yUnit" bType="Struct" type="Unit" fc="DC" />
+      <DA ext:eOption="M " name="yD" bType="VisString255" fc="DC" />
+      <DA ext:eOption="M " name="numPts" bType="INT16U" fc="DC" />
+      <DA ext:eOption="M " name="crvPts" bType="Struct" type="Point" fc="DC" />
+      <DA ext:eOption="M " name="d" bType="VisString255" fc="DC" />
+      <DA ext:eOption="O " name="dU" bType="Unicode255" fc="DC" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcNs" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLNDA_M " name="cdcName" bType="VisString255" fc="EX" />
+      <DA ext:eOption="AC_DLN_M " name="dataNs" bType="VisString255" fc="EX" />
+    </DOType>
+  </DataTypeTemplates>
+</SCL>

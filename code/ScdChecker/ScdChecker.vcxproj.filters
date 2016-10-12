@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{26209bfc-c1ae-477f-a64e-a4ad5a1afa20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VtdXml">
+      <UniqueIdentifier>{a2ea9754-b72e-43bf-8fb8-9259d26026b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CheckItems">
+      <UniqueIdentifier>{47952856-04ef-4856-bd3a-d6feb6bf93e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ScdChecker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\charconv.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ScdCheckCommon\VtdTools.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\unaryExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\unionExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\variableExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\vtdGen.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\vtdNav.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\vtdNav_L5.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\XMLChar.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\XMLModifier.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\lex.yy.cc">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\xpath_driver.cc">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\xpathParser.tab.cc">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\arrayList.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\autoPilot.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\binaryExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\bookMark.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\cachedExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\contextBuffer.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\decoder.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\elementFragmentNs.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\fastIntBuffer.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\fastLongBuffer.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\filterExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\funcExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\indexHandler.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\intHash.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\literalExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\locationPathExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\nodeRecorder.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\numberExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\pathExpr.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\textIter.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\VtdXml\transcoder.cpp">
+      <Filter>VtdXml</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\_InitAllCheckItems.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\AppidUniqueCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\BayValid1Check.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\BayValid2Check.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\CommunicationRedunCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\CommunicationValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ConnectedAPValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ControlBlockLdCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\ControlIdUniqueCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\CrcBlankCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DataTempRedunCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DaTempValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\DoiDescBlankCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\FcdaValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GseAppidValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GseMacValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsDescValid1Check.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsDescValid2Check.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsDtValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsFormatCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsStadValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\IntAddrUniqueCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\IpUniqueCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\IpValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\LDescBlankCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\MacAddrUniqueCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SchemaCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SmvAppidValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SmvMacValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SubFormatCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\XmlCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GeneralCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\_PreCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\CrcBlankValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\GSEControlBlockInfoCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SVControlBlockInfoCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\VlanValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsDtbTypeValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsDtCDCValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\InputsDtDODAValidCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\CommunicationGSEorSVUniqueCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDTerminalCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDSubstationCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDLNodeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDBayCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDBayCheck_AttrNormative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDBayCheck_dTypeNormative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDBayCheck_LineBay.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck_IFLEquipment.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck_Normative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConductingEquipmentCheck_Unique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck_NameNormative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck_PathUnique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDLNodeCheck_BeUsed.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDLNodeCheck_InBay.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDLNodeCheck_Unique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDLNodeCheck_Valid.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_AttrNormative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_Connection.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_Unique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDPowerTransformerCheck_WindingNormative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDSubstationCheck_Normative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDSubstationCheck_Unique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDTerminalCheck_CNodeConnection.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDTerminalCheck_NameNormative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDTerminalCheck_Unique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDTerminalCheck_Valid.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Normative.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Sort.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Unique.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_UnNULL.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDCommunicationCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDConnectedAPCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDGSECheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDHeaderCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDIPAddressCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDPhysConnCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDSMVCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDSubNetWorkCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDDATypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDDOTypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDEnumTypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDLNodeTypeCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDIEDAccessPointCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDIEDCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDIEDLNCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SCDIEDServicesCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDSubstationCheck_Other.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDVoltageLevelCheck_Other.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDCommonEquipmentCheck.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckItems\SSDConnectivityNodeCheck_UnUsed.cpp">
+      <Filter>CheckItems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ScdCheckCommon\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\charconv.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\VtdTools.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\arrayList.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\autoPilot.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\binaryExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\bookMark.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\cachedExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\contextBuffer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\customTypes.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\decoder.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\elementFragmentNs.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\everything.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\expr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\fastIntBuffer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\fastLongBuffer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\filterExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\FlexLexer.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\funcExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\indexHandler.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\intHash.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\literalExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\locationPathExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\nodeRecorder.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\numberExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\pathExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\test.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\textIter.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\transcoder.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\unaryExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\unionExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\UTF8Char.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\variableExpr.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdException.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdGen.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdNav.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\vtdNav_L5.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\XMLChar.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\XMLModifier.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\VtdXml\xpath_driver.h">
+      <Filter>VtdXml</Filter>
+    </ClInclude>
+    <ClInclude Include="ScdChecker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\_InitAllCheckItems.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\AppidUniqueCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\BayValid1Check.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\BayValid2Check.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\CommunicationRedunCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\CommunicationValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ConnectedAPValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ControlBlockLdCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\ControlIdUniqueCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\CrcBlankCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DataTempRedunCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DaTempValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\DoiDescBlankCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\FcdaValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GseAppidValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GseMacValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsDescValid1Check.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsDescValid2Check.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsDtValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsFormatCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsStadValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\IntAddrUniqueCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\IpUniqueCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\IpValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\LDescBlankCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\MacAddrUniqueCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SchemaCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SmvAppidValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SmvMacValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SubFormatCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\XmlCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\OperHandler.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GeneralCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\_PreCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\CrcBlankValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\GSEControlBlockInfoCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SVControlBlockInfoCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ScdCheckCommon\deelx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\VlanValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsDtbTypeValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsDtCDCValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\InputsDtDODAValidCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\CommunicationGSEorSVUniqueCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDTerminalCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDSubstationCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDLNodeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDBayCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDBayCheck_AttrNormative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDBayCheck_dTypeNormative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDBayCheck_LineBay.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck_IFLEquipment.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck_Normative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConductingEquipmentCheck_Unique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck_NameNormative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck_PathUnique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDLNodeCheck_BeUsed.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDLNodeCheck_InBay.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDLNodeCheck_Unique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDLNodeCheck_Valid.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_AttrNormative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_Connection.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_Unique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDPowerTransformerCheck_WindingNormative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDSubstationCheck_Normative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDSubstationCheck_Unique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDTerminalCheck_CNodeConnection.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDTerminalCheck_NameNormative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDTerminalCheck_Unique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDTerminalCheck_Valid.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Normative.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Sort.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Unique.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_UnNULL.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDCommunicationCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDConnectedAPCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDGSECheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDHeaderCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDIPAddressCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDPhysConnCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDSMVCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDSubNetWorkCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDCommonEquipmentCheck.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDSubstationCheck_Other.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDVoltageLevelCheck_Other.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDDATypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDDOTypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDEnumTypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDLNodeTypeCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDIEDAccessPointCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDIEDCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDIEDLNCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SCDIEDServicesCheck.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckItems\SSDConnectivityNodeCheck_UnUsed.h">
+      <Filter>CheckItems</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\VtdXml\location.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="..\VtdXml\position.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="..\VtdXml\stack.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+    <None Include="..\VtdXml\xpathParser.tab.hh">
+      <Filter>VtdXml</Filter>
+    </None>
+  </ItemGroup>
+</Project>

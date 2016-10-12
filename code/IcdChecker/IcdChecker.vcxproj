@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DEA703B5-26D2-43AF-9AD0-EEA23551C93B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>IcdChecker</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>$(SolutionDir)generated\$(ProjectName)\$(Configuration)$(PlatformName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;4334;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\boost_1_55_0;e:\boost_1_55_0;..\</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4723;4244;4101;4996;4018;4114;4554;4334;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(TargetDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>d:\boost_1_55_0\stage\lib$(PlatformName);e:\boost_1_55_0\stage\lib$(PlatformName);..\lib\$(PlatformName)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;Shlwapi.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ScdCheckCommon\charconv.cpp" />
+    <ClCompile Include="..\ScdCheckCommon\Common.cpp" />
+    <ClCompile Include="..\ScdCheckCommon\Markup.cpp" />
+    <ClCompile Include="..\ScdCheckCommon\VtdTools.cpp" />
+    <ClCompile Include="..\VtdXml\arrayList.cpp" />
+    <ClCompile Include="..\VtdXml\autoPilot.cpp" />
+    <ClCompile Include="..\VtdXml\binaryExpr.cpp" />
+    <ClCompile Include="..\VtdXml\bookMark.cpp" />
+    <ClCompile Include="..\VtdXml\cachedExpr.cpp" />
+    <ClCompile Include="..\VtdXml\contextBuffer.cpp" />
+    <ClCompile Include="..\VtdXml\decoder.cpp" />
+    <ClCompile Include="..\VtdXml\elementFragmentNs.cpp" />
+    <ClCompile Include="..\VtdXml\fastIntBuffer.cpp" />
+    <ClCompile Include="..\VtdXml\fastLongBuffer.cpp" />
+    <ClCompile Include="..\VtdXml\filterExpr.cpp" />
+    <ClCompile Include="..\VtdXml\funcExpr.cpp" />
+    <ClCompile Include="..\VtdXml\indexHandler.cpp" />
+    <ClCompile Include="..\VtdXml\intHash.cpp" />
+    <ClCompile Include="..\VtdXml\lex.yy.cc" />
+    <ClCompile Include="..\VtdXml\literalExpr.cpp" />
+    <ClCompile Include="..\VtdXml\locationPathExpr.cpp" />
+    <ClCompile Include="..\VtdXml\nodeRecorder.cpp" />
+    <ClCompile Include="..\VtdXml\numberExpr.cpp" />
+    <ClCompile Include="..\VtdXml\pathExpr.cpp" />
+    <ClCompile Include="..\VtdXml\textIter.cpp" />
+    <ClCompile Include="..\VtdXml\transcoder.cpp" />
+    <ClCompile Include="..\VtdXml\unaryExpr.cpp" />
+    <ClCompile Include="..\VtdXml\unionExpr.cpp" />
+    <ClCompile Include="..\VtdXml\variableExpr.cpp" />
+    <ClCompile Include="..\VtdXml\vtdGen.cpp" />
+    <ClCompile Include="..\VtdXml\vtdNav.cpp" />
+    <ClCompile Include="..\VtdXml\vtdNav_L5.cpp" />
+    <ClCompile Include="..\VtdXml\XMLChar.cpp" />
+    <ClCompile Include="..\VtdXml\XMLModifier.cpp" />
+    <ClCompile Include="..\VtdXml\xpathParser.tab.cc" />
+    <ClCompile Include="..\VtdXml\xpath_driver.cc" />
+    <ClCompile Include="CacheMgr.cpp" />
+    <ClCompile Include="CheckItem.cpp" />
+    <ClCompile Include="CheckItems\CdcCheck.cpp" />
+    <ClCompile Include="CheckItems\ConfDataSetCheck.cpp" />
+    <ClCompile Include="CheckItems\ConfFcdaCheck.cpp" />
+    <ClCompile Include="CheckItems\ConfLogCheck.cpp" />
+    <ClCompile Include="CheckItems\ConfReportCheck.cpp" />
+    <ClCompile Include="CheckItems\DataSetCheck.cpp" />
+    <ClCompile Include="CheckItems\DataSetTypeValidCheck.cpp" />
+    <ClCompile Include="CheckItems\DatypeCheck.cpp" />
+    <ClCompile Include="CheckItems\DoiValidCheck.cpp" />
+    <ClCompile Include="CheckItems\DotypeCheck.cpp" />
+    <ClCompile Include="CheckItems\EnumtypeCheck.cpp" />
+    <ClCompile Include="CheckItems\FcdaLdValidCheck.cpp" />
+    <ClCompile Include="CheckItems\FcdaValidCheck.cpp" />
+    <ClCompile Include="CheckItems\GeneralErrorCheck.cpp" />
+    <ClCompile Include="CheckItems\GeneralWarnCheck.cpp" />
+    <ClCompile Include="CheckItems\GsSmvCheck.cpp" />
+    <ClCompile Include="CheckItems\IedCheck.cpp" />
+    <ClCompile Include="CheckItems\LdDescCheck.cpp" />
+    <ClCompile Include="CheckItems\LDdoiCheck.cpp" />
+    <ClCompile Include="CheckItems\LdValidCheck.cpp" />
+    <ClCompile Include="CheckItems\LntypeCheck.cpp" />
+    <ClCompile Include="CheckItems\LnValidCheck.cpp" />
+    <ClCompile Include="CheckItems\MDatypeCheck.cpp" />
+    <ClCompile Include="CheckItems\MDotypeCheck.cpp" />
+    <ClCompile Include="CheckItems\MLntypeCheck.cpp" />
+    <ClCompile Include="CheckItems\PhsyconCheck.cpp" />
+    <ClCompile Include="CheckItems\RedDatypeCheck.cpp" />
+    <ClCompile Include="CheckItems\RedDotypeCheck.cpp" />
+    <ClCompile Include="CheckItems\RedInputsCheck.cpp" />
+    <ClCompile Include="CheckItems\RedLntypeCheck.cpp" />
+    <ClCompile Include="CheckItems\REnumtypeCheck.cpp" />
+    <ClCompile Include="CheckItems\ReportCtrlCheck.cpp" />
+    <ClCompile Include="CheckItems\SchemaCheck.cpp" />
+    <ClCompile Include="CheckItems\ServerCheck.cpp" />
+    <ClCompile Include="CheckItems\XmlCheck.cpp" />
+    <ClCompile Include="CheckItems\_InitAllCheckItems.cpp" />
+    <ClCompile Include="ConfigMgr.cpp" />
+    <ClCompile Include="IcdChecker.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OutputMgr.cpp" />
+    <ClCompile Include="ScdChecker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ScdCheckCommon\charconv.h" />
+    <ClInclude Include="..\ScdCheckCommon\Common.h" />
+    <ClInclude Include="..\ScdCheckCommon\Markup.h" />
+    <ClInclude Include="..\ScdCheckCommon\OperHandler.h" />
+    <ClInclude Include="..\ScdCheckCommon\VtdTools.h" />
+    <ClInclude Include="..\VtdXml\arrayList.h" />
+    <ClInclude Include="..\VtdXml\autoPilot.h" />
+    <ClInclude Include="..\VtdXml\binaryExpr.h" />
+    <ClInclude Include="..\VtdXml\bookMark.h" />
+    <ClInclude Include="..\VtdXml\cachedExpr.h" />
+    <ClInclude Include="..\VtdXml\contextBuffer.h" />
+    <ClInclude Include="..\VtdXml\customTypes.h" />
+    <ClInclude Include="..\VtdXml\decoder.h" />
+    <ClInclude Include="..\VtdXml\elementFragmentNs.h" />
+    <ClInclude Include="..\VtdXml\everything.h" />
+    <ClInclude Include="..\VtdXml\expr.h" />
+    <ClInclude Include="..\VtdXml\fastIntBuffer.h" />
+    <ClInclude Include="..\VtdXml\fastLongBuffer.h" />
+    <ClInclude Include="..\VtdXml\filterExpr.h" />
+    <ClInclude Include="..\VtdXml\FlexLexer.h" />
+    <ClInclude Include="..\VtdXml\funcExpr.h" />
+    <ClInclude Include="..\VtdXml\indexHandler.h" />
+    <ClInclude Include="..\VtdXml\intHash.h" />
+    <ClInclude Include="..\VtdXml\literalExpr.h" />
+    <ClInclude Include="..\VtdXml\locationPathExpr.h" />
+    <ClInclude Include="..\VtdXml\nodeRecorder.h" />
+    <ClInclude Include="..\VtdXml\numberExpr.h" />
+    <ClInclude Include="..\VtdXml\pathExpr.h" />
+    <ClInclude Include="..\VtdXml\test.h" />
+    <ClInclude Include="..\VtdXml\textIter.h" />
+    <ClInclude Include="..\VtdXml\transcoder.h" />
+    <ClInclude Include="..\VtdXml\unaryExpr.h" />
+    <ClInclude Include="..\VtdXml\unionExpr.h" />
+    <ClInclude Include="..\VtdXml\UTF8Char.h" />
+    <ClInclude Include="..\VtdXml\variableExpr.h" />
+    <ClInclude Include="..\VtdXml\vtdException.h" />
+    <ClInclude Include="..\VtdXml\vtdGen.h" />
+    <ClInclude Include="..\VtdXml\vtdNav.h" />
+    <ClInclude Include="..\VtdXml\vtdNav_L5.h" />
+    <ClInclude Include="..\VtdXml\XMLChar.h" />
+    <ClInclude Include="..\VtdXml\XMLModifier.h" />
+    <ClInclude Include="..\VtdXml\xpath_driver.h" />
+    <ClInclude Include="CacheMgr.h" />
+    <ClInclude Include="CheckItem.h" />
+    <ClInclude Include="CheckItems\CdcCheck.h" />
+    <ClInclude Include="CheckItems\ConfDataSetCheck.h" />
+    <ClInclude Include="CheckItems\ConfFcdaCheck.h" />
+    <ClInclude Include="CheckItems\ConfLogCheck.h" />
+    <ClInclude Include="CheckItems\ConfReportCheck.h" />
+    <ClInclude Include="CheckItems\DataSetCheck.h" />
+    <ClInclude Include="CheckItems\DataSetTypeValidCheck.h" />
+    <ClInclude Include="CheckItems\DatypeCheck.h" />
+    <ClInclude Include="CheckItems\DoiValidCheck.h" />
+    <ClInclude Include="CheckItems\DotypeCheck.h" />
+    <ClInclude Include="CheckItems\EnumtypeCheck.h" />
+    <ClInclude Include="CheckItems\FcdaLdValidCheck.h" />
+    <ClInclude Include="CheckItems\FcdaValidCheck.h" />
+    <ClInclude Include="CheckItems\GeneralErrorCheck.h" />
+    <ClInclude Include="CheckItems\GeneralWarnCheck.h" />
+    <ClInclude Include="CheckItems\GsSmvCheck.h" />
+    <ClInclude Include="CheckItems\IedCheck.h" />
+    <ClInclude Include="CheckItems\LdDescCheck.h" />
+    <ClInclude Include="CheckItems\LDdoiCheck.h" />
+    <ClInclude Include="CheckItems\LdValidCheck.h" />
+    <ClInclude Include="CheckItems\LntypeCheck.h" />
+    <ClInclude Include="CheckItems\LnValidCheck.h" />
+    <ClInclude Include="CheckItems\MDatypeCheck.h" />
+    <ClInclude Include="CheckItems\MDotypeCheck.h" />
+    <ClInclude Include="CheckItems\MLntypeCheck.h" />
+    <ClInclude Include="CheckItems\PhsyconCheck.h" />
+    <ClInclude Include="CheckItems\RedDatypeCheck.h" />
+    <ClInclude Include="CheckItems\RedDotypeCheck.h" />
+    <ClInclude Include="CheckItems\RedInputsCheck.h" />
+    <ClInclude Include="CheckItems\RedLntypeCheck.h" />
+    <ClInclude Include="CheckItems\REnumtypeCheck.h" />
+    <ClInclude Include="CheckItems\ReportCtrlCheck.h" />
+    <ClInclude Include="CheckItems\SchemaCheck.h" />
+    <ClInclude Include="CheckItems\ServerCheck.h" />
+    <ClInclude Include="CheckItems\XmlCheck.h" />
+    <ClInclude Include="ConfigMgr.h" />
+    <ClInclude Include="OutputMgr.h" />
+    <ClInclude Include="ScdChecker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\VtdXml\location.hh">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\VtdXml\position.hh">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\VtdXml\stack.hh">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\VtdXml\xpathParser.tab.hh">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="CheckItems\ICDCheckCfg.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

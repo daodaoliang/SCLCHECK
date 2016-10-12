@@ -1,0 +1,36 @@
+// code guru example 
+There are 16 directories under this directory. Each directory contains
+the C++ code of a short application written in VTD-XML. Additionally, each 
+directory contains the input and output XML documents. All those examples
+are self-explanatory, ideally suited as the first course for learning 
+VTD-XML.
+ 
+Below is a list of brief description of what each directory contains. 
+
+basic
+1. hello world (parsing from a file) parse+ navigate
+2. using XPath without namespaces
+3. using XPath with name spaces
+
+indexing
+4. index writing
+5. index loading
+
+Incremental Modifier
+6. modify an attribute value
+7. remove element fragments
+8. insert fragments
+9. insert byte fragments with transcoding
+10. update element name
+ 
+NS compensated fragments
+11. insert namespace compensated element fragments
+12. insert namespace compensated element fragments with transcoding
+
+slicing
+13. re-arrange element fragments
+
+editing
+14. create a template
+15. edit the template
+16. erase the template

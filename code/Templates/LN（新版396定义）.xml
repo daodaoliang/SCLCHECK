@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 (mgl) 使用XMLSpy vroof编辑的 (http://www.altova.com) by -->
+<SCL>
+	<IED voltage="220" name="线路保护" type="线路保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="主保护" desc="纵联差动" inst="2" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="零序差动" inst="3" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="分相差动" inst="4" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="突变量差动" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="纵联距离" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="O" funcType="主保护" desc="纵联方向" inst="1" lnClass="PDIR"/>
+			<LN ext:eOption="M" funcType="主保护" desc="纵联零序" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="通道" desc="纵联通道" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="通道" desc="远传1" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="通道" desc="远传2" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="通道" desc="远传3" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="快速距离" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="接地距离Ⅰ段" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="接地距离Ⅱ段" inst="2" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="接地距离Ⅲ段" inst="3" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="相间距离Ⅰ段" inst="4" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="相间距离Ⅱ段" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="相间距离Ⅲ段" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="距离加速动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="零序过流Ⅰ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="零序过流Ⅱ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="零序过流Ⅲ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="零序过流Ⅳ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="零序过流加速定值" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="PT断线相电流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="PT断线零序过流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="零序反时限过流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="振荡闭锁" inst="1" lnClass="RPSB"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="过电压保护" inst="1" lnClass="PTOV"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="过电压起动远跳" inst="1" lnClass="PTOV"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="远跳有判据" inst="2" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="远跳无判据" inst="3" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="保护动作" desc="跳闸逻辑" inst="4" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护辅助功能" desc="重合闸" inst="1" lnClass="RREC"/>
+			<LN ext:eOption="M" funcType="保护辅助功能" desc="故障定位" inst="1" lnClass="RFLO"/>
+			<LN ext:eOption="M" funcType="保护辅助功能" desc="故障录波" inst="1" lnClass="RDRE"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="线路或母线电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="线路电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="保护开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护测量" desc="保护测量" inst="1" lnClass="MMXU"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="位置输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="其他输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="（边断路器）出口" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="（中断路器）出口" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="重合闸出口" inst="1" lnClass="RREC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="远传命令输出" inst="1" lnClass="PSCH"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层" desc="保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="纵联距离方向保护" type="线路保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="主保护" desc="纵联差动" inst="2" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="零序差动" inst="3" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="分相差动" inst="4" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="主保护" desc="突变量差动" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="主保护" desc="纵联距离" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="主保护" desc="纵联方向" inst="1" lnClass="PDIR"/>
+			<LN ext:eOption="M" funcType="主保护" desc="纵联零序" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="通道" desc="纵联通道" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="通道" desc="远传1" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="通道" desc="远传2" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="通道" desc="远传3" inst="1" lnClass="PSCH"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="快速距离" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="接地距离Ⅰ段" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="接地距离Ⅱ段" inst="2" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="接地距离Ⅲ段" inst="3" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="相间距离Ⅰ段" inst="4" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="相间距离Ⅱ段" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="相间距离Ⅲ段" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="距离加速动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="零序过流Ⅰ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="零序过流Ⅱ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="零序过流Ⅲ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="零序过流Ⅳ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="零序过流加速定值" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="PT断线相电流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="PT断线零序过流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="后备保护" desc="零序反时限过流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="后备保护" desc="振荡闭锁" inst="1" lnClass="RPSB"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="过电压保护" inst="1" lnClass="PTOV"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="过电压起动远跳" inst="1" lnClass="PTOV"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="远跳有判据" inst="2" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="过电压及就地判别功能" desc="远跳无判据" inst="3" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="保护动作" desc="跳闸逻辑" inst="4" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护辅助功能" desc="重合闸" inst="1" lnClass="RREC"/>
+			<LN ext:eOption="M" funcType="保护辅助功能" desc="故障定位" inst="1" lnClass="RFLO"/>
+			<LN ext:eOption="M" funcType="保护辅助功能" desc="故障录波" inst="1" lnClass="RDRE"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="线路或母线电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="线路电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="保护开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护测量" desc="保护测量" inst="1" lnClass="MMXU"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="位置输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="其他输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="（边断路器）出口" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="（中断路器）出口" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="重合闸出口" inst="1" lnClass="RREC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="远传命令输出" inst="1" lnClass="PSCH"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层" desc="保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="断路器保护" type="断路器保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="失灵及跟跳" desc="失灵跳本断路器" inst="2" lnClass="RBRF"/>
+			<LN ext:eOption="M" funcType="失灵及跟跳" desc="失灵保护动作跳相邻断路器" inst="3" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="失灵及跟跳" desc="A相跟跳" inst="4" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="失灵及跟跳" desc="B相跟跳" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="失灵及跟跳" desc="C相跟跳" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="失灵及跟跳" desc="三相跟跳" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="失灵及跟跳" desc="两相联跳三相" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="过流Ⅰ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="过流Ⅱ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="零序过流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="过流保护" desc="死区保护" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="辅助功能" desc="三相不一致保护" inst="1" lnClass="PPDP"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="跳闸逻辑" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="辅助功能" desc="重合闸" inst="2" lnClass="RREC"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="故障录波" inst="3" lnClass="RDRE"/>
+			<LN ext:eOption="O" funcType="保护输入接口" desc="线路或母线电压互感器" inst="4" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="线路或断路器电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="保护开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护测量" desc="保护测量" inst="1" lnClass="MMXU"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="位置输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="其他输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="本断路器跳闸出口" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="相邻断路器跳闸及闭重出口" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="重合闸出口" inst="1" lnClass="RREC"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层" desc="保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="变压器保护" type="变压器保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="比率差动动作" inst="2" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="差动速断动作" inst="3" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="工频变化量差动" inst="4" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="零序差动保护" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="分侧差动保护" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="小区差动" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="分相差动" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="相间阻抗1时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="相间阻抗2时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="接地阻抗1时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="接地阻抗2时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="相间阻抗1时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="相间阻抗2时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="接地阻抗1时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="接地阻抗2时限动作" inst="1" lnClass="PDIS"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="过流1时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="过流2时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="低压侧后备保护" desc="过流3时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="复压闭锁过流1时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="复压闭锁过流2时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="O" funcType="低压侧后备保护" desc="复压闭锁过流3时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="O" funcType="低压侧后备保护" desc="过负荷告警" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="公共绕组模块" desc="中性点零流保护动作" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="公共绕组模块" desc="公共绕组过负荷告警" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过励磁保护" desc="定时限过励磁告警" inst="1" lnClass="PVPH"/>
+			<LN ext:eOption="M" funcType="过励磁保护" desc="反时限过励磁保护" inst="1" lnClass="PVPH"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="跳闸逻辑" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="故障录波" inst="1" lnClass="RDRE"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="保护开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护测量" desc="保护测量" inst="1" lnClass="MMXU"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="失灵联跳输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="断路器跳闸及起失灵出口及解除失灵电压闭锁" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="风冷或闭锁调压出口" inst="1" lnClass="GGIO"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层接口" desc="各侧保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="500" name="变压器保护" type="变压器保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="比率差动动作" inst="2" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="差动速断动作" inst="3" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="工频变化量差动" inst="4" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="零序差动保护" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="分侧差动保护" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="小区差动" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="分相差动" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="复压闭锁过流Ⅰ段1时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="复压闭锁过流Ⅰ段2时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="高压侧复压闭锁过流Ⅱ段" inst="2" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="零序过流Ⅰ段1时限" inst="3" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="零序过流Ⅰ段2时限" inst="4" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="高压侧后备保护" desc="零序过流Ⅱ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="高压侧后备保护" desc="间隙零序过压保护" inst="1" lnClass="PTOV"/>
+			<LN ext:eOption="O" funcType="高压侧后备保护" desc="间隙零序过流保护" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="高压侧后备保护" desc="失灵联跳" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="高压侧后备保护" desc="过负荷告警" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="复压闭锁过流Ⅰ段1时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="复压闭锁过流Ⅰ段2时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="复压闭锁过流Ⅱ段" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="零序过流Ⅰ段1时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="零序过流Ⅰ段2时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="中压侧后备保护" desc="零序过流Ⅱ段" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="中压侧后备保护" desc="间隙零序过压保护" inst="1" lnClass="PTOV"/>
+			<LN ext:eOption="O" funcType="中压侧后备保护" desc="间隙零序过流保护" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="中压侧后备保护" desc="失灵联跳" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="中压侧后备保护" desc="过负荷告警" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="过流1时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="过流2时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="低压侧后备保护" desc="过流3时限" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="复压闭锁过流1时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="M" funcType="低压侧后备保护" desc="复压闭锁过流2时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="O" funcType="低压侧后备保护" desc="复压闭锁过流3时限" inst="1" lnClass="PVOC"/>
+			<LN ext:eOption="O" funcType="低压侧后备保护" desc="过负荷告警" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="公共绕组模块" desc="中性点零流保护动作" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="公共绕组模块" desc="公共绕组过负荷告警" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="跳闸逻辑" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="故障录波" inst="1" lnClass="RDRE"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="保护开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护测量" desc="保护测量" inst="1" lnClass="MMXU"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="失灵联跳输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="断路器跳闸及起失灵出口及解除失灵电压闭锁" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="风冷或闭锁调压出口" inst="1" lnClass="GGIO"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层接口" desc="各侧保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="母线保护" type="母线保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="变化量差动保护" inst="2" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="稳态量差动保护" inst="3" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="母线相关逻辑节点" desc="母线失灵动作" inst="4" lnClass="RBRF"/>
+			<LN ext:eOption="O" funcType="母线相关逻辑节点" desc="母线电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="O" funcType="母线相关逻辑节点" desc="母线电压测量" inst="1" lnClass="MMXU"/>
+			<LN ext:eOption="O" funcType="母线相关逻辑节点" desc="母线差动电流测量" inst="1" lnClass="MMXU"/>
+			<LN ext:eOption="M" funcType="间隔相关逻辑节点" desc="断路器失灵保护" inst="1" lnClass="RBRF"/>
+			<LN ext:eOption="M" funcType="间隔相关逻辑节点" desc="间隔跳闸逻辑" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="M" funcType="间隔相关逻辑节点" desc="间隔开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="间隔相关逻辑节点" desc="间隔电流互感器" inst="2" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="间隔相关逻辑节点" desc="间隔模拟量测量" inst="3" lnClass="MMXU"/>
+			<LN ext:eOption="O" funcType="间隔相关逻辑节点" desc="间隔软压板" inst="4" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="主变失灵联跳" desc="主变失灵联跳" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="保护动作" inst="1" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="辅助功能" desc="基准电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="辅助功能" desc="故障录波" inst="1" lnClass="RDRE"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="失灵联跳输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="断路器跳闸及起失灵出口及解除失灵电压闭锁" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="风冷或闭锁调压出口" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="风冷或闭锁调压出口" inst="1" lnClass="PTRC"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层接口" desc="各侧保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="电抗器保护" type="电抗器保护">
+		<LDevice desc="保护" inst="PROT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="差动速断" inst="2" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="差动保护" inst="3" lnClass="PDIF"/>
+			<LN ext:eOption="M" funcType="差动保护" desc="工频变化量差动" inst="4" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="零序差动保护" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="差动保护" desc="零序差动速断保护" inst="1" lnClass="PDIF"/>
+			<LN ext:eOption="O" funcType="匝间保护" desc="匝间保护" inst="1" lnClass="PDUP"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="零序过流保护" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="主电抗过电流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="小电抗过电流" inst="1" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="主电抗过负荷" inst="2" lnClass="PTOC"/>
+			<LN ext:eOption="M" funcType="过流保护" desc="小电抗过负荷" inst="3" lnClass="PTOC"/>
+			<LN ext:eOption="O" funcType="辅助功能" desc="跳闸逻辑" inst="4" lnClass="PTRC"/>
+			<LN ext:eOption="O" funcType="辅助功能" desc="故障录波" inst="1" lnClass="RDRE"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="O" funcType="保护输入接口" desc="电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护输入接口" desc="保护开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护自检" desc="保护自检告警" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="保护测量" desc="保护测量" inst="1" lnClass="MMXU"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="GOOSE接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="GOOSE接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="GOOSE接口" desc="断路器跳闸" inst="1" lnClass="PTRC"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="SV接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="SV接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="SV接口" desc="采样值输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="测控装置" type="测控装置">
+		<LDevice desc="保护" inst="CTRL">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="断路器控制" desc="断路器分合含无压合" inst="2" lnClass="CSWI"/>
+			<LN ext:eOption="O" funcType="隔离开关控制" desc="隔离开关控制" inst="3" lnClass="CSWI"/>
+			<LN ext:eOption="O" funcType="隔离开关控制" desc="接地开关控制" inst="4" lnClass="CSWI"/>
+			<LN ext:eOption="O" funcType="断路器过程层接口" desc="总断路器" inst="1" lnClass="XCBR"/>
+			<LN ext:eOption="O" funcType="断路器过程层接口" desc="A相断路器" inst="1" lnClass="XCBR"/>
+			<LN ext:eOption="O" funcType="断路器过程层接口" desc="B相断路器" inst="1" lnClass="XCBR"/>
+			<LN ext:eOption="O" funcType="断路器过程层接口" desc="C相断路器" inst="1" lnClass="XCBR"/>
+			<LN ext:eOption="O" funcType="隔离开关过程层接口" desc="隔离开关" inst="1" lnClass="XSWI"/>
+			<LN ext:eOption="O" funcType="隔离开关过程层接口" desc="接地开关" inst="1" lnClass="XSWI"/>
+			<LN ext:eOption="O" funcType="备用控制" desc="备用1" inst="2" lnClass="CSWI"/>
+			<LN ext:eOption="O" funcType="备用控制" desc="备用2" inst="3" lnClass="CSWI"/>
+			<LN ext:eOption="O" funcType="备用控制" desc="备用3" inst="4" lnClass="CSWI"/>
+			<LN ext:eOption="O" funcType="联锁功能" desc="隔离开关联锁" inst="1" lnClass="CILO"/>
+			<LN ext:eOption="O" funcType="联锁功能" desc="接地开关联锁" inst="1" lnClass="CILO"/>
+			<LN ext:eOption="O" funcType="联锁功能" desc="备用联锁" inst="1" lnClass="CILO"/>
+			<LN ext:eOption="O" funcType="其他" desc="开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="其他" desc="告警" inst="1" lnClass="GGIO"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="MEAS">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="测量" desc="间隔测量" inst="1" lnClass="MMXU"/>
+			<LN ext:eOption="M" funcType="测量" desc="同期电压频率" inst="1" lnClass="MMXN"/>
+			<LN ext:eOption="O" funcType="测量" desc="通用模拟量" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="互感器输入" desc="母线电压" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="互感器输入" desc="线路电压" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="互感器输入" desc="线路电流" inst="1" lnClass="TCTR"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="测控GOOSE过程层接口" desc="GOOSE位置输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="测控GOOSE过程层接口" desc="GOOSE开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="测控GOOSE过程层接口" desc="GOOSE模拟量输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="测控GOOSE过程层接口" desc="GOOSE输出" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="测控GOOSE过程层接口" desc="GOOSE联锁输出" inst="1" lnClass="CILO"/>
+			<LN ext:eOption="M" funcType="测控GOOSE过程层接口" desc="断路器分合" inst="1" lnClass="CSWI"/>
+			<LN ext:eOption="M" funcType="测控GOOSE过程层接口" desc="隔离开关分合" inst="1" lnClass="CSWI"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="测控SV过程层接口" desc="各侧保护电流、电压输入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="LD0">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="其他" desc="开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="其他" desc="告警" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="智能终端" type="智能终端">
+		<LDevice desc="保护" inst="RPIT">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="断路器" desc="总断路器" inst="2" lnClass="XCBR"/>
+			<LN ext:eOption="M" funcType="断路器" desc="A相断路器" inst="3" lnClass="XCBR"/>
+			<LN ext:eOption="M" funcType="断路器" desc="B相断路器" inst="4" lnClass="XCBR"/>
+			<LN ext:eOption="O" funcType="断路器" desc="C相断路器" inst="1" lnClass="XCBR"/>
+			<LN ext:eOption="O" funcType="（接地）隔离开关" desc="（接地）隔离开关" inst="1" lnClass="XSWI"/>
+			<LN ext:eOption="O" funcType="其他" desc="开关量输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="其他" desc="保护用信号" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="其他" desc="内部告警信号" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="其他" desc="GOOSE告警信号" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="其他" desc="温湿度测量" inst="2" lnClass="GGIO"/>
+			<LN ext:eOption="M" funcType="GOOSE" desc="保护输入虚端子" inst="3" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="GOOSE" desc="测控输入虚端子" inst="4" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="合并单元" type="合并单元">
+		<LDevice desc="保护" inst="MUSV">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="电压" desc="A相电压互感器" inst="2" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="电压" desc="B相电压互感器" inst="3" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="电压" desc="C相电压互感器" inst="4" lnClass="TVTR"/>
+			<LN ext:eOption="O" funcType="电压" desc="零序电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="O" funcType="同期电压" desc="A相电压互感器" inst="1" lnClass="TVTR"/>
+			<LN ext:eOption="M" funcType="测量电流" desc="A相电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="测量电流" desc="B相电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="测量电流" desc="C相电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护电流" desc="A相电流互感器" inst="1" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护电流" desc="B相电流互感器" inst="2" lnClass="TCTR"/>
+			<LN ext:eOption="M" funcType="保护电流" desc="C相电流互感器" inst="3" lnClass="TCTR"/>
+			<LN ext:eOption="O" funcType="保护电流" desc="零序电流互感器" inst="4" lnClass="TCTR"/>
+			<LN ext:eOption="O" funcType="主变间隙电流" desc="间隙电流互感器" inst="1" lnClass="TCTR"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="MUGO">
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="M" funcType="保护GOOSE过程层接口" desc="失灵联跳输入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="断路器跳闸及起失灵出口及解除失灵电压闭锁" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护GOOSE过程层接口" desc="风冷或闭锁调压出口" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+	<IED voltage="220" name="录波器" type="录波器">
+		<LDevice desc="保护" inst="RCD">
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="基本逻辑节点" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="额定线电压" inst="2" lnClass="TVTR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="额定相电流" inst="3" lnClass="TCTR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="相电压突变" inst="4" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="零序电压突变" inst="1" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="正序电压" inst="1" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="零序电压" inst="1" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="频率" inst="1" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="相电流" inst="1" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="零序电流" inst="1" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="负序电流" inst="2" lnClass="RADR"/>
+			<LN ext:eOption="O" funcType="单元采样" desc="故障定位" inst="3" lnClass="RFLO"/>
+			<LN ext:eOption="O" funcType="开关量" desc="开关量" inst="4" lnClass="RBDR"/>
+			<LN ext:eOption="M" funcType="录波信息" desc="故障录波" inst="1" lnClass="RDRE"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PIGO">
+			<LN ext:eOption="M" funcType="过程层开入" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="过程层开入" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="过程层开入" desc="单元单点GOOSE开入" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="过程层开入" desc="单元双点GOOSE开入" inst="1" lnClass="GGIO"/>
+		</LDevice>
+		<LDevice desc="装置公共信息" inst="PISV">
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="管理逻辑节点" inst="1" lnClass="LLN0"/>
+			<LN ext:eOption="M" funcType="保护SV过程层接口" desc="物理设备逻辑节点" inst="1" lnClass="LPHD"/>
+			<LN ext:eOption="O" funcType="保护SV过程层接口" desc="录波电流" inst="1" lnClass="GGIO"/>
+			<LN ext:eOption="O" funcType="保护SV过程层接口" desc="录波电压" inst="1" lnClass="GGIO"/>
+		</LDevice>
+	</IED>
+</SCL>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- flag为登记标志（E为错误，W为警告，R为提示）isCheck=true为是否检测标记 -->
+<SCLConfig>
+	<CheckClass key="1" desc="语法格式校验">
+		<CheckItem key="CE18E6" name="XmlCheck" desc="XML格式规范" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="DB5780" name="SchemaCheck" desc="Schema校验" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="2" desc="数据类型模板检测">
+		<CheckItem key="5BA640" name="LntypeCheck" desc="标准LNodeType检查（检查标准LNodeType的标准DO顺序是否正确、检查标准LNodeType的标准DO的数据类型是否正确、标准LNodeType是否存在扩展的DO类型）" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="2C98FA" name="RedLntypeCheck" desc="检查是否存在扩展的LNodeType，扩展的LNodeType应符合命名规范（制造厂商前缀_装置型号_版本号_LN类名(_其它后缀)）" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第7.1.7节"/>
+		<CheckItem key="20544B" name="MLntypeCheck" desc="检查标准LNodeType的强制（或条件强制）DO是否存在" flag="R" isCheck="true" standard="Q/GDW 1396-2012 第7.1.7节"/>
+		<CheckItem key="3E1AE0" name="DotypeCheck" desc="引用Q/GDW-1396标准中定义的数据对象类型（DOType），应与标准中定义的内容一致" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="A63491" name="RedDotypeCheck" desc="检查是否存在扩展的DO，扩展时应符合命名规范（制造厂商前缀_装置型号_版本号_DO类名(_其它后缀)）" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第7.1.6节"/>
+		<CheckItem key="BB4024" name="MDotypeCheck" desc="检查标准DOType的强制DA元素是否存在" flag="W" isCheck="true" standard="Q/GDW 1396-2012 第7.1.6节"/>
+		<CheckItem key="1F61CB" name="CdcCheck" desc="检查是否存在扩展的CDC类型" flag="W" isCheck="true" standard="Q/GDW 1396-2012 第7.1.5节"/>
+		<CheckItem key="DE1D56" name="DatypeCheck" desc="引用Q/GDW-1396标准中定义的数据属性类型（DAType），应与标准中定义的内容一致" flag="W" isCheck="true" standard="工程实践（SCD检测已有）或参照检测标准"/>
+		<CheckItem key="165A0B" name="RedDatypeCheck" desc="检查是否存在扩展DA，且扩展DA应符合命名规范（制造厂商前缀_装置型号_版本号_DA类名(_其它后缀)）" flag="E" isCheck="true" standard="工程实践（SCD检测已有）或参照检测标准"/>
+		<CheckItem key="B73E6D" name="MDatypeCheck" desc="数据类型模板强制信检查DAType的强制BDA元素是否存在息检测（LNodeType的强制DO是否正确）" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="145768" name="EnumtypeCheck" desc="检查标准EnumType的类型和值是否正确" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="56AB89" name="REnumtypeCheck" desc="检查是否存在扩展的EnumType" flag="E" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="3" desc="IED通用检测">
+		<CheckItem key="CAFCE7" name="IedCheck" desc="IED名称应为“TEMPLATE”" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第7.1.1节"/>
+		<CheckItem key="9A2FE1" name="ServerCheck" desc="Server对象中至少应包含一个LDevice对象，每个LDevice对象至少应包含LLN0及LPHD两个逻辑节点。" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第7.1.1节"/>
+		<CheckItem key="ED195B" name="PhsyconCheck" desc="Communication下PhysConn配置的物理端口插头类型、端口号、接口类型等是否符合规范中的命名要求" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="51A518" name="RedInputsCheck" desc="IED中不应包含Inputs这类代表GOOSE/SV连线的信息。" flag="E" isCheck="true" standard="工程实践"/>
+		<CheckItem key="467747" name="GsSmvCheck" desc="IED中应包含GSEControl和SampledValueControl。" flag="E" isCheck="true" standard="工程实践"/>
+	</CheckClass>
+	<CheckClass key="4" desc="服务（Services）检测">
+		<CheckItem key="B3824A" name="ConfFcdaCheck" desc="数据集配置的FCDA实际个数是否小于或等于ConfDataset的maxAttributes属性值" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="AF455E" name="ConfDataSetCheck" desc="数据集DataSet实际个数是否小于或等于ConfDataset的max属性值" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="0CB373" name="ConfReportCheck" desc="报告控制块ReportControl实际个数是否小于或等于ConfReportControl的max属性值" flag="W" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="B21624" name="ConfLogCheck" desc="日志控制块LogControl实际个数是否小于或等于ConfLogControl的max属性值" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+	<CheckClass key="5" desc="数据集（DataSet）检测">
+		<CheckItem key="83395E" name="DataSetCheck" desc="数据集的命名应符合Q/GDW-1396标准中定义的命名原则。" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第8.3.1节"/>
+		<CheckItem key="EA5BBA" name="FcdaValidCheck" desc="数据集中包含的FCDA的引用有效性检查（包括报告控制块及其他控制块）" flag="E" isCheck="true" standard="工程实践（SCD检测已有逻辑）"/>
+		<CheckItem key="58E4DA" name="FcdaLdValidCheck" desc="数据集中包含的FCDA不应跨LDevice" flag="W" isCheck="true" standard="Q/GDW 1396-2012 第7.1.3节"/>
+		<CheckItem key="EA80EF" name="DataSetTypeValidCheck" desc="GOOSE数据集应配置到DA，其它配置（包括SV数据集）都到DO" flag="W" isCheck="true" standard="Q/GDW 1396-2012 第10.1.1，11.1.1节"/>
+	</CheckClass>
+	<CheckClass key="6" desc="报告控制块（ReportControl）检测">
+		<CheckItem key="8E9CE7" name="ReportCtrlCheck" desc="报告控制块的命名应符合Q/GDW-1396标准中定义的命名原则" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第8.3.2节"/>
+	</CheckClass>
+	<CheckClass key="7" desc="实例化（LDevice、LN0、LN、DOI、SDI、DAI）检测">
+		<CheckItem key="E9DFBC" name="LDdoiCheck" desc="LN0/LN、DOI、SDI、DAI对数据类型模板引用的有效性" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="28F210" name="DoiValidCheck" desc="实例化DOI元素的“desc”属性值与“dU” 属性值是否非空且两者一致" flag="W" isCheck="true" standard="Q/GDW 1396-2012 第6.2节"/>
+		<CheckItem key="0D52B6" name="LnValidCheck" desc="逻辑节点的实例化建模原则检测，符合Q/GDW-1396标准" flag="E" isCheck="true" standard="GDW1396"/>
+		<CheckItem key="6A2E19" name="LdValidCheck" desc="LDevice的命名应符合Q/GDW-1396标准中定义的命名原则" flag="E" isCheck="true" standard="Q/GDW 1396-2012 第7.1.3节"/>
+		<CheckItem key="661141" name="LdDescCheck" desc="LD和LN实例的“desc”属性值是否非空" flag="W" isCheck="true" standard="Q/GDW 1396-2012 第6.2节"/>
+	</CheckClass>
+	<CheckClass key="8" desc="其他">
+		<CheckItem key="5E04BF" name="GeneralCheck" desc="其他问题检查" flag="W" isCheck="true" standard="GDW1396"/>
+	</CheckClass>
+</SCLConfig>

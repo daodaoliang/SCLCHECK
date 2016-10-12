@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{2bc1b142-f892-4497-a4ee-b13c887d9e7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Source">
+      <UniqueIdentifier>{2dfcd73f-34d1-42a9-9f95-d4a74fa25579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Source">
+      <UniqueIdentifier>{54d97654-1e06-4dcd-bcc7-075714b0234c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreeListCtrl">
+      <UniqueIdentifier>{0e7841f9-6aef-4828-ade3-3433395ba1bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\ScdIcdCheckTool.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ScdIcdCheckTool.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\SSDT.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\scd校验.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\scd差异化.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\icd校验.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\CRC校验码.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\ICDCheck.jpg">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\CRC.jpg">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\SCDCheck.jpg">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\SCDCmp.jpg">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\sys_dlg_close.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\sys_dlg_min.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\btn_green.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\bg_02.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\bg_briangle.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\bg_light-level_02.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Image\btn_bg.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\folders.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\IcdCrcCalcTool.exe">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScdIcdCheckTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\charconv.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\CheckComboBox.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\dog_api.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\Markup.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MemoryDC.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\Runner.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\SingleInst.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\SuperDog.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\XButton.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AttributeDlg.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Dlg_AnglyzeFiles.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DlgStdCRC.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ICDinputDlg.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\IcdParser.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\KCBusyProgressCtrl.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\WndPreview.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\ImageInfo.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CheckConfigDlg.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeListCtrl\ComboInListView.h">
+      <Filter>TreeListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeListCtrl\listeditctrl.h">
+      <Filter>TreeListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeListCtrl\supergridctrl.h">
+      <Filter>TreeListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeListCtrl\SuperGridExt.h">
+      <Filter>TreeListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CheckDlg.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\Common.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CheckConfigSaveAsDlg.h">
+      <Filter>头文件\Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ScdIcdCheckTool.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ScdIcdCheckTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\charconv.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\CheckComboBox.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\KillOnJobClose.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\Markup.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\SingleInst.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\SuperDog.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\XButton.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WndPreview.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\KCBusyProgressCtrl.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\IcdParser.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ICDinputDlg.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DlgStdCRC.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Dlg_AnglyzeFiles.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AttributeDlg.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\ImageInfo.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CheckConfigDlg.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeListCtrl\ComboInListView.cpp">
+      <Filter>TreeListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeListCtrl\listeditctrl.cpp">
+      <Filter>TreeListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeListCtrl\supergridctrl.cpp">
+      <Filter>TreeListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeListCtrl\SuperGridExt.cpp">
+      <Filter>TreeListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CheckDlg.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\Common.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CheckConfigSaveAsDlg.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\ScdIcdCheckTool.manifest">
+      <Filter>资源文件</Filter>
+    </Manifest>
+  </ItemGroup>
+</Project>
